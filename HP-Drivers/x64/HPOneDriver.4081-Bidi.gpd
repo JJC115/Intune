@@ -1,0 +1,4625 @@
+*%===============================================================================*%
+*%              (c) Copyright 2021-2024 HP Development Company, L.P.	         *%
+*%                              All rights reserved.						     *%
+*%===============================================================================*%
+
+*GPDFileVersion: "0.99.6"
+*GPDSpecVersion: "1.0"
+*GPDFileName: "HPOneDriver.4081-Bidi.gpd"
+
+*Include:  "StdNames.gpd"
+*%Include: "PJL.GPD"
+*Include:  "PCLXL.GPD"
+*Include:  "HPOneDriver.4081-Properties.gpd"
+
+*%==============================================================================*%
+*%                          DuplexUnit (Installable)                            *%
+*%==============================================================================*%
+*Feature: DuplexUnit
+{
+	*%rcNameID: =IDS_PC_OPTIONAL_DUPLEXER
+	*Name: "PC_OPTIONAL_DUPLEXER"
+	*FeatureType: PRINTER_PROPERTY
+	*ConcealFromUI?: =FeatureConcealFromUI
+	*Option: NotInstalled
+	{
+		*rcNameID: =IDS_NOTINSTALLED
+	}
+	*Option: Installed
+	{
+		*rcNameID: =IDS_INSTALLED
+	}
+}
+
+*%==============================================================================*%
+*%                       JobStorageEncryptionPasswordType (Installable)         *%
+*%==============================================================================*%
+*Feature: JobStorageEncryptionPasswordType
+{
+	*Name: "PC_Encryption Password Type"
+	*DefaultOption: disable
+	*FeatureType: PRINTER_PROPERTY
+	*ConcealFromUI?: =FeatureConcealFromUI
+
+	*Option: disable
+	{
+		*Name: "Numeric Password"
+	}
+	*Option: enable
+	{
+		*Name: "Alphanumeric Password"
+	}
+}
+
+*%==============================================================================*%
+*%                 JobStorageEncryptionPasswordMinLength (Installable)          *%
+*%==============================================================================*%
+*Feature: JobStorageEncryptionPasswordMinLength
+{
+	*Name: "PC_Encryption Password Min Length"
+	*FeatureType: PRINTER_PROPERTY
+	*ConcealFromUI?: =FeatureConcealFromUI
+	*DefaultOption: 6
+	*Option: 4
+	{
+		*Name: "4"
+	}
+	*Option: 6
+	{
+		*Name: "6"
+	}
+}
+
+*%==============================================================================*%
+*%                 JobStorageEncryptionPasswordMaxLength (Installable)          *%
+*%==============================================================================*%
+*Feature: JobStorageEncryptionPasswordMaxLength
+{
+	*Name: "PC_Encryption Password Max Length"
+	*FeatureType: PRINTER_PROPERTY
+	*ConcealFromUI?: =FeatureConcealFromUI
+	*DefaultOption: 16
+	*Option: 16
+	{
+		*Name: "16"
+	}
+	*Option: 32
+	{
+		*Name: "32"
+	}
+}
+
+*%==============================================================================*%
+*%                          PQDisplayTagStandardType2                                     *%
+*%==============================================================================*%
+*Feature: PQDisplayTagStandardType2
+{
+	*Name: "PC_QUALITY_StandardType2"
+	*FeatureType: PRINTER_PROPERTY
+	*ConcealFromUI?: =FeatureConcealFromUI
+	*DefaultOption: NotAvailable
+
+	*Option: NotAvailable
+	{
+		*rcNameID: =IDS_NOTAVAILABLE
+	}
+
+	*Option: Normal
+	{
+		*Name: "Normal"
+	}
+
+	*Option: FineLines_MaxDPI
+	{
+		*Name: "FineLines_MaxDPI"
+	}
+
+    *Option: QuickView_Draft
+	{
+		*Name: "QuickView_Draft"
+	}
+
+	*Option: Enhanced
+	{
+		*Name: "Enhanced"
+	}
+
+    *Option: EconoMode
+	{
+		*Name: "EconoMode"
+	}
+
+	*Option: Draft
+	{
+		*Name: "Draft"
+	}
+
+	*Option: Best
+	{
+		*Name: "Best"
+	}
+
+	*Option: Fast_LFPLegacy
+	{
+		*Name: "Fast_LFPLegacy"
+	}
+	
+
+	*Option: MaxDetail_LFPLegacy
+	{
+		*Name: "MaxDetail_LFPLegacy"
+	}
+
+	*Option: GeneralOffice_Draft
+	{
+		*Name: "GeneralOffice_Draft"
+	}
+
+    *Option: Professional
+	{
+		*Name: "Professional"
+	}
+
+	*Option: Presentation
+	{
+		*Name: "Presentation"
+	}
+
+    *Option: MaxDPI
+	{
+		*Name: "MaxDPI"
+	}
+
+	*Option: QuickDraft
+	{
+		*Name: "QuickDraft"
+	}
+
+    *Option: HPStandard
+	{
+		*Name: "HPStandard"
+	}
+
+    *Option: Standard
+	{
+		*Name: "Standard"
+	}
+
+    *Option: Premium
+	{
+		*Name: "Premium"
+	}
+
+	*Option: Detailed
+	{
+		*Name: "Detailed"
+	}
+
+    *Option: HPHighSpeed
+	{
+		*Name: "HPHighSpeed"
+	}
+
+    *Option: HPColorSave
+	{
+		*Name: "HPColorSave"
+	}
+
+	*Option: HPTonerSave
+	{
+		*Name: "HPTonerSave"
+	}
+}
+
+*%==============================================================================*%
+*%                          PQModeStandardType2                                     *%
+*%==============================================================================*%
+*Feature: PQModeStandardType2
+{
+	*Name: "PC_QUALITY_PQMode2"
+	*FeatureType: PRINTER_PROPERTY
+	*ConcealFromUI?: =FeatureConcealFromUI
+	*DefaultOption: NotAvailable
+
+	*Option: NotAvailable
+	{
+		*rcNameID: =IDS_NOTAVAILABLE
+	}
+
+	*Option: 1
+	{
+		*Name: "1"
+	}
+
+	*Option: 2
+	{
+		*Name: "2"
+	}
+
+	*Option: 3
+	{
+		*Name: "3"
+	}
+
+    *Option: 4
+	{
+		*Name: "4"
+	}
+
+	*Option: 5
+	{
+		*Name: "5"
+	}
+
+	*Option: 6
+	{
+		*Name: "6"
+	}
+
+    *Option: 7
+	{
+		*Name: "7"
+	}
+}
+
+*%==============================================================================*%
+*%                          PQOptimalResolutionStandardType2                    *%
+*%==============================================================================*%
+*Feature: PQOptimalResolutionStandardType2
+{
+	*%rcNameID: =IDS_PC_QUALITY_NORMAL_DPI
+	*Name: "PC_QUALITY_NORMAL_DPI"
+	*FeatureType: PRINTER_PROPERTY
+	*ConcealFromUI?: =FeatureConcealFromUI
+	*DefaultOption: Res600Dpi
+
+	*Option: Res150Dpi
+	{
+		*Name: "150 DPI"
+	}
+
+	*Option: Res600Dpi
+	{
+		*Name: "600 DPI"
+	}
+
+	*Option: Res1200Dpi	
+	{
+		*Name: "1200 DPI"
+	}
+
+	*Option: Res300Dpi
+	{
+		*Name: "300 DPI"
+	}
+}
+
+*Ifdef: DRIVER_ARCHITECTURE_V3
+*%==============================================================================*%
+*%                          PQNormalSupport                                     *%
+*%==============================================================================*%
+*Feature: PQNormalSupport
+{
+	*%rcNameID: =IDS_PC_QUALITY_NORMAL
+	*Name: "PC_QUALITY_NORMAL"
+	*FeatureType: PRINTER_PROPERTY
+	*ConcealFromUI?: =FeatureConcealFromUI
+	*DefaultOption: NotAvailable
+
+	*Option: NotAvailable
+	{
+		*rcNameID: =IDS_NOTAVAILABLE
+*Ifdef: DRIVER_TYPE_SUPD
+*Ifdef: DRIVER_ARCHITECTURE_V4
+		*Constraints: LIST(UserResolution.PQNormalLaser, UserResolution.PQNormalPageWide, UserResolution.HPS_Normal, UserResolution.Normal, UserResolution.FineLines_MaxDPI, UserResolution.QuickView_Draft, UserResolution.Enhanced, UserResolution.GeneralOffice_Draft, UserResolution.Professional, UserResolution.Presentation, UserResolution.MaxDPI, UserResolution.QuickDraft, UserResolution.HPStandard, UserResolution.Standard, UserResolution.Premium, UserResolution.Detailed, UserResolution.HPHighSpeed, UserResolution.HighSpeed, UserResolution.Draft, UserResolution.Best, UserResolution.EconoMode, UserResolution.ColorSave, UserResolution.TonerSave, UserResolution.HPColorSave, UserResolution.HPTonerSave)
+*Endif: DRIVER_ARCHITECTURE_V4
+*Endif: DRIVER_TYPE_SUPD
+	}
+
+	*Option: Laser
+	{
+		*Name: "Laser"
+		*Constraints: LIST(UserResolution.PQNormalPageWide, UserResolution.PQNormal, UserResolution.PQDraft, UserResolution.PQBest, UserResolution.PQMax, UserResolution.HPS_Normal, UserResolution.Normal, UserResolution.FineLines_MaxDPI, UserResolution.QuickView_Draft, UserResolution.Enhanced, UserResolution.GeneralOffice_Draft, UserResolution.Professional, UserResolution.Presentation, UserResolution.MaxDPI, UserResolution.QuickDraft, UserResolution.HPStandard, UserResolution.Standard, UserResolution.Premium, UserResolution.Detailed, UserResolution.HPHighSpeed, UserResolution.HighSpeed, UserResolution.Draft, UserResolution.Best, UserResolution.EconoMode, UserResolution.ColorSave, UserResolution.TonerSave, UserResolution.HPColorSave, UserResolution.HPTonerSave)
+	}
+
+	*Option: Ink
+	{
+		*Name: "Ink"
+		*Constraints: LIST(UserResolution.PQNormalLaser, UserResolution.PQNormal, UserResolution.PQDraft, UserResolution.PQBest, UserResolution.PQMax, UserResolution.HPS_Normal, UserResolution.Normal, UserResolution.FineLines_MaxDPI, UserResolution.QuickView_Draft, UserResolution.Enhanced, UserResolution.GeneralOffice_Draft, UserResolution.Professional, UserResolution.Presentation, UserResolution.MaxDPI, UserResolution.QuickDraft, UserResolution.HPStandard, UserResolution.Standard, UserResolution.Premium, UserResolution.Detailed, UserResolution.HPHighSpeed, UserResolution.HighSpeed, UserResolution.Draft, UserResolution.Best, UserResolution.EconoMode, UserResolution.ColorSave, UserResolution.TonerSave, UserResolution.HPColorSave, UserResolution.HPTonerSave)
+	}
+}
+
+*%==============================================================================*%
+*%                          PQNormalDPI                                         *%
+*%==============================================================================*%
+*Feature: PQNormalDPI
+{
+	*%rcNameID: =IDS_PC_QUALITY_NORMAL_DPI
+	*Name: "PC_QUALITY_NORMAL_DPI"
+	*FeatureType: PRINTER_PROPERTY
+	*ConcealFromUI?: =FeatureConcealFromUI
+	*DefaultOption: Res600Dpi
+
+	*Option: Res150Dpi
+	{
+		*Name: "150 DPI"
+	}
+
+	*Option: Res600Dpi
+	{
+		*Name: "600 DPI"
+	}
+
+	*Option: Res1200Dpi	
+	{
+		*Name: "1200 DPI"
+	}
+
+	*Option: Res300Dpi
+	{
+		*Name: "300 DPI"
+	}
+}
+*Endif: DRIVER_ARCHITECTURE_V3
+
+*%==============================================================================*%
+*%                          PQDisplayTagStandardType1                                     *%
+*%==============================================================================*%
+*Feature: PQDisplayTagStandardType1
+{
+	*Name: "PC_QUALITY_StandardType1"
+	*FeatureType: PRINTER_PROPERTY
+	*ConcealFromUI?: =FeatureConcealFromUI
+	*DefaultOption: NotAvailable
+
+	*Option: NotAvailable
+	{
+		*rcNameID: =IDS_NOTAVAILABLE
+	}
+
+	*Option: Normal
+	{
+		*Name: "Normal"
+	}
+
+	*Option: FineLines_MaxDPI
+	{
+		*Name: "FineLines_MaxDPI"
+	}
+
+    *Option: QuickView_Draft
+	{
+		*Name: "QuickView_Draft"
+	}
+
+	*Option: Enhanced
+	{
+		*Name: "Enhanced"
+	}
+
+    *Option: EconoMode
+	{
+		*Name: "EconoMode"
+	}
+
+	*Option: Draft
+	{
+		*Name: "Draft"
+	}
+
+	*Option: Best
+	{
+		*Name: "Best"
+	}
+
+	*Option: Fast_LFPLegacy
+	{
+		*Name: "Fast_LFPLegacy"
+	}
+	
+
+	*Option: MaxDetail_LFPLegacy
+	{
+		*Name: "MaxDetail_LFPLegacy"
+	}
+
+	*Option: GeneralOffice_Draft
+	{
+		*Name: "GeneralOffice_Draft"
+	}
+
+    *Option: Professional
+	{
+		*Name: "Professional"
+	}
+
+	*Option: Presentation
+	{
+		*Name: "Presentation"
+	}
+
+    *Option: MaxDPI
+	{
+		*Name: "MaxDPI"
+	}
+
+	*Option: QuickDraft
+	{
+		*Name: "QuickDraft"
+	}
+
+    *Option: HPStandard
+	{
+		*Name: "HPStandard"
+	}
+
+    *Option: Standard
+	{
+		*Name: "Standard"
+	}
+
+    *Option: Premium
+	{
+		*Name: "Premium"
+	}
+
+	*Option: Detailed
+	{
+		*Name: "Detailed"
+	}
+
+    *Option: HPHighSpeed
+	{
+		*Name: "HPHighSpeed"
+	}
+
+    *Option: HPColorSave
+	{
+		*Name: "HPColorSave"
+	}
+
+	*Option: HPTonerSave
+	{
+		*Name: "HPTonerSave"
+	}
+}
+
+*%==============================================================================*%
+*%                          PQModeStandardType1                                     *%
+*%==============================================================================*%
+*Feature: PQModeStandardType1
+{
+	*Name: "PC_QUALITY_PQMode1"
+	*FeatureType: PRINTER_PROPERTY
+	*ConcealFromUI?: =FeatureConcealFromUI
+	*DefaultOption: NotAvailable
+
+	*Option: NotAvailable
+	{
+		*rcNameID: =IDS_NOTAVAILABLE
+	}
+
+	*Option: 1
+	{
+		*Name: "1"
+	}
+
+	*Option: 2
+	{
+		*Name: "2"
+	}
+
+	*Option: 3
+	{
+		*Name: "3"
+	}
+
+    *Option: 4
+	{
+		*Name: "4"
+	}
+
+	*Option: 5
+	{
+		*Name: "5"
+	}
+
+	*Option: 6
+	{
+		*Name: "6"
+	}
+
+    *Option: 7
+	{
+		*Name: "7"
+	}
+}
+
+*%==============================================================================*%
+*%						PQOptimalResolutionStandardType1                     	*%
+*%==============================================================================*%
+*Feature: PQOptimalResolutionStandardType1
+{
+	*%rcNameID: =IDS_PC_QUALITY_DRAFT_DPI
+	*Name: "PC_QUALITY_DRAFT_DPI"
+	*FeatureType: PRINTER_PROPERTY
+	*ConcealFromUI?: =FeatureConcealFromUI
+	*DefaultOption: Res300Dpi 	
+
+	*Option: Res150Dpi
+	{
+		*Name: "150 DPI"
+	}
+
+	*Option: Res600Dpi
+	{
+		*Name: "600 DPI"
+	}
+
+	*Option: Res1200Dpi
+	{
+		*Name: "1200 DPI"
+	}
+
+	*Option: Res300Dpi
+	{
+		*Name: "300 DPI"
+	}
+}
+
+*Ifdef: DRIVER_ARCHITECTURE_V3
+*%==============================================================================*%
+*%                          PQDraftSupport                                      *%
+*%==============================================================================*%
+*Feature: PQDraftSupport
+{
+	*%rcNameID: =IDS_PC_QUALITY_DRAFT
+	*Name: "PC_QUALITY_DRAFT"
+	*FeatureType: PRINTER_PROPERTY
+	*ConcealFromUI?: =FeatureConcealFromUI
+	*DefaultOption: NotAvailable	
+
+
+	*Option: NotAvailable
+	{
+		*rcNameID: =IDS_NOTAVAILABLE
+*Ifdef: DRIVER_TYPE_SUPD
+*Ifdef: DRIVER_ARCHITECTURE_V4
+		*Constraints: LIST(UserResolution.PQDraftLaser, UserResolution.PQDraftPageWide, UserResolution.HPS_Draft, UserResolution.Normal, UserResolution.FineLines_MaxDPI, UserResolution.QuickView_Draft, UserResolution.Enhanced, UserResolution.GeneralOffice_Draft, UserResolution.Professional, UserResolution.Presentation, UserResolution.MaxDPI, UserResolution.QuickDraft, UserResolution.HPStandard, UserResolution.Standard, UserResolution.Premium, UserResolution.Detailed, UserResolution.HPHighSpeed, UserResolution.HighSpeed, UserResolution.Draft, UserResolution.Best, UserResolution.EconoMode, UserResolution.ColorSave, UserResolution.TonerSave, UserResolution.HPColorSave, UserResolution.HPTonerSave)
+*Endif: DRIVER_ARCHITECTURE_V4
+*Endif: DRIVER_TYPE_SUPD
+	}
+
+	*Option: Laser
+	{
+		*Name: "Laser"
+		*Constraints: LIST(UserResolution.PQDraftPageWide, UserResolution.PQNormal, UserResolution.PQDraft, UserResolution.PQBest, UserResolution.PQMax, UserResolution.HPS_Draft, UserResolution.Normal, UserResolution.FineLines_MaxDPI, UserResolution.QuickView_Draft, UserResolution.Enhanced, UserResolution.GeneralOffice_Draft, UserResolution.Professional, UserResolution.Presentation, UserResolution.MaxDPI, UserResolution.QuickDraft, UserResolution.HPStandard, UserResolution.Standard, UserResolution.Premium, UserResolution.Detailed, UserResolution.HPHighSpeed, UserResolution.HighSpeed, UserResolution.Draft, UserResolution.Best, UserResolution.EconoMode, UserResolution.ColorSave, UserResolution.TonerSave, UserResolution.HPColorSave, UserResolution.HPTonerSave)
+	}
+
+	*Option: Ink
+	{
+		*Name: "Ink"
+		*Constraints: LIST(UserResolution.PQDraftLaser, UserResolution.PQNormal, UserResolution.PQDraft, UserResolution.PQBest, UserResolution.PQMax, UserResolution.HPS_Draft, UserResolution.Normal, UserResolution.FineLines_MaxDPI, UserResolution.QuickView_Draft, UserResolution.Enhanced, UserResolution.GeneralOffice_Draft, UserResolution.Professional, UserResolution.Presentation, UserResolution.MaxDPI, UserResolution.QuickDraft, UserResolution.HPStandard, UserResolution.Standard, UserResolution.Premium, UserResolution.Detailed, UserResolution.HPHighSpeed, UserResolution.HighSpeed, UserResolution.Draft, UserResolution.Best, UserResolution.EconoMode, UserResolution.ColorSave, UserResolution.TonerSave, UserResolution.HPColorSave, UserResolution.HPTonerSave)
+	}
+	
+	*Option: LFP
+	{
+		*Name: "LFP"
+		*Constraints: LIST(UserResolution.PQDraftLaser, UserResolution.PQNormal, UserResolution.PQDraft, UserResolution.PQBest, UserResolution.PQMax, UserResolution.HPS_Draft, UserResolution.Normal, UserResolution.FineLines_MaxDPI, UserResolution.QuickView_Draft, UserResolution.Enhanced, UserResolution.GeneralOffice_Draft, UserResolution.Professional, UserResolution.Presentation, UserResolution.MaxDPI, UserResolution.QuickDraft, UserResolution.HPStandard, UserResolution.Standard, UserResolution.Premium, UserResolution.Detailed, UserResolution.HPHighSpeed, UserResolution.HighSpeed, UserResolution.Draft, UserResolution.Best, UserResolution.EconoMode, UserResolution.ColorSave, UserResolution.TonerSave, UserResolution.HPColorSave, UserResolution.HPTonerSave)
+	}
+}
+
+*%==============================================================================*%
+*%										 PQDraftDPI					        	*%
+*%==============================================================================*%
+*Feature: PQDraftDPI
+{
+	*%rcNameID: =IDS_PC_QUALITY_DRAFT_DPI
+	*Name: "PC_QUALITY_DRAFT_DPI"
+	*FeatureType: PRINTER_PROPERTY
+	*ConcealFromUI?: =FeatureConcealFromUI
+	*DefaultOption: Res300Dpi 	
+
+	*Option: Res150Dpi
+	{
+		*Name: "150 DPI"
+	}
+
+	*Option: Res600Dpi
+	{
+		*Name: "600 DPI"
+	}
+
+	*Option: Res1200Dpi
+	{
+		*Name: "1200 DPI"
+	}
+
+	*Option: Res300Dpi
+	{
+		*Name: "300 DPI"
+	}
+}
+*Endif: DRIVER_ARCHITECTURE_V3
+
+*%==============================================================================*%
+*%                          PQDisplayTagStandardType3                                     *%
+*%==============================================================================*%
+*Feature: PQDisplayTagStandardType3
+{
+	*Name: "PC_QUALITY_StandardType3"
+	*FeatureType: PRINTER_PROPERTY
+	*ConcealFromUI?: =FeatureConcealFromUI
+	*DefaultOption: NotAvailable
+
+	*Option: NotAvailable
+	{
+		*rcNameID: =IDS_NOTAVAILABLE
+	}
+
+	*Option: Normal
+	{
+		*Name: "Normal"
+	}
+
+	*Option: FineLines_MaxDPI
+	{
+		*Name: "FineLines_MaxDPI"
+	}
+
+    *Option: QuickView_Draft
+	{
+		*Name: "QuickView_Draft"
+	}
+
+	*Option: Enhanced
+	{
+		*Name: "Enhanced"
+	}
+
+    *Option: EconoMode
+	{
+		*Name: "EconoMode"
+	}
+
+	*Option: Draft
+	{
+		*Name: "Draft"
+	}
+
+	*Option: Best
+	{
+		*Name: "Best"
+	}
+
+	*Option: Fast_LFPLegacy
+	{
+		*Name: "Fast_LFPLegacy"
+	}
+	
+
+	*Option: MaxDetail_LFPLegacy
+	{
+		*Name: "MaxDetail_LFPLegacy"
+	}
+
+	*Option: GeneralOffice_Draft
+	{
+		*Name: "GeneralOffice_Draft"
+	}
+
+    *Option: Professional
+	{
+		*Name: "Professional"
+	}
+
+	*Option: Presentation
+	{
+		*Name: "Presentation"
+	}
+
+    *Option: MaxDPI
+	{
+		*Name: "MaxDPI"
+	}
+
+	*Option: QuickDraft
+	{
+		*Name: "QuickDraft"
+	}
+
+    *Option: HPStandard
+	{
+		*Name: "HPStandard"
+	}
+
+    *Option: Standard
+	{
+		*Name: "Standard"
+	}
+
+    *Option: Premium
+	{
+		*Name: "Premium"
+	}
+
+	*Option: Detailed
+	{
+		*Name: "Detailed"
+	}
+
+    *Option: HPHighSpeed
+	{
+		*Name: "HPHighSpeed"
+	}
+
+    *Option: HPColorSave
+	{
+		*Name: "HPColorSave"
+	}
+
+	*Option: HPTonerSave
+	{
+		*Name: "HPTonerSave"
+	}
+}
+
+*%==============================================================================*%
+*%                          PQModeStandardType3                                     *%
+*%==============================================================================*%
+*Feature: PQModeStandardType3
+{
+	*Name: "PC_QUALITY_PQMode3"
+	*FeatureType: PRINTER_PROPERTY
+	*ConcealFromUI?: =FeatureConcealFromUI
+	*DefaultOption: NotAvailable
+
+	*Option: NotAvailable
+	{
+		*rcNameID: =IDS_NOTAVAILABLE
+	}
+
+	*Option: 1
+	{
+		*Name: "1"
+	}
+
+	*Option: 2
+	{
+		*Name: "2"
+	}
+
+	*Option: 3
+	{
+		*Name: "3"
+	}
+
+    *Option: 4
+	{
+		*Name: "4"
+	}
+
+	*Option: 5
+	{
+		*Name: "5"
+	}
+
+	*Option: 6
+	{
+		*Name: "6"
+	}
+
+    *Option: 7
+	{
+		*Name: "7"
+	}
+}
+
+*%==============================================================================*%
+*%                                 PQOptimalResolutionStandardType3             *%
+*%==============================================================================*%
+*Feature: PQOptimalResolutionStandardType3
+{
+	*%rcNameID: =IDS_PC_QUALITY_BEST_DPI
+	*Name: "PC_QUALITY_BEST_DPI"
+	*FeatureType: PRINTER_PROPERTY
+	*ConcealFromUI?: =FeatureConcealFromUI
+	*DefaultOption: Res600Dpi 
+
+	*Option: Res150Dpi
+	{
+		*Name: "150 DPI"
+	}
+
+	*Option: Res600Dpi
+	{
+		*Name: "600 DPI"
+	}
+
+	*Option: Res1200Dpi
+	{
+		*Name: "1200 DPI"
+	}
+
+	*Option: Res300Dpi
+	{
+		*Name: "300 DPI"
+	}
+}
+
+*Ifdef: DRIVER_ARCHITECTURE_V3
+*%==============================================================================*%
+*%                          PQBestSupport                                       *%
+*%==============================================================================*%
+*Feature: PQBestSupport
+{
+	*%rcNameID: =IDS_PC_QUALITY_BEST
+	*Name: "PC_QUALITY_BEST"
+	*FeatureType: PRINTER_PROPERTY
+	*ConcealFromUI?: =FeatureConcealFromUI
+	*DefaultOption: NotAvailable	
+
+	*Option: NotAvailable
+	{
+		*rcNameID: =IDS_NOTAVAILABLE
+*Ifdef: DRIVER_TYPE_SUPD
+*Ifdef: DRIVER_ARCHITECTURE_V4
+		*Constraints: LIST(UserResolution.PQBestLaser, UserResolution.PQBestPageWide, UserResolution.HPS_Best, UserResolution.Normal, UserResolution.FineLines_MaxDPI, UserResolution.QuickView_Draft, UserResolution.Enhanced, UserResolution.GeneralOffice_Draft, UserResolution.Professional, UserResolution.Presentation, UserResolution.MaxDPI, UserResolution.QuickDraft, UserResolution.HPStandard, UserResolution.Standard, UserResolution.Premium, UserResolution.Detailed, UserResolution.HPHighSpeed, UserResolution.HighSpeed, UserResolution.Draft, UserResolution.Best, UserResolution.EconoMode, UserResolution.ColorSave, UserResolution.TonerSave, UserResolution.HPColorSave, UserResolution.HPTonerSave)
+*Endif: DRIVER_ARCHITECTURE_V4
+*Endif: DRIVER_TYPE_SUPD
+	}
+
+	*Option: Laser
+	{
+		*Name: "Laser"
+		*Constraints: LIST(UserResolution.PQBestPageWide, UserResolution.PQNormal, UserResolution.PQDraft, UserResolution.PQBest, UserResolution.PQMax, UserResolution.HPS_Best, UserResolution.Normal, UserResolution.FineLines_MaxDPI, UserResolution.QuickView_Draft, UserResolution.Enhanced, UserResolution.GeneralOffice_Draft, UserResolution.Professional, UserResolution.Presentation, UserResolution.MaxDPI, UserResolution.QuickDraft, UserResolution.HPStandard, UserResolution.Standard, UserResolution.Premium, UserResolution.Detailed, UserResolution.HPHighSpeed, UserResolution.HighSpeed, UserResolution.Draft, UserResolution.Best, UserResolution.EconoMode, UserResolution.ColorSave, UserResolution.TonerSave, UserResolution.HPColorSave, UserResolution.HPTonerSave)
+	}
+
+	*Option: Ink
+	{
+		*Name: "Ink"
+		*Constraints: LIST(UserResolution.PQBestLaser, UserResolution.PQNormal, UserResolution.PQDraft, UserResolution.PQBest, UserResolution.PQMax, UserResolution.HPS_Best, UserResolution.Normal, UserResolution.FineLines_MaxDPI, UserResolution.QuickView_Draft, UserResolution.Enhanced, UserResolution.GeneralOffice_Draft, UserResolution.Professional, UserResolution.Presentation, UserResolution.MaxDPI, UserResolution.QuickDraft, UserResolution.HPStandard, UserResolution.Standard, UserResolution.Premium, UserResolution.Detailed, UserResolution.HPHighSpeed, UserResolution.HighSpeed, UserResolution.Draft, UserResolution.Best, UserResolution.EconoMode, UserResolution.ColorSave, UserResolution.TonerSave, UserResolution.HPColorSave, UserResolution.HPTonerSave)
+	}
+	
+	*Option: LFP
+	{
+		*Name: "LFP"
+		*Constraints: LIST(UserResolution.PQBestLaser, UserResolution.PQNormal, UserResolution.PQDraft, UserResolution.PQBest, UserResolution.PQMax, UserResolution.HPS_Best, UserResolution.Normal, UserResolution.FineLines_MaxDPI, UserResolution.QuickView_Draft, UserResolution.Enhanced, UserResolution.GeneralOffice_Draft, UserResolution.Professional, UserResolution.Presentation, UserResolution.MaxDPI, UserResolution.QuickDraft, UserResolution.HPStandard, UserResolution.Standard, UserResolution.Premium, UserResolution.Detailed, UserResolution.HPHighSpeed, UserResolution.HighSpeed, UserResolution.Draft, UserResolution.Best, UserResolution.EconoMode, UserResolution.ColorSave, UserResolution.TonerSave, UserResolution.HPColorSave, UserResolution.HPTonerSave)
+	}
+}
+
+*%==============================================================================*%
+*%                                 PQBestDPI                                    *%
+*%==============================================================================*%
+*Feature: PQBestDPI
+{
+	*%rcNameID: =IDS_PC_QUALITY_BEST_DPI
+	*Name: "PC_QUALITY_BEST_DPI"
+	*FeatureType: PRINTER_PROPERTY
+	*ConcealFromUI?: =FeatureConcealFromUI
+	*DefaultOption: Res600Dpi 
+
+	*Option: Res150Dpi
+	{
+		*Name: "150 DPI"
+	}
+
+	*Option: Res600Dpi
+	{
+		*Name: "600 DPI"
+	}
+
+	*Option: Res1200Dpi
+	{
+		*Name: "1200 DPI"
+	}
+
+	*Option: Res300Dpi
+	{
+		*Name: "300 DPI"
+	}
+}
+*Endif: DRIVER_ARCHITECTURE_V3
+
+*%==============================================================================*%
+*%                          PQDisplayTagStandardType4                                     *%
+*%==============================================================================*%
+*Feature: PQDisplayTagStandardType4
+{
+	*Name: "PC_QUALITY_StandardType4"
+	*FeatureType: PRINTER_PROPERTY
+	*ConcealFromUI?: =FeatureConcealFromUI
+	*DefaultOption: NotAvailable
+
+	*Option: NotAvailable
+	{
+		*rcNameID: =IDS_NOTAVAILABLE
+	}
+
+	*Option: Normal
+	{
+		*Name: "Normal"
+	}
+
+	*Option: FineLines_MaxDPI
+	{
+		*Name: "FineLines_MaxDPI"
+	}
+
+    *Option: QuickView_Draft
+	{
+		*Name: "QuickView_Draft"
+	}
+
+	*Option: Enhanced
+	{
+		*Name: "Enhanced"
+	}
+
+    *Option: EconoMode
+	{
+		*Name: "EconoMode"
+	}
+
+	*Option: Draft
+	{
+		*Name: "Draft"
+	}
+
+	*Option: Best
+	{
+		*Name: "Best"
+	}
+
+	*Option: Fast_LFPLegacy
+	{
+		*Name: "Fast_LFPLegacy"
+	}
+	
+
+	*Option: MaxDetail_LFPLegacy
+	{
+		*Name: "MaxDetail_LFPLegacy"
+	}
+
+	*Option: GeneralOffice_Draft
+	{
+		*Name: "GeneralOffice_Draft"
+	}
+
+    *Option: Professional
+	{
+		*Name: "Professional"
+	}
+
+	*Option: Presentation
+	{
+		*Name: "Presentation"
+	}
+
+    *Option: MaxDPI
+	{
+		*Name: "MaxDPI"
+	}
+
+	*Option: QuickDraft
+	{
+		*Name: "QuickDraft"
+	}
+
+    *Option: HPStandard
+	{
+		*Name: "HPStandard"
+	}
+
+    *Option: Standard
+	{
+		*Name: "Standard"
+	}
+
+    *Option: Premium
+	{
+		*Name: "Premium"
+	}
+
+	*Option: Detailed
+	{
+		*Name: "Detailed"
+	}
+
+    *Option: HPHighSpeed
+	{
+		*Name: "HPHighSpeed"
+	}
+
+    *Option: HPColorSave
+	{
+		*Name: "HPColorSave"
+	}
+
+	*Option: HPTonerSave
+	{
+		*Name: "HPTonerSave"
+	}
+}
+
+*%==============================================================================*%
+*%                          PQModeStandardType4                                     *%
+*%==============================================================================*%
+*Feature: PQModeStandardType4
+{
+	*Name: "PC_QUALITY_PQMode4"
+	*FeatureType: PRINTER_PROPERTY
+	*ConcealFromUI?: =FeatureConcealFromUI
+	*DefaultOption: NotAvailable
+
+	*Option: NotAvailable
+	{
+		*rcNameID: =IDS_NOTAVAILABLE
+	}
+
+	*Option: 1
+	{
+		*Name: "1"
+	}
+
+	*Option: 2
+	{
+		*Name: "2"
+	}
+
+	*Option: 3
+	{
+		*Name: "3"
+	}
+
+    *Option: 4
+	{
+		*Name: "4"
+	}
+
+	*Option: 5
+	{
+		*Name: "5"
+	}
+
+	*Option: 6
+	{
+		*Name: "6"
+	}
+
+    *Option: 7
+	{
+		*Name: "7"
+	}
+}
+
+*%==============================================================================*%
+*%									PQOptimalResolutionStandardType4            *%
+*%==============================================================================*%
+*Feature: PQOptimalResolutionStandardType4
+{
+	*%rcNameID: =IDS_PC_QUALITY_MAX_DPI
+	*Name: "PC_QUALITY_MAX_DPI"
+	*FeatureType: PRINTER_PROPERTY
+	*ConcealFromUI?: =FeatureConcealFromUI
+	*DefaultOption: Res1200Dpi
+
+	*Option: Res150Dpi
+	{
+		*Name: "150 DPI"
+	}
+
+	*Option: Res600Dpi
+	{
+		*Name: "600 DPI"
+	}
+
+	*Option: Res1200Dpi
+	{
+		*Name: "1200 DPI"
+	}
+
+	*Option: Res300Dpi
+	{
+		*Name: "300 DPI"
+	}
+}
+
+*Ifdef: DRIVER_ARCHITECTURE_V3
+*%==============================================================================*%
+*%									PQMaxSupport								*%
+*%==============================================================================*%
+*Feature: PQMaxSupport
+{
+	*%rcNameID: =IDS_PC_QUALITY_MAX
+	*Name: "PC_QUALITY_MAX"
+	*FeatureType: PRINTER_PROPERTY
+	*ConcealFromUI?: =FeatureConcealFromUI
+	*DefaultOption: NotAvailable	
+
+	*Option: NotAvailable
+	{
+		*rcNameID: =IDS_NOTAVAILABLE
+*Ifdef: DRIVER_TYPE_SUPD
+*Ifdef: DRIVER_ARCHITECTURE_V4
+		*Constraints: LIST(UserResolution.PQMaxLaser, UserResolution.PQMaxPageWide, UserResolution.Normal, UserResolution.FineLines_MaxDPI, UserResolution.QuickView_Draft, UserResolution.Enhanced, UserResolution.GeneralOffice_Draft, UserResolution.Professional, UserResolution.Presentation, UserResolution.MaxDPI, UserResolution.QuickDraft, UserResolution.HPStandard, UserResolution.Standard, UserResolution.Premium, UserResolution.Detailed, UserResolution.HPHighSpeed, UserResolution.HighSpeed, UserResolution.Draft, UserResolution.Best, UserResolution.EconoMode, UserResolution.ColorSave, UserResolution.TonerSave, UserResolution.HPColorSave, UserResolution.HPTonerSave)
+*Endif: DRIVER_ARCHITECTURE_V4
+*Endif: DRIVER_TYPE_SUPD
+	}
+
+	*Option: Laser
+	{
+		*Name: "Laser"
+		*Constraints: LIST(UserResolution.PQMaxPageWide, UserResolution.PQNormal, UserResolution.PQDraft, UserResolution.PQBest, UserResolution.PQMax, UserResolution.Normal, UserResolution.FineLines_MaxDPI, UserResolution.QuickView_Draft, UserResolution.Enhanced, UserResolution.GeneralOffice_Draft, UserResolution.Professional, UserResolution.Presentation, UserResolution.MaxDPI, UserResolution.QuickDraft, UserResolution.HPStandard, UserResolution.Standard, UserResolution.Premium, UserResolution.Detailed, UserResolution.HPHighSpeed, UserResolution.HighSpeed, UserResolution.Draft, UserResolution.Best, UserResolution.EconoMode, UserResolution.ColorSave, UserResolution.TonerSave, UserResolution.HPColorSave, UserResolution.HPTonerSave)
+	}
+
+	*Option: Ink
+	{
+		*Name: "Ink"
+		*Constraints: LIST(UserResolution.PQMaxLaser, UserResolution.PQNormal, UserResolution.PQDraft, UserResolution.PQBest, UserResolution.PQMax, UserResolution.Normal, UserResolution.FineLines_MaxDPI, UserResolution.QuickView_Draft, UserResolution.Enhanced, UserResolution.GeneralOffice_Draft, UserResolution.Professional, UserResolution.Presentation, UserResolution.MaxDPI, UserResolution.QuickDraft, UserResolution.HPStandard, UserResolution.Standard, UserResolution.Premium, UserResolution.Detailed, UserResolution.HPHighSpeed, UserResolution.HighSpeed, UserResolution.Draft, UserResolution.Best, UserResolution.EconoMode, UserResolution.ColorSave, UserResolution.TonerSave, UserResolution.HPColorSave, UserResolution.HPTonerSave)
+	}
+	
+	
+	*Option: LFP
+	{
+		*Name: "LFP"
+		*Constraints: LIST(UserResolution.PQMaxLaser, UserResolution.PQNormal, UserResolution.PQDraft, UserResolution.PQBest, UserResolution.PQMax, UserResolution.Normal, UserResolution.FineLines_MaxDPI, UserResolution.QuickView_Draft, UserResolution.Enhanced, UserResolution.GeneralOffice_Draft, UserResolution.Professional, UserResolution.Presentation, UserResolution.MaxDPI, UserResolution.QuickDraft, UserResolution.HPStandard, UserResolution.Standard, UserResolution.Premium, UserResolution.Detailed, UserResolution.HPHighSpeed, UserResolution.HighSpeed, UserResolution.Draft, UserResolution.Best, UserResolution.EconoMode, UserResolution.ColorSave, UserResolution.TonerSave, UserResolution.HPColorSave, UserResolution.HPTonerSave)
+	}
+}
+
+*%==============================================================================*%
+*%									PQMaxDPI                                    *%
+*%==============================================================================*%
+*Feature: PQMaxDPI
+{
+	*%rcNameID: =IDS_PC_QUALITY_MAX_DPI
+	*Name: "PC_QUALITY_MAX_DPI"
+	*FeatureType: PRINTER_PROPERTY
+	*ConcealFromUI?: =FeatureConcealFromUI
+	*DefaultOption: Res1200Dpi
+
+	*Option: Res150Dpi
+	{
+		*Name: "150 DPI"
+	}
+
+	*Option: Res600Dpi
+	{
+		*Name: "600 DPI"
+	}
+
+	*Option: Res1200Dpi
+	{
+		*Name: "1200 DPI"
+	}
+
+	*Option: Res300Dpi
+	{
+		*Name: "300 DPI"
+	}
+}
+*Endif: DRIVER_ARCHITECTURE_V3
+
+*%==============================================================================*%
+*%                          PQDisplayTagStandardType5                                     *%
+*%==============================================================================*%
+*Feature: PQDisplayTagStandardType5
+{
+	*Name: "PC_QUALITY_StandardType5"
+	*FeatureType: PRINTER_PROPERTY
+	*ConcealFromUI?: =FeatureConcealFromUI
+	*DefaultOption: NotAvailable
+
+	*Option: NotAvailable
+	{
+		*rcNameID: =IDS_NOTAVAILABLE
+	}
+
+	*Option: Normal
+	{
+		*Name: "Normal"
+	}
+
+	*Option: FineLines_MaxDPI
+	{
+		*Name: "FineLines_MaxDPI"
+	}
+
+    *Option: QuickView_Draft
+	{
+		*Name: "QuickView_Draft"
+	}
+
+	*Option: Enhanced
+	{
+		*Name: "Enhanced"
+	}
+
+    *Option: EconoMode
+	{
+		*Name: "EconoMode"
+	}
+
+	*Option: Draft
+	{
+		*Name: "Draft"
+	}
+
+	*Option: Best
+	{
+		*Name: "Best"
+	}
+
+	*Option: Fast_LFPLegacy
+	{
+		*Name: "Fast_LFPLegacy"
+	}
+	
+
+	*Option: MaxDetail_LFPLegacy
+	{
+		*Name: "MaxDetail_LFPLegacy"
+	}
+
+	*Option: GeneralOffice_Draft
+	{
+		*Name: "GeneralOffice_Draft"
+	}
+
+    *Option: Professional
+	{
+		*Name: "Professional"
+	}
+
+	*Option: Presentation
+	{
+		*Name: "Presentation"
+	}
+
+    *Option: MaxDPI
+	{
+		*Name: "MaxDPI"
+	}
+
+	*Option: QuickDraft
+	{
+		*Name: "QuickDraft"
+	}
+
+    *Option: HPStandard
+	{
+		*Name: "HPStandard"
+	}
+
+    *Option: Standard
+	{
+		*Name: "Standard"
+	}
+
+    *Option: Premium
+	{
+		*Name: "Premium"
+	}
+
+	*Option: Detailed
+	{
+		*Name: "Detailed"
+	}
+
+    *Option: HPHighSpeed
+	{
+		*Name: "HPHighSpeed"
+	}
+
+    *Option: HPColorSave
+	{
+		*Name: "HPColorSave"
+	}
+
+	*Option: HPTonerSave
+	{
+		*Name: "HPTonerSave"
+	}
+}
+
+*%==============================================================================*%
+*%                          PQModeStandardType5                                     *%
+*%==============================================================================*%
+*Feature: PQModeStandardType5
+{
+	*Name: "PC_QUALITY_PQMode5"
+	*FeatureType: PRINTER_PROPERTY
+	*ConcealFromUI?: =FeatureConcealFromUI
+	*DefaultOption: NotAvailable
+
+	*Option: NotAvailable
+	{
+		*rcNameID: =IDS_NOTAVAILABLE
+	}
+
+	*Option: 1
+	{
+		*Name: "1"
+	}
+
+	*Option: 2
+	{
+		*Name: "2"
+	}
+
+	*Option: 3
+	{
+		*Name: "3"
+	}
+
+    *Option: 4
+	{
+		*Name: "4"
+	}
+
+	*Option: 5
+	{
+		*Name: "5"
+	}
+
+	*Option: 6
+	{
+		*Name: "6"
+	}
+
+    *Option: 7
+	{
+		*Name: "7"
+	}
+}
+
+*%==============================================================================*%
+*%						PQOptimalResolutionStandardType5						*%
+*%==============================================================================*%
+*Feature: PQOptimalResolutionStandardType5
+{
+	*%rcNameID: =IDS_PC_QUALITY_ECONO_DPI
+	*Name: "PC_QUALITY_ECONO_DPI"
+	*FeatureType: PRINTER_PROPERTY
+	*ConcealFromUI?: =FeatureConcealFromUI
+	*DefaultOption: Res600Dpi
+	
+	*Option: Res150Dpi
+	{
+		*Name: "150 DPI"
+	}
+
+	*Option: Res600Dpi
+	{
+		*Name: "600 DPI"
+	}
+
+	*Option: Res1200Dpi
+	{
+		*Name: "1200 DPI"
+	}
+
+	*Option: Res300Dpi
+	{
+		*Name: "300 DPI"
+	}
+}
+
+
+
+*Ifdef: DRIVER_ARCHITECTURE_V3
+
+*%==============================================================================*%
+*%									PQEconomodeSupport							*%
+*%==============================================================================*%
+*Feature: PQEconomodeSupport
+{
+	*%rcNameID: =IDS_PC_QUALITY_ECONO
+	*Name: "PC_QUALITY_ECONO"
+	*FeatureType: PRINTER_PROPERTY
+	*ConcealFromUI?: =FeatureConcealFromUI
+	*DefaultOption: NotAvailable
+
+	*Option: NotAvailable
+	{
+		*rcNameID: =IDS_NOTAVAILABLE
+*Ifdef: DRIVER_TYPE_SUPD
+*Ifdef: DRIVER_ARCHITECTURE_V4
+		*Constraints: LIST(UserResolution.PQEconomode, UserResolution.HPS_Economode, UserResolution.Normal, UserResolution.FineLines_MaxDPI, UserResolution.QuickView_Draft, UserResolution.Enhanced, UserResolution.GeneralOffice_Draft, UserResolution.Professional, UserResolution.Presentation, UserResolution.MaxDPI, UserResolution.QuickDraft, UserResolution.HPStandard, UserResolution.Standard, UserResolution.Premium, UserResolution.Detailed, UserResolution.HPHighSpeed, UserResolution.HighSpeed, UserResolution.Draft, UserResolution.Best, UserResolution.EconoMode, UserResolution.ColorSave, UserResolution.TonerSave, UserResolution.HPColorSave, UserResolution.HPTonerSave)
+*Endif: DRIVER_ARCHITECTURE_V4
+*Endif: DRIVER_TYPE_SUPD
+	}
+
+	*Option: Available
+	{
+		*rcNameID: =IDS_AVAILABLE
+		*Constraints: LIST(UserResolution.HPS_Economode, UserResolution.PQNormal, UserResolution.PQDraft, UserResolution.PQBest, UserResolution.PQMax, UserResolution.Normal, UserResolution.FineLines_MaxDPI, UserResolution.QuickView_Draft, UserResolution.Enhanced, UserResolution.GeneralOffice_Draft, UserResolution.Professional, UserResolution.Presentation, UserResolution.MaxDPI, UserResolution.QuickDraft, UserResolution.HPStandard, UserResolution.Standard, UserResolution.Premium, UserResolution.Detailed, UserResolution.HPHighSpeed, UserResolution.HighSpeed, UserResolution.Draft, UserResolution.Best, UserResolution.EconoMode, UserResolution.ColorSave, UserResolution.TonerSave, UserResolution.HPColorSave, UserResolution.HPTonerSave)
+	}
+}
+
+*%==============================================================================*%
+*%									  PQEconomodeDPI                            *%
+*%==============================================================================*%
+*Feature: PQEconomodeDPI
+{
+	*%rcNameID: =IDS_PC_QUALITY_ECONO_DPI
+	*Name: "PC_QUALITY_ECONO_DPI"
+	*FeatureType: PRINTER_PROPERTY
+	*ConcealFromUI?: =FeatureConcealFromUI
+	*DefaultOption: Res600Dpi
+	
+	*Option: Res150Dpi
+	{
+		*Name: "150 DPI"
+	}
+
+	*Option: Res600Dpi
+	{
+		*Name: "600 DPI"
+	}
+
+	*Option: Res1200Dpi
+	{
+		*Name: "1200 DPI"
+	}
+
+	*Option: Res300Dpi
+	{
+		*Name: "300 DPI"
+	}
+}
+*Endif: DRIVER_ARCHITECTURE_V3
+
+*%==============================================================================*%
+*%                       EPEAT (DuplexByDefault)                                *%
+*%==============================================================================*%
+*Feature: DuplexByDefault
+{
+    *ConflictPriority: 3
+	*Name: "PC_EPEAT"
+	*%DefaultOption: disable
+	*FeatureType: PRINTER_PROPERTY
+	*ConcealFromUI?: =FeatureConcealFromUI
+	*Option: disable
+	{
+		*%rcNameID: =IDS_DISABLE
+		*Name: "Disable"
+	}
+	*Option: enable
+	{
+		*%rcNameID: =IDS_ENABLE
+		*Name: "Enable"
+	}
+}
+*%==============================================================================
+*%                    LFP_Constraints                     
+*%==============================================================================
+*BlockMacro: LFP_Constraints
+{
+	*Constraints: LIST(JobMarginsLayout.Standard,JobMarginsLayout.ClipContentsByMargins,JobMarginsLayout.Oversize)
+	*Constraints: LIST(PageRotate.AutoRotate,PageRotate.NoRotation,PageRotate.Rotate90,PageRotate.Rotate180,PageRotate.Rotate270)
+	*Constraints: LIST(JobEnableAutoCutter.On,JobEnableAutoCutter.Off)
+	*Constraints: LIST(PageMediaTypeExt1.LFP_Plain_Paper,PageMediaTypeExt1.LFP_Plain_Paper_L90_G_M2,PageMediaTypeExt1.LFP_Plain_Paper_90_110_G_M2,PageMediaTypeExt1.LFP_Plain_Paper_G110_G_M2,PageMediaTypeExt1.LFP_Plain_Paper_For_Retail,PageMediaTypeExt1.LFP_Plain_Paper_70_G_M2,PageMediaTypeExt1.LFP_Poster_Plain,PageMediaTypeExt1.LFP_Plain_Paper_For_Graphics,PageMediaTypeExt1.LFP_Bright_White_Bond_Paper,PageMediaTypeExt1.LFP_HP_Bright_White_Inkjet_Paper,PageMediaTypeExt1.LFP_HP_Universal_Bond_Paper,PageMediaTypeExt1.LFP_HP_Premium_Bond_Paper_3_In_Core,PageMediaTypeExt1.LFP_HP_20_Lb_Bond_With_ColorPRO_Technology,PageMediaTypeExt1.LFP_Plain_Paper_Durable_Print_Out_In_Grayscale,PageMediaTypeExt1.LFP_Plain_Paper_CAD,PageMediaTypeExt1.LFP_Plain_Uncoated_Foam_Board,PageMediaTypeExt1.LFP_Plain_Uncoated_Cardstock,PageMediaTypeExt1.LFP_Plain_Uncoated_L200gsm,PageMediaTypeExt1.LFP_Plain_Uncoated_200gsm_400gsm,PageMediaTypeExt1.LFP_Plain_Uncoated_G400gsm,PageMediaTypeExt1.LFP_Coated_Paper,PageMediaTypeExt1.LFP_HP_Coated_Paper,PageMediaTypeExt1.LFP_HP_Universal_Coated_Paper,PageMediaTypeExt1.LFP_Coated_Paper_CAD,PageMediaTypeExt1.LFP_Digital_Blueprint_Paper,PageMediaTypeExt1.LFP_Heavyweight_Coated_Paper,PageMediaTypeExt1.LFP_HP_Heavyweight_Coated_Paper,PageMediaTypeExt1.LFP_HP_Universal_Heavyweight_Coated_Paper,PageMediaTypeExt1.LFP_Super_Heavyweight_Coated_Paper,PageMediaTypeExt1.LFP_HP_Super_Heavyweight_Plus_Matte_Paper,PageMediaTypeExt1.LFP_WaterBased_Coated_Foam_Board,PageMediaTypeExt1.LFP_WaterBased_Coated_Cardstock,PageMediaTypeExt1.LFP_Waterbased_Coated_Paper_L200gsm,PageMediaTypeExt1.LFP_Waterbased_Coated_200gsm_400gsm,PageMediaTypeExt1.LFP_Waterbased_Coated_G400gsm,PageMediaTypeExt1.LFP_Digital_Blueprint_Paper_High_Usage,PageMediaTypeExt1.LFP_Blueprint_Paper_With_Red_Stamps,PageMediaTypeExt1.LFP_Coloured_Paper,PageMediaTypeExt1.LFP_Recycled_Bond_Paper,PageMediaTypeExt1.LFP_HP_Recycled_Bond_Paper,PageMediaTypeExt1.LFP_Recycled_Paper,PageMediaTypeExt1.LFP_Unlined_Compressed_Cardstock,PageMediaTypeExt1.LFP_Unlined_Compressed_Board,PageMediaTypeExt1.LFP_HP_Satin_Wrapping_Paper,PageMediaTypeExt1.LFP_Photo_Gloss_Paper,PageMediaTypeExt1.LFP_HP_Premium_Instant_Dry_Gloss_Photo_Paper,PageMediaTypeExt1.LFP_HP_Universal_Gloss_Photo_Paper,PageMediaTypeExt1.LFP_HP_Universal_Instant_Dry_Gloss_Photo_Paper,PageMediaTypeExt1.LFP_HP_Everyday_Instant_Dry_Gloss_Photo_Paper,PageMediaTypeExt1.LFP_HP_Premium_Gloss_Photo_Paper,PageMediaTypeExt1.LFP_Photo_Semi_Gloss_Satin_Paper,PageMediaTypeExt1.LFP_HP_Premium_Instant_Dry_Satin_Photo_Paper,PageMediaTypeExt1.LFP_HP_Professional_Instant_Dry_Satin_Photo_Paper,PageMediaTypeExt1.LFP_HP_Universal_Satin_Photo_Paper,PageMediaTypeExt1.LFP_HP_Universal_Instant_Dry_Satin_Photo_Paper,PageMediaTypeExt1.LFP_HP_Everyday_Instant_Dry_Satin_Photo_Paper,PageMediaTypeExt1.LFP_HP_Premium_Satin_Photo_Paper,PageMediaTypeExt1.LFP_Photo_Matte_Paper,PageMediaTypeExt1.LFP_HP_Matte_Photo_Paper,PageMediaTypeExt1.LFP_HP_Premium_Matte_Photo_Paper,PageMediaTypeExt1.LFP_Photo_Gloss_Paper_More_Ink,PageMediaTypeExt1.LFP_Polypropylene_Satin,PageMediaTypeExt1.LFP_Photo_Gloss_Paper_Less_Ink,PageMediaTypeExt1.LFP_Photo_Gloss_Semi_Gloss_Satin_Paper,PageMediaTypeExt1.LFP_Photo_Gloss_Semi_Gloss_Satin_Paper_More_Ink,PageMediaTypeExt1.LFP_Photo_Gloss_Semi_Gloss_Satin_Paper_Less_Ink,PageMediaTypeExt1.LFP_Proofing_Gloss_Paper,PageMediaTypeExt1.LFP_HP_Professional_High_Gloss_Contract_Proofing_Paper,PageMediaTypeExt1.LFP_Proofing_Semi_Gloss_Satin_Paper,PageMediaTypeExt1.LFP_HP_Professional_Semi_Gloss_Contract_Proofing_Paper,PageMediaTypeExt1.LFP_HP_Premium_Semi_Gloss_Proofing_Paper,PageMediaTypeExt1.LFP_Proofing_Matte_Paper,PageMediaTypeExt1.LFP_HP_Matte_Proofing_Paper,PageMediaTypeExt1.LFP_Photo_Pearl_Paper_More_Ink,PageMediaTypeExt1.LFP_Photo_Pearl_Paper_Less_Ink,PageMediaTypeExt1.LFP_Photo_Baryte_Paper,PageMediaTypeExt1.LFP_HP_Photo_Baryte_Paper,PageMediaTypeExt1.LFP_Natural_Tracing_Paper,PageMediaTypeExt1.LFP_HP_Natural_Tracing_Paper,PageMediaTypeExt1.LFP_Translucent_Bond_Paper,PageMediaTypeExt1.LFP_HP_Translucent_Bond_Paper,PageMediaTypeExt1.LFP_Vellum,PageMediaTypeExt1.LFP_Generic_Natural_Tracing_Paper_L65_G_M2,PageMediaTypeExt1.LFP_Generic_Natural_Tracing_Paper_G65_G_M2,PageMediaTypeExt1.LFP_Natural_Tracing_Paper_Rubber_Resistant,PageMediaTypeExt1.LFP_Technical_Media,PageMediaTypeExt1.LFP_HP_Special_Inkjet_Paper,PageMediaTypeExt1.LFP_Transparent_Clear_Film,PageMediaTypeExt1.LFP_HP_Clear_Film,PageMediaTypeExt1.LFP_Clear_Film_KOD,PageMediaTypeExt1.LFP_Matte_Film,PageMediaTypeExt1.LFP_HP_Matte_Film,PageMediaTypeExt1.LFP_HP_4_Mil_Double_Matte_Film,PageMediaTypeExt1.LFP_HP_Double_Matte_Film,PageMediaTypeExt1.LFP_Backlit_Material,PageMediaTypeExt1.LFP_HP_Premium_Vivid_Color_Backlit_Film,PageMediaTypeExt1.LFP_Backlit_Material_More_Ink,PageMediaTypeExt1.LFP_HP_Backlit_Polyester_Film,PageMediaTypeExt1.LFP_Canvas,PageMediaTypeExt1.LFP_HP_Professional_Matte_Canvas,PageMediaTypeExt1.LFP_HP_Collector_Satin_Canvas,PageMediaTypeExt1.LFP_HP_Artist_Matte_Canvas,PageMediaTypeExt1.LFP_HP_Universal_Matte_Canvas,PageMediaTypeExt1.LFP_HP_Recycled_Satin_Canvas,PageMediaTypeExt1.LFP_HP_Hahnem_Hle_Smooth_Fine_Art_Paper,PageMediaTypeExt1.LFP_HP_Matte_Litho_Realistic_Paper,PageMediaTypeExt1.LFP_HP_Hahnem_Hle_Textured_Fine_Art_Paper,PageMediaTypeExt1.LFP_Fine_Art_Paper,PageMediaTypeExt1.LFP_Thick_Fine_Art_Paper_G250_G_M,PageMediaTypeExt1.LFP_Canvas_More_Ink,PageMediaTypeExt1.LFP_Fine_Art_Pearl_Paper_More_Ink,PageMediaTypeExt1.LFP_Fine_Art_Pearl_Paper_Less_Ink,PageMediaTypeExt1.LFP_Canvas_Less_Ink,PageMediaTypeExt1.LFP_Fine_Art_Paper_Less_Ink,PageMediaTypeExt1.LFP_Fine_Art_Paper_More_Ink,PageMediaTypeExt1.LFP_Tyvek,PageMediaTypeExt1.LFP_HP_Durable_Banner_With_DuPont_Tyvek,PageMediaTypeExt1.LFP_Banner_With_DuPont_Tyvek,PageMediaTypeExt1.LFP_Mohawk_Wide_Format_Inkjet_DuPont_Tyvek,PageMediaTypeExt1.LFP_Indoor_Banner,PageMediaTypeExt1.LFP_Scrim_Banner,PageMediaTypeExt1.LFP_HP_Opaque_Scrim,PageMediaTypeExt1.LFP_Polypropylene,PageMediaTypeExt1.LFP_HP_Premium_Matte_Polypropylene,PageMediaTypeExt1.LFP_HP_Everyday_Matte_Polypropylene,PageMediaTypeExt1.LFP_HP_Matte_Polypropylene,PageMediaTypeExt1.LFP_PET,PageMediaTypeExt1.LFP_Polypropylene_Matte,PageMediaTypeExt1.LFP_Polypropylene_Gloss,PageMediaTypeExt1.LFP_HP_Production_Matte_Polypropylene_3_In_Core,PageMediaTypeExt1.LFP_HP_Durable_Semi_Gloss_Display_Film,PageMediaTypeExt1.LFP_HP_Everyday_Blockout_Display_Film,PageMediaTypeExt1.LFP_Cling,PageMediaTypeExt1.LFP_Adhesive_Polypropylene_Matte,PageMediaTypeExt1.LFP_HP_Everyday_Adhesive_Matte_Polypropylene,PageMediaTypeExt1.LFP_Adhesive_Paper,PageMediaTypeExt1.LFP_Adhesive_Vinyl,PageMediaTypeExt1.LFP_HP_Universal_Adhesive_Vinyl,PageMediaTypeExt1.LFP_HP_Colorfast_Adhesive_Vinyl,PageMediaTypeExt1.LFP_Adhesive_Polypropylene_Gloss,PageMediaTypeExt1.LFP_Adhesive_Polypropylene,PageMediaTypeExt1.LFP_HP_Everyday_Adhesive_Gloss_Polypropylene_2_Pack,PageMediaTypeExt1.LFP_Blueback_Paper,PageMediaTypeExt1.LFP_Poster_Matte_Paper,PageMediaTypeExt1.LFP_HP_Production_Matte_Poster_Paper_3_In_Core,PageMediaTypeExt1.LFP_Poster_Matte_L200gsm,PageMediaTypeExt1.LFP_Poster_Matte_200gsm_400gsm,PageMediaTypeExt1.LFP_Poster_Matte_G400gsm,PageMediaTypeExt1.LFP_Poster_Gloss_Paper,PageMediaTypeExt1.LFP_HP_Gloss_Poster_Paper_3_In_Core,PageMediaTypeExt1.LFP_Poster_Semi_Gloss_Paper,PageMediaTypeExt1.LFP_HP_Production_Semi_Gloss_Poster_Paper_3_In_Core,PageMediaTypeExt1.LFP_Poster_Satin_Paper,PageMediaTypeExt1.LFP_HP_Production_Satin_Poster_Paper_3_In_Core,PageMediaTypeExt1.LFP_HP_Satin_Poster_Paper_3_In_Core)
+	*Constraints: LIST(PaperSize.A0,PaperSize.A1,PaperSize.ARCH_A,PaperSize.ARCH_B,PaperSize.ARCH_C,PaperSize.ARCH_D,PaperSize.ARCH_E,PaperSize.ARCH_E1,PaperSize.ARCH_E2,PaperSize.ARCH_E3,PaperSize.B0_JIS,PaperSize.B1_ISO,PaperSize.B1_JIS,PaperSize.B2_ISO,PaperSize.B2_JIS,PaperSize.B3_ISO,PaperSize.B3_JIS,PaperSize.SUPERBA3,PaperSize.SUPERCA2,PaperSize.SUPERDA1,PaperSize.C0,PaperSize.C1,PaperSize.C2,PaperSize.C3,PaperSize.C4,PaperSize.DSHEET,PaperSize.ESHEET,PaperSize.FSHEET,PaperSize.ISOB0,PaperSize.ISOB4,PaperSize.INDEX10X12IN,PaperSize.INDEX10X15IN,PaperSize.INDEX12X16IN,PaperSize.INDEX14X17IN,PaperSize.INDEX14X18IN,PaperSize.INDEX16X20IN,PaperSize.INDEX18X22IN,PaperSize.INDEX20X24IN,PaperSize.INDEX24X30IN,PaperSize.INDEX30X40CM,PaperSize.INDEX22X28IN,PaperSize.INDEX30X45CM,PaperSize.INDEX35X46CM,PaperSize.INDEX40X60CM,PaperSize.INDEX50X76CM,PaperSize.INDEX60X90CM)
+	*Constraints: LIST(PageMaxAppResolution.300dpi,PageMaxAppResolution.600dpi,PageMaxAppResolution.Automatic)
+	*Constraints: LIST(JobRemoveBlankAreas.On,JobRemoveBlankAreas.Off)
+	*Constraints: LIST(ColorManagement.LFP_PrinterManagedColor,ColorManagement.LFP_AppManagedColor)
+	*Constraints: LIST(FinishingFolding.UsePrinterDefault,FinishingFolding.LFP_Fold_Style-192,FinishingFolding.LFP_Fold_Style-193,FinishingFolding.LFP_Fold_Style-194,FinishingFolding.LFP_Fold_Style-195,FinishingFolding.LFP_Fold_Style-196,FinishingFolding.LFP_Fold_Style-197,FinishingFolding.LFP_Fold_Style-198,FinishingFolding.LFP_Fold_Style-199,FinishingFolding.LFP_Fold_Style-200,FinishingFolding.LFP_Fold_Style-201,FinishingFolding.LFP_Fold_Style-256,FinishingFolding.LFP_Fold_Style-257,FinishingFolding.LFP_Fold_Style-258,FinishingFolding.LFP_Fold_Style-259,FinishingFolding.LFP_Fold_Style-262)
+	*Constraints: LIST(JobUserMargin._5mm,JobUserMargin._3mm)
+	*Constraints: LIST(PagePantoneEmulation.On,PagePantoneEmulation.Off)
+	*Constraints: LIST(PageScaling.FitToRoll)
+	*Constraints: LIST(DocumentRGBColor.RGBColor_None_LFP, DocumentRGBColor.RGBColor_SRGB_LFP, DocumentRGBColor.ColorMatchRGB, DocumentRGBColor.AppleRGB, DocumentRGBColor.ProPhotoRGB)  
+	*Constraints: LIST(DocumentCMYKInks.None) 
+	}
+
+*%==============================================================================
+*%                    HPSOPS_Constraints                     
+*%==============================================================================
+*BlockMacro: HPSOPS_Constraints
+{
+    *Constraints: LIST(PageRotate180.NoRotation,PageRotate180.Rotate180)
+    *Constraints: LIST(InputBin.MainTray,InputBin.PhotoTray,InputBin.Tray1,InputBin.UsePrinterSetting,InputBin.ManualFeed,InputBin.Tray2)
+    *Constraints: LIST(FinishingFolding.FoldOff)
+    *Constraints: LIST(PageWatermark.Exclude,PageWatermark.Text,PageWatermark.Image,PageWatermark.TemplateText)
+    *Constraints: LIST(JobHPPrintOnBothSidesManually.ON, JobHPPrintOnBothSidesManually.OFF) 
+    *Constraints: LIST(JobDuplexAllDocumentsContiguously.TwoSidedLongEdge, JobDuplexAllDocumentsContiguously.TwoSidedShortEdge, JobDuplexAllDocumentsContiguously.OneSided)
+    *Constraints: LIST(JobManualDuplex.ManualLongEdge, JobManualDuplex.ManualSimplex, JobManualDuplex.ManualShortEdge)
+    *Constraints: LIST(DocumentNUp.2, DocumentNUp.4, DocumentNUp.6, DocumentNUp.9, DocumentNUp.16) 
+    *Constraints: LIST(PageSpecial.Off, PageSpecial.On) 
+    *Constraints: LIST(DocumentBinding.Booklet, DocumentBinding.JapaneseBooklet, DocumentBinding.None) 
+    *Constraints: LIST(DocumentRasterCompression.BestQuality, DocumentRasterCompression.MaxCompression, DocumentRasterCompression.Automatic) 
+    *Constraints: LIST(DocumentManualMargin.ON, DocumentManualMargin.OFF) 
+    *Constraints: LIST(PageBlackText.None, PageBlackText.BlackText) 
+    *Constraints: LIST(DocumentHPEasyColor.HPEasyColorConservative,DocumentHPEasyColor.HPEasyColorOn)
+    *Constraints: LIST(DocumentInkDryTime.PrintDefault,DocumentInkDryTime.DryZero,DocumentInkDryTime.DryMedium,DocumentInkDryTime.DryLong)
+    *Constraints: LIST(DocumentInkSaturation.PrintDefault,DocumentInkSaturation.SaturationM2,DocumentInkSaturation.SaturationM1,DocumentInkSaturation.SaturationZero,DocumentInkSaturation.SaturationOne,DocumentInkSaturation.SaturationTwo)
+    *Constraints: LIST(DocumentBlackInkSpread.PrintDefault,DocumentBlackInkSpread.InkSpreadLeast,DocumentBlackInkSpread.InkSpreadLess,DocumentBlackInkSpread.InkSpreadDefault)
+    *Constraints: LIST(DocumentRGBColor.GeneralPrinterDefault, DocumentRGBColor.RGBColorSRGB, DocumentRGBColor.RGBColorVivid, DocumentRGBColor.RGBColorCustomProfile, DocumentRGBColor.RGBColorNone)
+	*Constraints: LIST(DocumentCMYKInks.PrinterDefault) 
+
+}
+
+*%==============================================================================
+*%                          OPS_Constraints                     
+*%==============================================================================
+*BlockMacro: OPS_Constraints
+{
+    *Constraints: LIST(PageRotate180.NoRotation,PageRotate180.Rotate180)
+    *Constraints: LIST(PageSpecial.Off, PageSpecial.On)  
+	*Constraints: LIST(PageBlackText.None, PageBlackText.BlackText) 
+	*Constraints: LIST(PageMirrorImage.Off, PageMirrorImage.MirrorImageWidth)
+	*Constraints: LIST(CONFIG_JobSeparatorMode.enable)
+	*Constraints: LIST(DocumentRasterCompression.BestQuality, DocumentRasterCompression.MaxCompression, DocumentRasterCompression.Automatic) 
+	
+}   
+*%==============================================================================
+*%                    Product_CID                     
+*%==============================================================================
+*Feature: Product_CID
+{
+    *ConflictPriority: 3
+	*Name: "Product_CID"
+	*FeatureType: PRINTER_PROPERTY
+*Ifdef: DRIVER_TYPE_SUPD
+	*ConcealFromUI?: =FeatureConcealFromUI
+*Else:
+	*ConcealFromUI?: TRUE
+	*DefaultOption: None  *% For backward compatibility, set to none...
+	*Option: None
+	{
+		*Name: "None"
+		*Constraints: LIST()
+	}
+*Endif: DRIVER_TYPE_SUPD
+*Ifdef: DRIVER_ARCHITECTURE_V3
+		*Option: None
+		{
+			*Name: "None"
+			*Constraints: LIST()
+		}
+*Endif: DRIVER_ARCHITECTURE_V3
+	*Option: Product_Unknown
+	{
+		*Name: "Product Unknown"
+		*Constraints: LIST(JobDeviceMarigin.Margin100,JobDeviceMarigin.Margin70)
+        *Constraints: LIST(InputBin.MainTray,InputBin.PhotoTray)
+		*Constraints: LIST(CONFIG_DuplexMode.NotInstalled)
+		*InsertBlock: =LFP_Constraints
+	}
+	*Option: 1284_CID_HPLJPCLMSMV1
+	{
+		*Name: "1284_CID_HPLJPCLMSMV1"
+		*Constraints: LIST(JobDeviceLanguage.None,JobDeviceLanguage.PCL,JobDeviceLanguage.PS,JobDeviceLanguage.PCL6,JobDeviceLanguage.HybridRaster,JobDeviceLanguage.PDF)
+		*Constraints: LIST(JobDeviceMarigin.Margin0,JobDeviceMarigin.Margin70)
+        *Constraints: LIST(DocumentHPEasyColor.HPEasyColorOff,DocumentHPEasyColor.HPEasyColorConservative,DocumentHPEasyColor.HPEasyColorOn)
+		*InsertBlock: =LFP_Constraints
+		*InsertBlock: =OPS_Constraints
+		*Constraints: LIST(InputBin.MainTray,InputBin.PhotoTray)
+	}
+	*Option: 1284_CID_HPLJPDLV1
+	{
+		*Name: "1284_CID_HPLJPDLV1"
+		*Constraints: LIST(JobDeviceLanguage.None,JobDeviceLanguage.PCL,JobDeviceLanguage.PCLmS,JobDeviceLanguage.HybridRaster,JobDeviceLanguage.PDF)
+		*Constraints: LIST(JobDeviceMarigin.Margin0,JobDeviceMarigin.Margin70)
+		*InsertBlock: =LFP_Constraints
+		*Constraints: LIST(InputBin.MainTray,InputBin.PhotoTray)
+	}
+	*Option: 1284_CID_HPIJVIPAV9
+	{		
+		*%Old OPA - 3M
+		*Name: "1284_CID_HPIJVIPAV9"
+		*Constraints: LIST(JobDeviceLanguage.None,JobDeviceLanguage.PCL6,JobDeviceLanguage.PCLmS,JobDeviceLanguage.PS,JobDeviceLanguage.HybridRaster,JobDeviceLanguage.PDF)
+		*Constraints: LIST(JobDeviceMarigin.Margin0,JobDeviceMarigin.Margin100)
+		*InsertBlock: =LFP_Constraints
+		*InsertBlock: =OPS_Constraints
+		*Constraints: LIST(InputBin.Tray1,InputBin.PhotoTray)
+	}
+*Ifdef: DRIVER_TYPE_SPD
+*% Not supported in SUPD 1.5 yet, so add only for SPD support
+	*Option: 1284_CID_HPIJVIPAV7
+	{
+		*%Old CCA - Palermo
+		*Name: "1284_CID_HPIJVIPAV7"
+		*Constraints: LIST(JobDeviceLanguage.None,JobDeviceLanguage.PCL6,JobDeviceLanguage.PCLmS,JobDeviceLanguage.PS,JobDeviceLanguage.HybridRaster,JobDeviceLanguage.PDF)
+		*Constraints: LIST(JobDeviceMarigin.Margin0,JobDeviceMarigin.Margin100)
+	    *Constraints: LIST(UserResolution.PQDraftLaser,UserResolution.PQNormalLaser,UserResolution.PQBestLaser,UserResolution.PQMaxLaser,UserResolution.PQDraftPageWide,UserResolution.PQNormalPageWide,UserResolution.PQBestPageWide,UserResolution.PQMaxPageWide,UserResolution.PQEconomode,UserResolution.PQDraft,UserResolution.PQNormal,UserResolution.PQBest,UserResolution.PQMax,UserResolution.HPS_Economode)
+		*Constraints: LIST(DocumentHPEasyColor.HPEasyColorConservative)
+		*InsertBlock: =LFP_Constraints
+		*Constraints: LIST(InputBin.Tray1,InputBin.Tray2)
+	}
+	*Option: 1284_CID_HPIJVIPAV4
+	{
+		*%Old CCA - Vasari
+		*Name: "1284_CID_HPIJVIPAV4"
+		*Constraints: LIST(JobDeviceLanguage.None,JobDeviceLanguage.PCL6,JobDeviceLanguage.PCLmS,JobDeviceLanguage.PS,JobDeviceLanguage.HybridRaster,JobDeviceLanguage.PDF)
+		*Constraints: LIST(JobDeviceMarigin.Margin0,JobDeviceMarigin.Margin100)
+	    *Constraints: LIST(UserResolution.PQDraftLaser,UserResolution.PQNormalLaser,UserResolution.PQBestLaser,UserResolution.PQMaxLaser,UserResolution.PQDraftPageWide,UserResolution.PQNormalPageWide,UserResolution.PQBestPageWide,UserResolution.PQMaxPageWide,UserResolution.PQEconomode,UserResolution.PQDraft,UserResolution.PQNormal,UserResolution.PQBest,UserResolution.PQMax,UserResolution.HPS_Economode)
+		*Constraints: LIST(DocumentHPEasyColor.HPEasyColorConservative)
+		*InsertBlock: =LFP_Constraints
+		*Constraints: LIST(InputBin.Tray1,InputBin.Tray2)
+	}
+	*Option: 1284_CID_HPDESKJET_P976D
+	{
+		*%Old CCB - Taccola
+		*Name: "1284_CID_HPDESKJET_P976D"
+		*Constraints: LIST(JobDeviceLanguage.None,JobDeviceLanguage.PCL6,JobDeviceLanguage.PCLmS,JobDeviceLanguage.PS,JobDeviceLanguage.HybridRaster,JobDeviceLanguage.PDF)
+		*Constraints: LIST(JobDeviceMarigin.Margin0,JobDeviceMarigin.Margin100)
+	    *Constraints: LIST(UserResolution.PQDraftLaser,UserResolution.PQNormalLaser,UserResolution.PQBestLaser,UserResolution.PQMaxLaser,UserResolution.PQDraftPageWide,UserResolution.PQNormalPageWide,UserResolution.PQBestPageWide,UserResolution.PQMaxPageWide,UserResolution.PQEconomode,UserResolution.PQDraft,UserResolution.PQNormal,UserResolution.PQBest,UserResolution.PQMax,UserResolution.HPS_Economode)
+		*Constraints: LIST(DocumentHPEasyColor.HPEasyColorConservative)
+		*InsertBlock: =LFP_Constraints
+		*Constraints: LIST(InputBin.Tray1,InputBin.Tray2)
+	}
+*Endif: DRIVER_TYPE_SPD
+	*% PC0.72 CID *%
+	*Option: 1284_CID_HPIJCCBV1
+	{
+		*Name: "HP Entry level deskjet"
+		*Constraints: LIST(JobDeviceLanguage.None,JobDeviceLanguage.PCL6,JobDeviceLanguage.PCLmS,JobDeviceLanguage.PS,JobDeviceLanguage.HybridRaster,JobDeviceLanguage.PDF)
+		*Constraints: LIST(JobDeviceMarigin.Margin0,JobDeviceMarigin.Margin100)
+		*InsertBlock: =LFP_Constraints
+		*InsertBlock: =OPS_Constraints
+		*Constraints: LIST(InputBin.Tray1,InputBin.Tray2)
+	}
+	*Option: 1284_CID_HPIJCCAV1
+	{
+		*Name: "HP Main stream Core consumer"
+		*Constraints: LIST(JobDeviceLanguage.None,JobDeviceLanguage.PCL6,JobDeviceLanguage.PCLmS,JobDeviceLanguage.PS,JobDeviceLanguage.HybridRaster,JobDeviceLanguage.PDF)
+		*Constraints: LIST(JobDeviceMarigin.Margin0,JobDeviceMarigin.Margin100)
+		*InsertBlock: =LFP_Constraints
+		*InsertBlock: =OPS_Constraints
+		*Constraints: LIST(InputBin.Tray1,InputBin.Tray2)
+	}
+	*Option: 1284_CID_HPIJOPAV1
+	{
+		*Name: "HP Officejet Pro A"
+		*Constraints: LIST(JobDeviceLanguage.None,JobDeviceLanguage.PCL6,JobDeviceLanguage.PCLmS,JobDeviceLanguage.PS,JobDeviceLanguage.HybridRaster,JobDeviceLanguage.PDF)
+		*Constraints: LIST(JobDeviceMarigin.Margin0,JobDeviceMarigin.Margin100)
+		*InsertBlock: =LFP_Constraints
+		*InsertBlock: =OPS_Constraints
+		*Constraints: LIST(InputBin.Tray1,InputBin.PhotoTray)
+	}
+	*Option: 1284_CID_HPIJOPBV1
+	{
+		*Name: "HP Officejet ProB"
+		*Constraints: LIST(JobDeviceLanguage.None,JobDeviceLanguage.PCL6,JobDeviceLanguage.PCLmS,JobDeviceLanguage.PS,JobDeviceLanguage.HybridRaster,JobDeviceLanguage.PDF)
+		*Constraints: LIST(JobDeviceMarigin.Margin0,JobDeviceMarigin.Margin100)
+		*InsertBlock: =LFP_Constraints
+		*InsertBlock: =OPS_Constraints
+		*Constraints: LIST(InputBin.Tray1,InputBin.PhotoTray)
+	}
+	*Option: 1284_CID_HPLJPCLMSCV2
+	{
+		*Name: "HP LaserJet 100~299 Color"
+		*Constraints: LIST(JobDeviceLanguage.None,JobDeviceLanguage.PCL,JobDeviceLanguage.PS,JobDeviceLanguage.PCL6,JobDeviceLanguage.HybridRaster,JobDeviceLanguage.PDF)
+		*Constraints: LIST(JobDeviceMarigin.Margin0,JobDeviceMarigin.Margin70)
+		*Constraints: LIST(DocumentHPEasyColor.HPEasyColorOff,DocumentHPEasyColor.HPEasyColorConservative,DocumentHPEasyColor.HPEasyColorOn)
+		*InsertBlock: =LFP_Constraints
+		*InsertBlock: =OPS_Constraints
+		*Constraints: LIST(InputBin.MainTray,InputBin.PhotoTray)
+	}
+	*Option: 1284_CID_HPLJPCLMSMV2
+	{
+		*Name: "HP LaserJet 100~299 Mono"
+		*Constraints: LIST(JobDeviceLanguage.None,JobDeviceLanguage.PCL,JobDeviceLanguage.PS,JobDeviceLanguage.PCL6,JobDeviceLanguage.HybridRaster,JobDeviceLanguage.PDF)
+		*Constraints: LIST(JobDeviceMarigin.Margin0,JobDeviceMarigin.Margin70)
+		*Constraints: LIST(DocumentHPEasyColor.HPEasyColorOff,DocumentHPEasyColor.HPEasyColorConservative,DocumentHPEasyColor.HPEasyColorOn)
+		*InsertBlock: =LFP_Constraints
+		*InsertBlock: =OPS_Constraints
+		*Constraints: LIST(InputBin.MainTray,InputBin.PhotoTray)
+	}
+	*Option: 1284_CID_HPLJPDLCV3
+	{
+		*Name: "HP LaserJet 300-499 Color"
+		*Constraints: LIST(JobDeviceLanguage.None,JobDeviceLanguage.PCL,JobDeviceLanguage.PCLmS,JobDeviceLanguage.HybridRaster,JobDeviceLanguage.PDF)
+		*Constraints: LIST(JobDeviceMarigin.Margin0,JobDeviceMarigin.Margin70)
+		*InsertBlock: =LFP_Constraints
+		*Constraints: LIST(InputBin.MainTray,InputBin.PhotoTray)
+	}
+	*Option: 1284_CID_HPLJPDLMV3
+	{
+		*Name: "HP LaserJet 300-499 Mono"
+		*Constraints: LIST(JobDeviceLanguage.None,JobDeviceLanguage.PCL,JobDeviceLanguage.PCLmS,JobDeviceLanguage.HybridRaster,JobDeviceLanguage.PDF)
+		*Constraints: LIST(JobDeviceMarigin.Margin0,JobDeviceMarigin.Margin70)
+		*InsertBlock: =LFP_Constraints
+		*Constraints: LIST(InputBin.MainTray,InputBin.PhotoTray)
+	}
+	*Option: 1284_CID_HPLJPDLCV5
+	{
+		*Name: "HP LaserJet 500~899 Color"
+		*Constraints: LIST(JobDeviceLanguage.None,JobDeviceLanguage.PCL,JobDeviceLanguage.PCLmS,JobDeviceLanguage.HybridRaster,JobDeviceLanguage.PDF)
+		*Constraints: LIST(JobDeviceMarigin.Margin0,JobDeviceMarigin.Margin70)
+		*InsertBlock: =LFP_Constraints
+		*Constraints: LIST(InputBin.MainTray,InputBin.PhotoTray)
+	}
+	*Option: 1284_CID_HPLJPDLMV5
+	{
+		*Name: "HP LaserJet 500~899 Mono"
+		*Constraints: LIST(JobDeviceLanguage.None,JobDeviceLanguage.PCL,JobDeviceLanguage.PCLmS,JobDeviceLanguage.HybridRaster,JobDeviceLanguage.PDF)
+		*Constraints: LIST(JobDeviceMarigin.Margin0,JobDeviceMarigin.Margin70)
+		*InsertBlock: =LFP_Constraints
+		*Constraints: LIST(InputBin.MainTray,InputBin.PhotoTray)
+	}
+	*Option: 1284_CID_HPLJPDLCV9
+	{
+		*Name: "HP LaserJet 900~999 Color"
+		*Constraints: LIST(JobDeviceLanguage.None,JobDeviceLanguage.PCL,JobDeviceLanguage.PCLmS,JobDeviceLanguage.HybridRaster,JobDeviceLanguage.PDF)
+		*Constraints: LIST(JobDeviceMarigin.Margin0,JobDeviceMarigin.Margin70)
+		*InsertBlock: =LFP_Constraints
+		*Constraints: LIST(InputBin.MainTray,InputBin.PhotoTray)
+	}
+	*Option: 1284_CID_HPLJPDLMV9
+	{
+		*Name: "HP LaserJet 900~999 Mono"
+		*Constraints: LIST(JobDeviceLanguage.None,JobDeviceLanguage.PCL,JobDeviceLanguage.PCLmS,JobDeviceLanguage.HybridRaster,JobDeviceLanguage.PDF)
+		*Constraints: LIST(JobDeviceMarigin.Margin0,JobDeviceMarigin.Margin70)
+		*InsertBlock: =LFP_Constraints
+		*Constraints: LIST(InputBin.MainTray,InputBin.PhotoTray)
+	}
+	*Option: 1284_CID_HPIJPDLCV1
+	{
+		*Name: "HP PageWide 100-299 Color"
+		*Constraints: LIST(JobDeviceLanguage.None,JobDeviceLanguage.PCL,JobDeviceLanguage.PCLmS,JobDeviceLanguage.HybridRaster,JobDeviceLanguage.PDF)
+		*Constraints: LIST(JobDeviceMarigin.Margin0,JobDeviceMarigin.Margin70)
+		*InsertBlock: =LFP_Constraints
+		*Constraints: LIST(InputBin.MainTray,InputBin.PhotoTray)
+	}	
+	*Option: 1284_CID_HPIJPDLMV1
+	{
+		*Name: "HP PageWide 100-299 Mono"
+		*Constraints: LIST(JobDeviceLanguage.None,JobDeviceLanguage.PCL,JobDeviceLanguage.PCLmS,JobDeviceLanguage.HybridRaster,JobDeviceLanguage.PDF)
+		*Constraints: LIST(JobDeviceMarigin.Margin0,JobDeviceMarigin.Margin70)
+		*InsertBlock: =LFP_Constraints
+		*Constraints: LIST(InputBin.MainTray,InputBin.PhotoTray)
+	}
+	*Option: 1284_CID_HPIJPDLCV3
+	{
+		*Name: "HP PageWide 300-499 Color"
+		*Constraints: LIST(JobDeviceLanguage.None,JobDeviceLanguage.PCL,JobDeviceLanguage.PCLmS,JobDeviceLanguage.HybridRaster,JobDeviceLanguage.PDF)
+		*Constraints: LIST(JobDeviceMarigin.Margin0,JobDeviceMarigin.Margin70)
+		*InsertBlock: =LFP_Constraints
+		*Constraints: LIST(InputBin.MainTray,InputBin.PhotoTray)
+	}
+	*Option: 1284_CID_HPIJPDLMV3
+	{
+		*Name: "HP PageWide 300-499 Mono"
+		*Constraints: LIST(JobDeviceLanguage.None,JobDeviceLanguage.PCL,JobDeviceLanguage.PCLmS,JobDeviceLanguage.HybridRaster,JobDeviceLanguage.PDF)
+		*Constraints: LIST(JobDeviceMarigin.Margin0,JobDeviceMarigin.Margin70)
+		*InsertBlock: =LFP_Constraints
+		*Constraints: LIST(InputBin.MainTray,InputBin.PhotoTray)
+	}
+	*Option: 1284_CID_HPIJPDLCV5
+	{
+		*Name: "HP PageWide 500~899 Color"
+		*Constraints: LIST(JobDeviceLanguage.None,JobDeviceLanguage.PCL,JobDeviceLanguage.PCLmS,JobDeviceLanguage.HybridRaster,JobDeviceLanguage.PDF)
+		*Constraints: LIST(JobDeviceMarigin.Margin0,JobDeviceMarigin.Margin70)
+		*InsertBlock: =LFP_Constraints
+		*Constraints: LIST(InputBin.MainTray,InputBin.PhotoTray)
+	}
+	*Option: 1284_CID_HPIJPDLMV5
+	{
+		*Name: "HP PageWide 500~899 Mono"
+		*Constraints: LIST(JobDeviceLanguage.None,JobDeviceLanguage.PCL,JobDeviceLanguage.PCLmS,JobDeviceLanguage.HybridRaster,JobDeviceLanguage.PDF)
+		*Constraints: LIST(JobDeviceMarigin.Margin0,JobDeviceMarigin.Margin70)
+		*InsertBlock: =LFP_Constraints
+		*Constraints: LIST(InputBin.MainTray,InputBin.PhotoTray)
+	}
+	*Option: 1284_CID_HPIJPDLCV9
+	{
+		*Name: "HP PageWide 900~999 Color"
+		*Constraints: LIST(JobDeviceLanguage.None,JobDeviceLanguage.PCL,JobDeviceLanguage.PCLmS,JobDeviceLanguage.HybridRaster,JobDeviceLanguage.PDF)
+		*Constraints: LIST(JobDeviceMarigin.Margin0,JobDeviceMarigin.Margin70)
+		*InsertBlock: =LFP_Constraints
+		*Constraints: LIST(InputBin.MainTray,InputBin.PhotoTray)
+	}
+	*Option: 1284_CID_HPIJPDLMV9
+	{
+		*Name: "HP PageWide 900~999 Mono"
+		*Constraints: LIST(JobDeviceLanguage.None,JobDeviceLanguage.PCL,JobDeviceLanguage.PCLmS,JobDeviceLanguage.HybridRaster,JobDeviceLanguage.PDF)
+		*Constraints: LIST(JobDeviceMarigin.Margin0,JobDeviceMarigin.Margin70)
+		*InsertBlock: =LFP_Constraints
+		*Constraints: LIST(InputBin.MainTray,InputBin.PhotoTray)
+	}
+	*Option: 1284_CID_HPLJPDLCME
+	{
+		*Name: "HP Managed Enterprise LaserJet EXXXXX Color"
+		*Constraints: LIST(JobDeviceLanguage.None,JobDeviceLanguage.PCL,JobDeviceLanguage.PCLmS,JobDeviceLanguage.HybridRaster,JobDeviceLanguage.PDF)
+		*Constraints: LIST(JobDeviceMarigin.Margin0,JobDeviceMarigin.Margin70)
+		*InsertBlock: =LFP_Constraints
+		*Constraints: LIST(InputBin.MainTray,InputBin.PhotoTray)
+	}
+	*Option: 1284_CID_HPLJPDLMME
+	{
+		*Name: "HP Managed Enterprise LaserJet EXXXXX Mono"
+		*Constraints: LIST(JobDeviceLanguage.None,JobDeviceLanguage.PCL,JobDeviceLanguage.PCLmS,JobDeviceLanguage.HybridRaster,JobDeviceLanguage.PDF)
+		*Constraints: LIST(JobDeviceMarigin.Margin0,JobDeviceMarigin.Margin70)
+		*InsertBlock: =LFP_Constraints
+		*Constraints: LIST(InputBin.MainTray,InputBin.PhotoTray)
+	}
+	*Option: 1284_CID_HPIJPDLCME
+	{
+		*Name: "HP Managed PageWide EXXXXX Color"
+		*Constraints: LIST(JobDeviceLanguage.None,JobDeviceLanguage.PCL,JobDeviceLanguage.PCLmS,JobDeviceLanguage.HybridRaster,JobDeviceLanguage.PDF)
+		*Constraints: LIST(JobDeviceMarigin.Margin0,JobDeviceMarigin.Margin70)
+		*InsertBlock: =LFP_Constraints
+		*Constraints: LIST(InputBin.MainTray,InputBin.PhotoTray)
+	}
+	*Option: 1284_CID_HPIJPDLMME
+	{
+		*Name: "HP Managed PageWide EXXXXX Mono"
+		*Constraints: LIST(JobDeviceLanguage.None,JobDeviceLanguage.PCL,JobDeviceLanguage.PCLmS,JobDeviceLanguage.HybridRaster,JobDeviceLanguage.PDF)
+		*Constraints: LIST(JobDeviceMarigin.Margin0,JobDeviceMarigin.Margin70)
+		*InsertBlock: =LFP_Constraints
+		*Constraints: LIST(InputBin.MainTray,InputBin.PhotoTray)
+	}
+	*Option: 1284_CID_HPIJOPAV2
+	{
+		*Name: "HP OfficejetPro A Size"
+		*Constraints: LIST(JobDeviceLanguage.None,JobDeviceLanguage.PCL,JobDeviceLanguage.PCLmS,JobDeviceLanguage.HybridRaster,JobDeviceLanguage.PDF)
+		*InsertBlock: =LFP_Constraints
+		*Constraints: LIST(InputBin.MainTray,InputBin.PhotoTray)
+		*Constraints: LIST(CONFIG_DuplexMode.NotInstalled)
+	}
+
+}
+
+*%==============================================================================
+*%                    Product_Model                     
+*%==============================================================================
+*Feature: Product_Model
+{
+	*Name: "Product_Model"
+	*FeatureType: PRINTER_PROPERTY
+	*DefaultOption: None
+*Ifdef: DRIVER_TYPE_SUPD
+	*ConcealFromUI?: =FeatureConcealFromUI
+*Else:
+	*ConcealFromUI?: TRUE
+*Endif: DRIVER_TYPE_SUPD
+	*Option: Product_Manhattan1
+	{
+		*Name: "Product_Manhattan1"
+		*Constraints: LIST(JobDeviceLanguage.None,JobDeviceLanguage.PCL6,JobDeviceLanguage.PCLmS,JobDeviceLanguage.PS,JobDeviceLanguage.HybridRaster,JobDeviceLanguage.PDF)
+		*Constraints: LIST(JobDeviceMarigin.Margin0,JobDeviceMarigin.Margin100)
+	    *Constraints: LIST(MediaType.AutoSelectMediaType,MediaType.HPLaserJet90gsm,MediaType.HPMatte90gsm,MediaType.light,MediaType.intermediate,MediaType.Bond,MediaType.recycled,MediaType.HPColorLaser105gsm,MediaType.HPPremium_120gsm,MediaType.HPPremiumChoice_120gsm,MediaType.HPPremiumPresentationMatte,MediaType.HPPresentationSoftGloss120gsm,MediaType.HPProfessionalSoftGloss120gsm,MediaType.HPProfessionalSoftGloss120gsm_2,MediaType.HPProfessionalGlossy130gsm,MediaType.HPPresentationGlossy130gsm,MediaType.HPPremiumInkjet,MediaType.midweight,MediaType.heavy,MediaType.midweightGlossy,MediaType.heavyGlossy,MediaType.thickPlain,MediaType.matte,MediaType.HPSuperiorMatte160gsm,MediaType.HPBrochureMatte160gsm,MediaType.HPSuperiorGlossy160gsm,MediaType.HPBrochureGlossy160gsm,MediaType.HPTrifoldBrochureGlossy,MediaType.HPBrochureMatte180gsm,MediaType.HPBrochureGlossy180gsm,MediaType.extraHeavy,MediaType.extraHeavyGloss,MediaType.matteBrochure,MediaType.HPBrochureAndFlyerPaperMatte,MediaType.HPGlossyEdgeline180g,MediaType.HPTrifoldBrochureGlossy180gsm,MediaType.HPMatteCover200gsm,MediaType.HPMattePhoto200gsm,MediaType.HPGlossPhoto220gsm,MediaType.HPGlossPhoto220gsm_2,MediaType.HPGlossPhoto220gsmFasterPrinting,MediaType.HPGlossPhoto220gsmHigherGloss,MediaType.HPEverydayPhotoMatte,MediaType.HPAdvancedPhoto,MediaType.HPPremiumPlusPhoto,MediaType.photoOther,MediaType.cardstockGeneral,MediaType.Cardstock176220g,MediaType.cardstockGlossy,MediaType.matteCover,MediaType.HPPremiumInkjetTransparency,MediaType.transparencyColorLaser,MediaType.transparencyMonoLaser,MediaType.transparency,MediaType.transparencyOther,MediaType.Labels,MediaType.ShelfEdgeLabels,MediaType.stationeryletterhead,MediaType.Envelope,MediaType.HeavyEnvelope,MediaType.stationerypreprinted,MediaType.stationeryprepunched,MediaType.color,MediaType.rough,MediaType.heavyRough,MediaType.vellum,MediaType.tab,MediaType.filmOpaque,MediaType.HPEcoSMARTLite,MediaType.lightRough,MediaType.lightBond,MediaType.Paperboard,MediaType.heavyPaperboard,MediaType.lightPaperboard,MediaType.thin,MediaType.cotton,MediaType.archive,MediaType.thicker,MediaType.heavyweight,MediaType.extraheavyweight1,MediaType.extraheavyweight2,MediaType.thincardstock,MediaType.thickcardstock,MediaType.thinglossy,MediaType.thickglossy,MediaType.glossyphoto111130,MediaType.glossyphoto131175,MediaType.glossyphoto176220,MediaType.thickenvelope,MediaType.thick,MediaType.extraheavyweight3,MediaType.extraheavyweight4,MediaType.heavycardstock,MediaType.extraheavycardstock1,MediaType.extraheavycardstock2,MediaType.extraheavyweight)
+		*Constraints: LIST(PaperSize.A3,PaperSize.B4,PaperSize.11X17,PaperSize.ENV_9,PaperSize.CSHEET,PaperSize.ENV_C4,PaperSize.ENV_B5,PaperSize.A2,PaperSize.DBL_JAPANESE_POSTCARD_ROTATED,PaperSize.B6_JIS,PaperSize.EXECUTIVE_JIS,PaperSize.FANFOLD_LGL_GERMAN,PaperSize.NA12X18,PaperSize.RA3,PaperSize.SRA3,PaperSize.RA4,PaperSize.SRA4,PaperSize.INDEX9X13,PaperSize.OFFICIO216X340MM,PaperSize.OFFICIO216X343MM,PaperSize.OFFICIO216X347MM,PaperSize.ROC8K270X390,PaperSize.ROC16K195X270,PaperSize.ROC8K260X368,PaperSize.ROC16K184X260,PaperSize.ROC8K273X394,PaperSize.ROC16K197X273,PaperSize.INDEX11X14,PaperSize.INDEX5X5)
+		*Constraints: LIST(InputBin.Tray1,InputBin.PhotoTray)
+
+	}
+	*Option: Product_Manhattan2
+	{
+		*Name: "Product_Manhattan2"
+		*Constraints: LIST(JobDeviceLanguage.None,JobDeviceLanguage.PCL6,JobDeviceLanguage.PCLmS,JobDeviceLanguage.PS,JobDeviceLanguage.HybridRaster,JobDeviceLanguage.PDF)
+		*Constraints: LIST(JobDeviceMarigin.Margin0,JobDeviceMarigin.Margin100)
+	    *Constraints: LIST(MediaType.AutoSelectMediaType,MediaType.HPLaserJet90gsm,MediaType.HPMatte90gsm,MediaType.light,MediaType.intermediate,MediaType.Bond,MediaType.recycled,MediaType.HPColorLaser105gsm,MediaType.HPPremium_120gsm,MediaType.HPPremiumChoice_120gsm,MediaType.HPPremiumPresentationMatte,MediaType.HPPresentationSoftGloss120gsm,MediaType.HPProfessionalSoftGloss120gsm,MediaType.HPProfessionalSoftGloss120gsm_2,MediaType.HPProfessionalGlossy130gsm,MediaType.HPPresentationGlossy130gsm,MediaType.HPPremiumInkjet,MediaType.midweight,MediaType.heavy,MediaType.midweightGlossy,MediaType.heavyGlossy,MediaType.thickPlain,MediaType.matte,MediaType.HPSuperiorMatte160gsm,MediaType.HPBrochureMatte160gsm,MediaType.HPSuperiorGlossy160gsm,MediaType.HPBrochureGlossy160gsm,MediaType.HPTrifoldBrochureGlossy,MediaType.HPBrochureMatte180gsm,MediaType.HPBrochureGlossy180gsm,MediaType.extraHeavy,MediaType.extraHeavyGloss,MediaType.matteBrochure,MediaType.HPBrochureAndFlyerPaperMatte,MediaType.HPGlossyEdgeline180g,MediaType.HPTrifoldBrochureGlossy180gsm,MediaType.HPMatteCover200gsm,MediaType.HPMattePhoto200gsm,MediaType.HPGlossPhoto220gsm,MediaType.HPGlossPhoto220gsm_2,MediaType.HPGlossPhoto220gsmFasterPrinting,MediaType.HPGlossPhoto220gsmHigherGloss,MediaType.HPEverydayPhotoMatte,MediaType.HPAdvancedPhoto,MediaType.HPPremiumPlusPhoto,MediaType.photoOther,MediaType.cardstockGeneral,MediaType.Cardstock176220g,MediaType.cardstockGlossy,MediaType.matteCover,MediaType.HPPremiumInkjetTransparency,MediaType.transparencyColorLaser,MediaType.transparencyMonoLaser,MediaType.transparency,MediaType.transparencyOther,MediaType.Labels,MediaType.ShelfEdgeLabels,MediaType.stationeryletterhead,MediaType.Envelope,MediaType.HeavyEnvelope,MediaType.stationerypreprinted,MediaType.stationeryprepunched,MediaType.color,MediaType.rough,MediaType.heavyRough,MediaType.vellum,MediaType.tab,MediaType.filmOpaque,MediaType.HPEcoSMARTLite,MediaType.lightRough,MediaType.lightBond,MediaType.Paperboard,MediaType.heavyPaperboard,MediaType.lightPaperboard,MediaType.thin,MediaType.cotton,MediaType.archive,MediaType.thicker,MediaType.heavyweight,MediaType.extraheavyweight1,MediaType.extraheavyweight2,MediaType.thincardstock,MediaType.thickcardstock,MediaType.thinglossy,MediaType.thickglossy,MediaType.glossyphoto111130,MediaType.glossyphoto131175,MediaType.glossyphoto176220,MediaType.thickenvelope,MediaType.thick,MediaType.extraheavyweight3,MediaType.extraheavyweight4,MediaType.heavycardstock,MediaType.extraheavycardstock1,MediaType.extraheavycardstock2,MediaType.extraheavyweight)
+		*Constraints: LIST(PaperSize.A3,PaperSize.B4,PaperSize.11X17,PaperSize.ENV_9,PaperSize.CSHEET,PaperSize.ENV_C4,PaperSize.ENV_B5,PaperSize.A2,PaperSize.DBL_JAPANESE_POSTCARD_ROTATED,PaperSize.B6_JIS,PaperSize.EXECUTIVE_JIS,PaperSize.FANFOLD_LGL_GERMAN,PaperSize.NA12X18,PaperSize.RA3,PaperSize.SRA3,PaperSize.RA4,PaperSize.SRA4,PaperSize.INDEX9X13,PaperSize.OFFICIO216X340MM,PaperSize.OFFICIO216X343MM,PaperSize.OFFICIO216X347MM,PaperSize.ROC8K270X390,PaperSize.ROC16K195X270,PaperSize.ROC8K260X368,PaperSize.ROC16K184X260,PaperSize.ROC8K273X394,PaperSize.ROC16K197X273,PaperSize.INDEX11X14,PaperSize.INDEX5X5)
+		*Constraints: LIST(InputBin.Tray1,InputBin.PhotoTray)
+
+	}
+	*Option: Product_Manhattan3
+	{
+		*Name: "Product_Manhattan3"
+		*Constraints: LIST(JobDeviceLanguage.None,JobDeviceLanguage.PCL6,JobDeviceLanguage.PCLmS,JobDeviceLanguage.PS,JobDeviceLanguage.HybridRaster,JobDeviceLanguage.PDF)
+		*Constraints: LIST(JobDeviceMarigin.Margin0,JobDeviceMarigin.Margin100)
+	    *Constraints: LIST(MediaType.AutoSelectMediaType,MediaType.HPLaserJet90gsm,MediaType.HPMatte90gsm,MediaType.light,MediaType.intermediate,MediaType.Bond,MediaType.recycled,MediaType.HPColorLaser105gsm,MediaType.HPPremium_120gsm,MediaType.HPPremiumChoice_120gsm,MediaType.HPPremiumPresentationMatte,MediaType.HPPresentationSoftGloss120gsm,MediaType.HPProfessionalSoftGloss120gsm,MediaType.HPProfessionalSoftGloss120gsm_2,MediaType.HPProfessionalGlossy130gsm,MediaType.HPPresentationGlossy130gsm,MediaType.HPPremiumInkjet,MediaType.midweight,MediaType.heavy,MediaType.midweightGlossy,MediaType.heavyGlossy,MediaType.thickPlain,MediaType.matte,MediaType.HPSuperiorMatte160gsm,MediaType.HPBrochureMatte160gsm,MediaType.HPSuperiorGlossy160gsm,MediaType.HPBrochureGlossy160gsm,MediaType.HPTrifoldBrochureGlossy,MediaType.HPBrochureMatte180gsm,MediaType.HPBrochureGlossy180gsm,MediaType.extraHeavy,MediaType.extraHeavyGloss,MediaType.matteBrochure,MediaType.HPBrochureAndFlyerPaperMatte,MediaType.HPGlossyEdgeline180g,MediaType.HPTrifoldBrochureGlossy180gsm,MediaType.HPMatteCover200gsm,MediaType.HPMattePhoto200gsm,MediaType.HPGlossPhoto220gsm,MediaType.HPGlossPhoto220gsm_2,MediaType.HPGlossPhoto220gsmFasterPrinting,MediaType.HPGlossPhoto220gsmHigherGloss,MediaType.HPEverydayPhotoMatte,MediaType.HPAdvancedPhoto,MediaType.HPPremiumPlusPhoto,MediaType.photoOther,MediaType.cardstockGeneral,MediaType.Cardstock176220g,MediaType.cardstockGlossy,MediaType.matteCover,MediaType.HPPremiumInkjetTransparency,MediaType.transparencyColorLaser,MediaType.transparencyMonoLaser,MediaType.transparency,MediaType.transparencyOther,MediaType.Labels,MediaType.ShelfEdgeLabels,MediaType.stationeryletterhead,MediaType.Envelope,MediaType.HeavyEnvelope,MediaType.stationerypreprinted,MediaType.stationeryprepunched,MediaType.color,MediaType.rough,MediaType.heavyRough,MediaType.vellum,MediaType.tab,MediaType.filmOpaque,MediaType.HPEcoSMARTLite,MediaType.lightRough,MediaType.lightBond,MediaType.Paperboard,MediaType.heavyPaperboard,MediaType.lightPaperboard,MediaType.thin,MediaType.cotton,MediaType.archive,MediaType.thicker,MediaType.heavyweight,MediaType.extraheavyweight1,MediaType.extraheavyweight2,MediaType.thincardstock,MediaType.thickcardstock,MediaType.thinglossy,MediaType.thickglossy,MediaType.glossyphoto111130,MediaType.glossyphoto131175,MediaType.glossyphoto176220,MediaType.thickenvelope,MediaType.thick,MediaType.extraheavyweight3,MediaType.extraheavyweight4,MediaType.heavycardstock,MediaType.extraheavycardstock1,MediaType.extraheavycardstock2,MediaType.extraheavyweight)
+		*Constraints: LIST(PaperSize.A3,PaperSize.B4,PaperSize.11X17,PaperSize.ENV_9,PaperSize.CSHEET,PaperSize.ENV_C4,PaperSize.ENV_B5,PaperSize.A2,PaperSize.DBL_JAPANESE_POSTCARD_ROTATED,PaperSize.B6_JIS,PaperSize.EXECUTIVE_JIS,PaperSize.FANFOLD_LGL_GERMAN,PaperSize.NA12X18,PaperSize.RA3,PaperSize.SRA3,PaperSize.RA4,PaperSize.SRA4,PaperSize.INDEX9X13,PaperSize.OFFICIO216X340MM,PaperSize.OFFICIO216X343MM,PaperSize.OFFICIO216X347MM,PaperSize.ROC8K270X390,PaperSize.ROC16K195X270,PaperSize.ROC8K260X368,PaperSize.ROC16K184X260,PaperSize.ROC8K273X394,PaperSize.ROC16K197X273,PaperSize.INDEX11X14,PaperSize.INDEX5X5)
+		*Constraints: LIST(InputBin.Tray1,InputBin.PhotoTray)
+
+	}
+	*Option: None
+	{
+		*Name: "None"
+	}
+}
+
+*%==============================================================================
+*%                    Product_Model_FDNR                     
+*%==============================================================================
+*Feature: Product_Model_FDNR
+{
+	*Name: "Product_Model_FDNR"
+	*FeatureType: PRINTER_PROPERTY
+	*DefaultOption: None
+*Ifdef: DRIVER_TYPE_SUPD
+	*ConcealFromUI?: =FeatureConcealFromUI
+*Else:
+	*ConcealFromUI?: TRUE
+*Endif: DRIVER_TYPE_SUPD
+
+	*Option: FDNRPCLCFeed {*Name: "FDNR2CFeed"}
+    *Option: FDNRPCLCFeed_1 { *Name: "FDNR2CFeed_1"}
+	*Option: FDNRPCLCFeed_2 { *Name: "FDNR2CFeed_2"}
+	*Option: FDNR6 { *Name: "FDNR6" }
+	*Option: FDNR6_1 { *Name: "FDNR6" }
+	*Option: FDNR6_2 { *Name: "FDNR6" }
+	*Option: FDNR6_3 { *Name: "FDNR6" }
+	*Option: FDNR6_4 { *Name: "FDNR6" }
+	*Option: FDNR6_5 { *Name: "FDNR6" }
+	*Option: FDNR6_6 { *Name: "FDNR6" }
+	*Option: FDNR6_7 { *Name: "FDNR6" }
+	*Option: FDNR6_8 { *Name: "FDNR6" }
+	*Option: FDNR6_9 { *Name: "FDNR6" }
+	*Option: FDNR6_10 { *Name: "FDNR6" }
+	*Option: FDNR6_11 { *Name: "FDNR6" }
+	*Option: FDNR6_12 { *Name: "FDNR6" }
+	*Option: FDNR6_13 { *Name: "FDNR6" }
+	*Option: FDNR6_14 { *Name: "FDNR6" }
+	*Option: FDNR6_15 { *Name: "FDNR6" }
+	*Option: FDNR6_16 { *Name: "FDNR6" }
+	*Option: FDNR6_17 { *Name: "FDNR6" }
+	
+	*Option: FDNR6_18 { *Name: "FDNR6" }
+	*Option: FDNR6_19 { *Name: "FDNR6" }
+	*Option: FDNR6_20 { *Name: "FDNR6" }
+	*Option: FDNR6_21 { *Name: "FDNR6" }
+	*Option: FDNR6_22 { *Name: "FDNR6" }
+	*Option: FDNR6_23 { *Name: "FDNR6" }
+	*Option: FDNR6_24 { *Name: "FDNR6" }
+	*Option: FDNR6_25 { *Name: "FDNR6" }
+	*Option: FDNR6_26 { *Name: "FDNR6" }
+	*Option: FDNR6_27 { *Name: "FDNR6" }
+	*Option: FDNR6_28 { *Name: "FDNR6" }
+	*Option: FDNR6_29 { *Name: "FDNR6" }
+	*Option: FDNR6_30 { *Name: "FDNR6" }
+	*Option: FDNR6_31 { *Name: "FDNR6" }
+	*Option: FDNR6_32 { *Name: "FDNR6" }
+	*Option: FDNR6_33 { *Name: "FDNR6" }
+	*Option: FDNR6_34 { *Name: "FDNR6" }
+	*Option: FDNR6_35 { *Name: "FDNR6" }
+	*Option: FDNR6_36 { *Name: "FDNR6" }
+	*Option: FDNR6_37 { *Name: "FDNR6" }
+	*Option: FDNR6_38 { *Name: "FDNR6" }
+	*Option: FDNR6_39 { *Name: "FDNR6" }
+	*Option: FDNR6_40 { *Name: "FDNR6" }
+	*Option: FDNR6_41 { *Name: "FDNR6" }
+	*Option: FDNR6_42 { *Name: "FDNR6" }
+	*Option: FDNR6_43 { *Name: "FDNR6" }
+	*Option: FDNR6_44 { *Name: "FDNR6" }
+	*Option: FDNR6_45 { *Name: "FDNR6" }
+	*Option: FDNR6_46 { *Name: "FDNR6" }
+	*Option: FDNR6_47 { *Name: "FDNR6" }
+	*Option: FDNR6_48 { *Name: "FDNR6" }
+	*Option: FDNR6_49 { *Name: "FDNR6" }
+	*Option: FDNR6_50 { *Name: "FDNR6" }
+	*Option: FDNR6_51 { *Name: "FDNR6" }
+	*Option: FDNRGeneric { *Name: "FDNR6" }
+	*Option: FDNRGeneric_2 { *Name: "FDNR6" }
+	*Option: FDNRGeneric_3 { *Name: "FDNR6" }
+	*Option: FDNRGeneric_4 { *Name: "FDNR6" }
+	*Option: FDNRGeneric_5 { *Name: "FDNR6" }
+	*Option: FDNRGeneric_6 { *Name: "FDNR6" }
+
+	
+	*Option: FDNRGeneric_7 { *Name: "FDNR6" }
+	*Option: FDNRGeneric_8 { *Name: "FDNR6" }
+	*Option: FDNRGeneric_9 { *Name: "FDNR6" }
+	*Option: FDNRGeneric_10 { *Name: "FDNR6" }
+	*Option: FDNRGeneric_11 { *Name: "FDNR6" }
+	*Option: FDNRGeneric_12 { *Name: "FDNR6" }
+	
+	
+	*Option: FDNRGeneric_13 { *Name: "FDNR6" }
+	*Option: FDNRGeneric_14 { *Name: "FDNR6" }
+	
+	
+	*Option: FDNR12 { *Name: "FDNR12" }
+	*Option: FDNR12_2 { *Name: "FDNR12" }
+	*Option: FDNR12_3 { *Name: "FDNR12" }
+	*Option: FDNR12_4 { *Name: "FDNR12" }
+	*Option: FDNR12_5 { *Name: "FDNR12" }
+	*Option: FDNR12_6 { *Name: "FDNR12" }
+	*Option: FDNR12_7 { *Name: "FDNR12" }
+	*Option: FDNR12_8 { *Name: "FDNR12" }
+	*Option: FDNR12_9 { *Name: "FDNR12" }
+	*Option: FDNR12_10 { *Name: "FDNR12" }
+	*Option: FDNR12_11 { *Name: "FDNR12" }
+	*Option: FDNR12_12 { *Name: "FDNR12" }
+	*Option: FDNR12_13 { *Name: "FDNR12" }
+	*Option: FDNR12_14 { *Name: "FDNR12" }
+
+	*Option: FDNR1 { *Name: "FDNR1"}
+    *Option: FDNR1_2 {*Name: "FDNR1"}
+    *Option: FDNR1_3 {*Name: "FDNR1"}
+    *Option: FDNR1_4 {*Name: "FDNR1"}
+    *Option: FDNR1_5 {*Name: "FDNR1"}
+    *Option: FDNR1_6 {*Name: "FDNR1"}
+    *Option: FDNR1_7 {*Name: "FDNR1"}
+    *Option: FDNR1_8 {*Name: "FDNR1"}
+    *Option: FDNR1_9 {*Name: "FDNR1"}
+    *Option: FDNR1_10 {*Name: "FDNR1"}
+    *Option: FDNR1_11 {*Name: "FDNR1"}
+    *Option: FDNR1_12 {*Name: "FDNR1"}
+    *Option: FDNR1_13 {*Name: "FDNR1"}
+    *Option: FDNR1_14 {*Name: "FDNR1"}
+    *Option: FDNR1_15 {*Name: "FDNR1"}
+    *Option: FDNR1_16 {*Name: "FDNR1"}
+    *Option: FDNR1_17 {*Name: "FDNR1"}
+    *Option: FDNR1_18 {*Name: "FDNR1"}
+    *Option: FDNR1_19 {*Name: "FDNR1"}
+    *Option: FDNR1_20 {*Name: "FDNR1"}
+    *Option: FDNR1_21 {*Name: "FDNR1"}
+    *Option: FDNR1_22 {*Name: "FDNR1"}
+    *Option: FDNR1_23 {*Name: "FDNR1"}
+    *Option: FDNR1_24 {*Name: "FDNR1"}
+    *Option: FDNR1_25 {*Name: "FDNR1"}
+	*Option: FDNR1_26 {*Name: "FDNR1"}
+    *Option: FDNR1_27 {*Name: "FDNR1"}
+    *Option: FDNR1_28 {*Name: "FDNR1"}
+	*Option: FDNR1_29 {*Name: "FDNR1"}
+    *Option: FDNR1_30 {*Name: "FDNR1"}
+	*Option: FDNR1_31 {*Name: "FDNR1"}
+	*Option: FDNR1_32 {*Name: "FDNR1"}
+	*Option: FDNR1_33 {*Name: "FDNR1"}
+	*Option: FDNR1_34 {*Name: "FDNR1"}
+	*Option: FDNR1_35 {*Name: "FDNR1"}
+	*Option: FDNR1_36 {*Name: "FDNR1"}
+	*Option: FDNR1_37 {*Name: "FDNR1"}
+	*Option: FDNR1_38 {*Name: "FDNR1"}
+	
+	*Option: FDNR1_39 {*Name: "FDNR1"}
+	*Option: FDNR1_40 {*Name: "FDNR1"}
+	*Option: FDNR1_41 {*Name: "FDNR1"}
+	*Option: FDNR1_42 {*Name: "FDNR1"}
+	
+	*Option: FDNR1_43 {*Name: "FDNR1"}
+	*Option: FDNR1_44 {*Name: "FDNR1"}
+	*Option: FDNR1_45 {*Name: "FDNR1"}
+	*Option: FDNR1_46 {*Name: "FDNR1"}
+
+	
+	*Option: FDNRPCLm2 {*Name: "FDNRPCLm Type 2"}
+	
+	*Option: FDNRPCLm2_1 {*Name: "FDNRPCLm Type 2"}
+	*Option: None { *Name: "None" }
+}
+
+*%==============================================================================
+*%                    EasyColorDefault (Installable)                      
+*%==============================================================================
+*Feature: EasyColorDefault
+{
+	*ConflictPriority: 3
+	*Name: "EasyColorDefault"
+	*FeatureType: PRINTER_PROPERTY
+	*ConcealFromUI?: =FeatureConcealFromUI
+	*switch: Product_CID
+		{
+			*Case: Product_Unknown
+			{
+				*DefaultOption: ECConservative
+			}		                 			
+		}	
+	*Option: ECOff
+	{
+		*Name: "Off"
+	}
+	*Option: ECOn
+	{
+		*Name: "On"
+	}
+	*Option: ECConservative
+	{
+		*Name: "Conservative"
+	}
+}
+
+*Ifdef: DRIVER_TYPE_SUPD
+*Ifdef: DRIVER_ARCHITECTURE_V4
+*%==============================================================================*%
+*%                       AdvancedColorOptionsAvailable                          *%
+*%==============================================================================*%
+*Feature: AdvancedColorOptionsAvailable
+{
+	*%rcNameID: =IDS_PC_ADVANCE_COLOR_OPTION
+	*Name: "PC_ADVANCE_COLOR_OPTION"
+	*FeatureType: PRINTER_PROPERTY
+	*ConcealFromUI?: =FeatureConcealFromUI
+	*DefaultOption: NotAvailable
+	*Option: NotAvailable
+	{
+		*rcNameID: =IDS_NOTAVAILABLE
+
+			*Constraints: LIST(GeneralEdgeControl.GeneralOff,GeneralEdgeControl.GeneralLight,GeneralEdgeControl.GeneralNormal,GeneralEdgeControl.GeneralMax)
+			*Constraints: LIST(PageColorCorrectionGrays.Black,PageColorCorrectionGrays.Composite)
+			*Constraints: LIST(TextGrays.Black,TextGrays.Composite)
+			*Constraints: LIST(GraphicsGrays.Black,GraphicsGrays.Composite)
+			*Constraints: LIST(ImageGrays.Black,ImageGrays.Composite)
+			*Constraints: LIST(ColorCorrectionHalftone.Smooth,ColorCorrectionHalftone.Detail)
+			*Constraints: LIST(TextHalftone.Smooth,TextHalftone.Detail)
+			*Constraints: LIST(GraphicsHalftone.Smooth,GraphicsHalftone.Detail)
+			*Constraints: LIST(ImageHalftone.Smooth,ImageHalftone.Detail)
+	}
+	*Option: Available
+	{
+		*rcNameID: =IDS_AVAILABLE
+	}
+}
+
+*%==============================================================================*%
+*%                               Ink Settings Available                         *%
+*%==============================================================================*%
+*Feature: AdvancedInkSettingsAvailable
+{
+	*%rcNameID: =IDS_PC_ADVANCE_INK_OPTION
+	*Name: "PC_ADVANCE_INK_OPTION"
+	*FeatureType: PRINTER_PROPERTY
+	*ConcealFromUI?: =FeatureConcealFromUI
+	*DefaultOption: NotAvailable
+	*Option: NotAvailable
+	{
+		*rcNameID: =IDS_NOTAVAILABLE
+	}
+	*Option: Available
+	{
+		*rcNameID: =IDS_AVAILABLE
+	}
+}
+*Endif: DRIVER_ARCHITECTURE_V4
+*%==============================================================================*%
+*%                    DeviceCollationControl (Installable)                      *%
+*%==============================================================================*%
+*Feature: DeviceCollationControl
+{
+	*%rcNameID: =IDS_PC_MOPIER_MODE
+	*Name: "PC_MOPIER_MODE"
+	*DefaultOption: disable
+	*FeatureType: PRINTER_PROPERTY
+	*ConcealFromUI?: =FeatureConcealFromUI
+	*Option: disable
+	{
+		*rcNameID: =IDS_NOTINSTALLED
+	}
+	*Option: auto
+	{
+		*rcNameID: =IDS_INSTALLED
+	}
+}
+
+
+*%==============================================================================*%
+*%                               ColorOrMonoPrinter                             *%
+*%==============================================================================*%
+*Feature: ColorOrMonoPrinter
+{
+	*%rcNameID: =IDS_PC_DEVICE_RENDER_TYPE
+	*Name: "PC_DEVICE_RENDER_TYPE"
+	*DefaultOption: MonoPrinter
+	*FeatureType: PRINTER_PROPERTY
+	*ConcealFromUI?: =FeatureConcealFromUI
+	*Option: MonoPrinter
+	{
+		*rcNameID: =IDS_DEVICE_TYPE_MONOCHROME
+	}
+	*Option: ColorPrinter
+	{
+		*rcNameID: =IDS_DEVICE_TYPE_COLOR
+	}
+	*Option: ColorPrinter_IPH
+	{
+		*rcNameID: =IDS_DEVICE_TYPE_COLOR
+	}
+}
+
+*Feature: IsAutoconfigDone
+{
+	*Name: "PC_Autoconfig Done"
+	*FeatureType: PRINTER_PROPERTY
+	*ConcealFromUI?: =FeatureConcealFromUI
+	*Option: NOTYET
+	{
+		*Name: "NOTYET"
+	}
+	*Option: DONE_MIB
+	{
+		*Name: "DONE_MIB"
+	}
+	*Option: DONE_MIB_IPH
+	{
+		*Name: "DONE_MIB_IPH"
+	}
+	*Option: DONE_WSD
+	{
+		*Name: "DONE_WSD"
+	}
+}
+
+*%==============================================================================
+*%   Staple
+*%==============================================================================
+*%==============================================================================
+*%                       PC_StapleTopLeft (Installable)
+*%==============================================================================
+*Feature: PC_StapleTopLeft
+{
+	*%rcNameID: =IDS_PC_STAPLING_TOPLEFT
+	*Name: "PC_STAPLING_TOPLEFT"
+	*FeatureType: PRINTER_PROPERTY
+	*ConcealFromUI?: =FeatureConcealFromUI
+	*Option: NotInstalled
+	{		
+		*rcNameID: =IDS_NOTINSTALLED
+		*DisabledFeatures: LIST(Stapling)
+	}
+	*Option: Installed
+	{
+		*rcNameID: =IDS_INSTALLED
+	}
+}
+
+*%==============================================================================
+*%                       PC_StapleTopRight (Installable)    
+*%==============================================================================
+*Feature: PC_StapleTopRight
+{
+	*%rcNameID: =IDS_PC_STAPLING_TOPRIGHT
+	*Name: "PC_STAPLING_TOPRIGHT"
+	*FeatureType: PRINTER_PROPERTY
+	*ConcealFromUI?: =FeatureConcealFromUI
+	*Option: NotInstalled
+	{
+		*rcNameID: =IDS_NOTINSTALLED
+	}
+	*Option: Installed
+	{
+		*rcNameID: =IDS_INSTALLED
+	}
+}
+
+*%==============================================================================
+*%                       PC_StapleDualLeft (Installable)    
+*%==============================================================================
+*Feature: PC_StapleDualLeft
+{
+	*%rcNameID: =IDS_PC_STAPLING_DUALLEFT
+	*Name: "PC_STAPLING_DUALLEFT"
+	*FeatureType: PRINTER_PROPERTY
+	*ConcealFromUI?: =FeatureConcealFromUI
+	*Option: NotInstalled
+	{
+		*rcNameID: =IDS_NOTINSTALLED
+	}
+	*Option: Installed
+	{
+		*rcNameID: =IDS_INSTALLED
+	}
+}
+
+*%==============================================================================
+*%                      PC_StapleDualRight (Installable)     
+*%==============================================================================
+*Feature: PC_StapleDualRight
+{
+	*%rcNameID: =IDS_PC_STAPLING_DUALRIGHT
+	*Name: "PC_STAPLING_DUALRIGHT"
+	*FeatureType: PRINTER_PROPERTY
+	*ConcealFromUI?: =FeatureConcealFromUI
+	*Option: NotInstalled
+	{
+		*rcNameID: =IDS_NOTINSTALLED
+	}
+	*Option: Installed
+	{
+		*rcNameID: =IDS_INSTALLED
+	}
+}
+
+*%==============================================================================
+*%                       PC_StapleDualTop (Installable)      
+*%==============================================================================
+*Feature: PC_StapleDualTop
+{
+	*%rcNameID: =IDS_PC_STAPLING_DUALTOP
+	*Name: "PC_STAPLING_DUALTOP"
+	*FeatureType: PRINTER_PROPERTY
+	*ConcealFromUI?: =FeatureConcealFromUI
+	*Option: NotInstalled
+	{
+		*rcNameID: =IDS_NOTINSTALLED
+	}
+	*Option: Installed
+	{
+		*rcNameID: =IDS_INSTALLED
+	}
+}
+
+*%==============================================================================
+*%                      PC_StapleDualBottom (Installable)    
+*%==============================================================================
+*Feature: PC_StapleDualBottom
+{
+	*%rcNameID: =IDS_PC_STAPLING_DUALBOTTOM
+	*Name: "PC_STAPLING_DUALBOTTOM"
+	*FeatureType: PRINTER_PROPERTY
+	*ConcealFromUI?: =FeatureConcealFromUI
+	*Option: NotInstalled
+	{
+		*rcNameID: =IDS_NOTINSTALLED
+	}
+	*Option: Installed
+	{
+		*rcNameID: =IDS_INSTALLED
+	}
+}
+
+*%==============================================================================
+*%                      PC_StapleTripleLeft (Installable)   
+*%==============================================================================
+*Feature: PC_StapleTripleLeft
+{
+	*%rcNameID: =IDS_PC_STAPLING_TRIPLELEFT
+	*Name: "PC_STAPLING_TRIPLELEFT"
+	*FeatureType: PRINTER_PROPERTY
+	*ConcealFromUI?: =FeatureConcealFromUI
+	*Option: NotInstalled
+	{
+		*rcNameID: =IDS_NOTINSTALLED
+	}
+	*Option: Installed
+	{
+		*rcNameID: =IDS_INSTALLED
+	}
+}
+
+*%==============================================================================
+*%                     PC_StapleTripleRight (Installable) 
+*%==============================================================================
+*Feature: PC_StapleTripleRight
+{
+	*%rcNameID: =IDS_PC_STAPLING_TRIPLERIGHT
+	*Name: "PC_STAPLING_TRIPLERIGHT"
+	*FeatureType: PRINTER_PROPERTY
+	*ConcealFromUI?: =FeatureConcealFromUI
+	*Option: NotInstalled
+	{
+		*rcNameID: =IDS_NOTINSTALLED
+	}
+	*Option: Installed
+	{
+		*rcNameID: =IDS_INSTALLED
+	}
+}
+
+
+*%==============================================================================
+*%                      PC_StapleTripleTop (Installable)    
+*%==============================================================================
+*Feature: PC_StapleTripleTop
+{
+	*%rcNameID: =IDS_PC_STAPLING_TRIPLETOP
+	*Name: "PC_STAPLING_TRIPLETOP"
+	*FeatureType: PRINTER_PROPERTY
+	*ConcealFromUI?: =FeatureConcealFromUI
+	*Option: NotInstalled
+	{
+		*rcNameID: =IDS_NOTINSTALLED
+	}
+	*Option: Installed
+	{
+		*rcNameID: =IDS_INSTALLED
+	}
+}
+
+*%==============================================================================
+*%                     PC_StapleTripleBottom (Installable)        
+*%==============================================================================
+*Feature: PC_StapleTripleBottom
+{
+	*%rcNameID: =IDS_PC_STAPLING_TRIPLEBOTTOM
+	*Name: "PC_STAPLING_TRIPLEBOTTOM"
+	*FeatureType: PRINTER_PROPERTY
+	*ConcealFromUI?: =FeatureConcealFromUI
+	*Option: NotInstalled
+	{
+		*rcNameID: =IDS_NOTINSTALLED
+	}
+	*Option: Installed
+	{
+		*rcNameID: =IDS_INSTALLED
+	}
+}
+
+*%==============================================================================
+*%                    PC_StapleFoldAndStitch (Installable)      
+*%==============================================================================
+*Feature: PC_StapleFoldAndStitch
+{
+	*%rcNameID: =IDS_PC_FOLD_AND_STITCH
+	*Name: "PC_FOLD_AND_STITCH"
+	*FeatureType: PRINTER_PROPERTY
+	*ConcealFromUI?: =FeatureConcealFromUI
+	*Option: NotInstalled
+	{
+		*rcNameID: =IDS_NOTINSTALLED
+	}
+	*Option: Installed
+	{
+		*rcNameID: =IDS_INSTALLED
+	}
+}
+
+*Feature: PC_FoldAndStitchForceReverseOrderSupport
+{
+	*%rcNameID: =IDS_PC_FOLD_AND_STITCH_REVERSE
+	*Name: "PC_FOLD_AND_STITCH_REVERSE"
+	*FeatureType: PRINTER_PROPERTY
+	*DefaultOption: NotSupported
+	*ConcealFromUI?: =FeatureConcealFromUI
+
+	*Option: NotSupported
+	{
+		*rcNameID: =IDS_NOTSUPPORT
+	}
+
+	*Option: Supported
+	{
+		*rcNameID: =IDS_SUPPORT
+	}
+}
+
+*%==============================================================================
+*%                                  Punching                                    
+*%==============================================================================
+
+*%==============================================================================
+*%                        PC_PunchRegion (Installable)  
+*%==============================================================================
+*Feature: PC_PunchRegion
+{
+	*%rcNameID: =IDS_PC_PUNCH_REGION
+	*Name: "PC_PUNCH_REGION"
+	*FeatureType: PRINTER_PROPERTY
+	*ConcealFromUI?: =FeatureConcealFromUI
+	*Option: NotInstalled
+	{
+		*rcNameID: =IDS_NOTINSTALLED
+	}
+	*Option: US
+	{
+		*Name: "US"
+	}
+	*Option: DIN
+	{
+		*Name: "DIN"
+	}
+	*Option: SWD
+	{
+		*Name: "SWD"
+	}
+}
+
+*%==============================================================================
+*%                      PC_TwoHolePunchLeft (Installable)  
+*%==============================================================================
+*Feature: PC_TwoHolePunchLeft
+{
+	*%rcNameID: =IDS_PC_TWO_PUNCH_LEFT
+	*Name: "PC_TWO_PUNCH_LEFT"
+	*FeatureType: PRINTER_PROPERTY
+	*ConcealFromUI?: =FeatureConcealFromUI
+	*Option: NotInstalled
+	{
+		*rcNameID: =IDS_NOTINSTALLED
+	}
+	*Option: Installed
+	{
+		*rcNameID: =IDS_INSTALLED
+	}
+}
+
+*%==============================================================================
+*%                     PC_TwoHolePunchRight (Installable)   
+*%==============================================================================
+*Feature: PC_TwoHolePunchRight
+{
+	*%rcNameID: =IDS_PC_TWO_PUNCH_RIGHT
+	*Name: "PC_TWO_PUNCH_RIGHT"
+	*FeatureType: PRINTER_PROPERTY
+	*ConcealFromUI?: =FeatureConcealFromUI
+	*Option: NotInstalled
+	{
+		*rcNameID: =IDS_NOTINSTALLED
+	}
+	*Option: Installed
+	{
+		*rcNameID: =IDS_INSTALLED
+	}
+
+}
+
+*%==============================================================================
+*%                      PC_TwoHolePunchTop (Installable)     
+*%==============================================================================
+*Feature: PC_TwoHolePunchTop
+{
+	*%rcNameID: =IDS_PC_TWO_PUNCH_TOP
+	*Name: "PC_TWO_PUNCH_TOP"
+	*FeatureType: PRINTER_PROPERTY
+	*ConcealFromUI?: =FeatureConcealFromUI
+	*Option: NotInstalled
+	{
+		*rcNameID: =IDS_NOTINSTALLED
+	}
+	*Option: Installed
+	{
+		*rcNameID: =IDS_INSTALLED
+	}
+}
+
+*%==============================================================================
+*%                     PC_TwoHolePunchBottom (Installable)   
+*%==============================================================================
+*Feature: PC_TwoHolePunchBottom
+{
+	*%rcNameID: =IDS_PC_TWO_PUNCH_BOTTOM
+	*Name: "PC_TWO_PUNCH_BOTTOM"
+	*FeatureType: PRINTER_PROPERTY
+	*ConcealFromUI?: =FeatureConcealFromUI
+	*Option: NotInstalled
+	{
+		*rcNameID: =IDS_NOTINSTALLED
+	}
+	*Option: Installed
+	{
+		*rcNameID: =IDS_INSTALLED
+	}
+}
+
+*%==============================================================================
+*%                     PC_ThreeHolePunchLeft (Installable)
+*%==============================================================================
+*Feature: PC_ThreeHolePunchLeft
+{
+	*%rcNameID: =IDS_PC_THREE_PUNCH_LEFT
+	*Name: "PC_THREE_PUNCH_LEFT"
+	*FeatureType: PRINTER_PROPERTY
+	*ConcealFromUI?: =FeatureConcealFromUI
+	*Option: NotInstalled
+	{
+		*rcNameID: =IDS_NOTINSTALLED
+	}
+	*Option: Installed
+	{
+		*rcNameID: =IDS_INSTALLED
+	}
+
+}
+
+*%==============================================================================
+*%                    PC_ThreeHolePunchRight (Installable) 
+*%==============================================================================
+*Feature: PC_ThreeHolePunchRight
+{
+	*%rcNameID: =IDS_PC_THREE_PUNCH_RIGHT
+	*Name: "PC_THREE_PUNCH_RIGHT"
+	*FeatureType: PRINTER_PROPERTY
+	*ConcealFromUI?: =FeatureConcealFromUI
+	*Option: NotInstalled
+	{
+		*rcNameID: =IDS_NOTINSTALLED
+	}
+	*Option: Installed
+	{
+		*rcNameID: =IDS_INSTALLED
+	}
+}
+
+*%==============================================================================
+*%                     PC_ThreeHolePunchTop (Installable)    
+*%==============================================================================
+*Feature: PC_ThreeHolePunchTop
+{
+	*%rcNameID: =IDS_PC_THREE_PUNCH_TOP
+	*Name: "PC_THREE_PUNCH_TOP"
+	*FeatureType: PRINTER_PROPERTY
+	*ConcealFromUI?: =FeatureConcealFromUI
+	*Option: NotInstalled
+	{
+		*rcNameID: =IDS_NOTINSTALLED
+	}
+	*Option: Installed
+	{
+		*rcNameID: =IDS_INSTALLED
+	}
+}
+
+*%==============================================================================
+*%                    PC_ThreeHolePunchBottom (Installable)    
+*%==============================================================================
+*Feature: PC_ThreeHolePunchBottom
+{
+	*%rcNameID: =IDS_PC_THREE_PUNCH_BOTTOM
+	*Name: "PC_THREE_PUNCH_BOTTOM"
+	*FeatureType: PRINTER_PROPERTY
+	*ConcealFromUI?: =FeatureConcealFromUI
+	*Option: NotInstalled
+	{
+		*rcNameID: =IDS_NOTINSTALLED
+	}
+	*Option: Installed
+	{
+		*rcNameID: =IDS_INSTALLED
+	}
+}
+
+*%==============================================================================
+*%                     PC_FourHolePunchLeft (Installable)
+*%==============================================================================
+*Feature: PC_FourHolePunchLeft
+{
+	*%rcNameID: =IDS_PC_FOUR_PUNCH_LEFT
+	*Name: "PC_FOUR_PUNCH_LEFT"
+	*FeatureType: PRINTER_PROPERTY
+	*ConcealFromUI?: =FeatureConcealFromUI
+	*Option: NotInstalled
+	{
+		*rcNameID: =IDS_NOTINSTALLED
+	}
+	*Option: Installed
+	{
+		*rcNameID: =IDS_INSTALLED
+	}
+}
+
+*%==============================================================================
+*%                     PC_FourHolePunchRight (Installable) 
+*%==============================================================================
+*Feature: PC_FourHolePunchRight
+{
+	*%rcNameID: =IDS_PC_FOUR_PUNCH_RIGHT
+	*Name: "PC_FOUR_PUNCH_RIGHT"
+	*FeatureType: PRINTER_PROPERTY
+	*ConcealFromUI?: =FeatureConcealFromUI
+	*Option: NotInstalled
+	{
+		*rcNameID: =IDS_NOTINSTALLED
+	}
+	*Option: Installed
+	{
+		*rcNameID: =IDS_INSTALLED
+	}
+}
+
+*%==============================================================================
+*%                      PC_FourHolePunchTop (Installable)   
+*%==============================================================================
+*Feature: PC_FourHolePunchTop
+{
+	*%rcNameID: =IDS_PC_FOUR_PUNCH_TOP
+	*Name: "PC_FOUR_PUNCH_TOP"
+	*FeatureType: PRINTER_PROPERTY
+	*ConcealFromUI?: =FeatureConcealFromUI
+	*Option: NotInstalled
+	{
+		*rcNameID: =IDS_NOTINSTALLED
+	}
+	*Option: Installed
+	{
+		*rcNameID: =IDS_INSTALLED
+	}
+}
+
+*%==============================================================================
+*%                    PC_FourHolePunchBottom (Installable)      
+*%==============================================================================
+*Feature: PC_FourHolePunchBottom
+{
+	*%rcNameID: =IDS_PC_FOUR_PUNCH_BOTTOM
+	*Name: "PC_FOUR_PUNCH_BOTTOM"
+	*FeatureType: PRINTER_PROPERTY
+	*ConcealFromUI?: =FeatureConcealFromUI
+	*Option: NotInstalled
+	{
+		*rcNameID: =IDS_NOTINSTALLED
+	}
+	*Option: Installed
+	{
+		*rcNameID: =IDS_INSTALLED
+	}
+}
+
+*%==============================================================================*%
+*%                       PC_OptionalTray2 (Installable)                         *%
+*%==============================================================================*%
+*Feature: PC_OptionalTray2
+{
+	*%rcNameID: =IDS_PC_TRAY_2
+	*Name: "PC_TRAY_2"
+	*FeatureType: PRINTER_PROPERTY
+	*ConcealFromUI?: =FeatureConcealFromUI
+	*Option: NotInstalled
+	{
+		*rcNameID: =IDS_NOTINSTALLED
+	}
+	*Option: Installed
+	{
+		*rcNameID: =IDS_INSTALLED
+	}
+}
+
+*%==============================================================================*%
+*%                       PC_OptionalTray3 (Installable)                         *%
+*%==============================================================================*%
+*Feature: PC_OptionalTray3
+{
+	*%rcNameID: =IDS_PC_TRAY_3
+	*Name: "PC_TRAY_3"
+	*FeatureType: PRINTER_PROPERTY
+	*ConcealFromUI?: =FeatureConcealFromUI
+	*Option: NotInstalled
+	{
+		*rcNameID: =IDS_NOTINSTALLED
+	}
+	*Option: Installed
+	{
+		*rcNameID: =IDS_INSTALLED
+	}
+}
+
+
+*%==============================================================================*%
+*%                       PC_OptionalTray4 (Installable)                         *%
+*%==============================================================================*%
+*Feature: PC_OptionalTray4
+{
+	*%rcNameID: =IDS_PC_TRAY_4
+	*Name: "PC_TRAY_4"
+	*FeatureType: PRINTER_PROPERTY
+	*ConcealFromUI?: =FeatureConcealFromUI
+	*Option: NotInstalled
+	{
+		*rcNameID: =IDS_NOTINSTALLED
+	}
+	*Option: Installed
+	{
+		*rcNameID: =IDS_INSTALLED
+	}
+}
+
+*%==============================================================================*%
+*%                       PC_OptionalTray5 (Installable)                         *%
+*%==============================================================================*%
+*Feature: PC_OptionalTray5
+{
+	*%rcNameID: =IDS_PC_TRAY_5
+	*Name: "PC_TRAY_5"
+	*FeatureType: PRINTER_PROPERTY
+	*ConcealFromUI?: =FeatureConcealFromUI
+	*Option: NotInstalled
+	{
+		*rcNameID: =IDS_NOTINSTALLED
+	}
+	*Option: Installed
+	{
+		*rcNameID: =IDS_INSTALLED
+	}
+}
+
+*%==============================================================================*%
+*%                       PC_OptionalTray6 (Installable)                         *%
+*%==============================================================================*%
+*Feature: PC_OptionalTray6
+{
+	*%rcNameID: =IDS_PC_TRAY_6
+	*Name: "PC_TRAY_6"
+	*FeatureType: PRINTER_PROPERTY
+	*ConcealFromUI?: =FeatureConcealFromUI
+	*Option: NotInstalled
+	{
+		*rcNameID: =IDS_NOTINSTALLED
+	}
+	*Option: Installed
+	{
+		*rcNameID: =IDS_INSTALLED
+	}
+}
+
+*%==============================================================================*%
+*%                       PC_OptionalTray7 (Installable)                         *%
+*%==============================================================================*%
+*Feature: PC_OptionalTray7
+{
+	*%rcNameID: =IDS_PC_TRAY_7
+	*Name: "PC_TRAY_7"
+	*FeatureType: PRINTER_PROPERTY
+	*ConcealFromUI?: =FeatureConcealFromUI
+	*Option: NotInstalled
+	{
+		*rcNameID: =IDS_NOTINSTALLED
+	}
+	*Option: Installed
+	{
+		*rcNameID: =IDS_INSTALLED
+	}
+}
+
+*%==============================================================================*%
+*%                       PC_OptionalTray8 (Installable)                         *%
+*%==============================================================================*%
+*Feature: PC_OptionalTray8
+{
+	*%rcNameID: =IDS_PC_TRAY_8
+	*Name: "PC_TRAY_8"
+	*FeatureType: PRINTER_PROPERTY
+	*ConcealFromUI?: =FeatureConcealFromUI
+	*Option: NotInstalled
+	{
+		*rcNameID: =IDS_NOTINSTALLED
+	}
+	*Option: Installed
+	{
+		*rcNameID: =IDS_INSTALLED
+	}
+}
+
+*%==============================================================================*%
+*%                       PC_OptionalTray9 (Installable)                         *%
+*%==============================================================================*%
+*Feature: PC_OptionalTray9
+{
+	*%rcNameID: =IDS_PC_TRAY_9
+	*Name: "PC_TRAY_9"
+	*FeatureType: PRINTER_PROPERTY
+	*ConcealFromUI?: =FeatureConcealFromUI
+	*Option: NotInstalled
+	{
+		*rcNameID: =IDS_NOTINSTALLED
+	}
+	*Option: Installed
+	{
+		*rcNameID: =IDS_INSTALLED
+	}
+}
+*%==============================================================================*%
+*%                       PC_OptionalTray10 (Installable)                         *%
+*%==============================================================================*%
+*Feature: PC_OptionalTray10
+{
+	*%rcNameID: =IDS_PC_TRAY_10
+	*Name: "PC_TRAY_10"
+	*FeatureType: PRINTER_PROPERTY
+	*ConcealFromUI?: =FeatureConcealFromUI
+	*Option: NotInstalled
+	{
+		*rcNameID: =IDS_NOTINSTALLED
+	}
+	*Option: Installed
+	{
+		*rcNameID: =IDS_INSTALLED
+	}
+}
+
+*%==============================================================================*%
+*%                   PC_OptionalEnvelopeFeeder (Installable)                    *%
+*%==============================================================================*%
+*Feature: PC_OptionalEnvelopeFeeder
+{
+	*%rcNameID: =IDS_PC_ENVELOPE_FEEDER
+	*Name: "PC_ENVELOPE_FEEDER"
+	*FeatureType: PRINTER_PROPERTY
+	*ConcealFromUI?: =FeatureConcealFromUI
+	*Option: NotInstalled
+	{
+		*rcNameID: =IDS_NOTINSTALLED
+	}
+	*Option: Installed
+	{
+		*rcNameID: =IDS_INSTALLED
+	}
+}
+
+*%==============================================================================*%
+*%						GrayscaleSupport (Installable)                    		*%
+*%==============================================================================*%
+*Feature: GrayscaleSupport
+{
+	*%rcNameID: =IDS_PC_GRAYSCALE_CMYK
+	*Name: "PC_GRAYSCALE_CMYK"
+	*FeatureType: PRINTER_PROPERTY
+	*ConcealFromUI?: =FeatureConcealFromUI
+	*Option: NotSupported
+	{
+		*rcNameID: =IDS_NOTSUPPORT
+	}
+	*Option: Supported
+	{
+		*rcNameID: =IDS_SUPPORT
+	}
+}
+
+
+*%==============================================================================
+*%                                  Folding                                    
+*%==============================================================================
+*%==============================================================================*%
+*%                         PC_VFoldType (Installable)                           *%
+*%==============================================================================*%
+*Feature: PC_VFoldType
+{
+	*%rcNameID: =IDS_PC_VFOLD_TYPE
+	*Name: "PC_VFOLD_TYPE"
+	*DefaultOption: NotInstalled
+	*FeatureType: PRINTER_PROPERTY
+	*ConcealFromUI?: =FeatureConcealFromUI
+	*Option: NotInstalled
+	{
+		*rcNameID: =IDS_NOTINSTALLED
+	}
+	*Option: Installed
+	{
+		*rcNameID: =IDS_INSTALLED
+	}
+}
+
+*%==============================================================================*%
+*%                       PC_VFoldMaxSheets (Installable)                        *%
+*%==============================================================================*%
+*Feature: PC_VFoldMaxSheets
+{
+	*Name : "PC_VFold Max Sheet per Set"
+	*FeatureType: PRINTER_PROPERTY
+	*ConcealFromUI?: =FeatureConcealFromUI
+	*Option: SetMode
+	{
+		*Name: "Set Mode"
+        *Constraints: LIST(FinishingFolding.InwardVFoldMopy,FinishingFolding.OutwardVFoldMopy)
+
+	}
+	*Option: DefaultMode
+	{
+		*Name: "Default 1page Set Mode"
+		*Constraints: LIST(FinishingFolding.InwardVFoldSet,FinishingFolding.OutwardVFoldSet)
+
+	}
+	
+}
+
+*%==============================================================================*%
+*%                         PC_CFoldType  (Installable)               
+*%==============================================================================*%
+*Feature: PC_CFoldType
+{
+	*%rcNameID: =IDS_PC_CFOLD_TYPE
+	*Name: "PC_CFOLD_TYPE"
+	*DefaultOption: NotInstalled
+	*FeatureType: PRINTER_PROPERTY
+	*ConcealFromUI?: =FeatureConcealFromUI
+	*Option: NotInstalled
+	{
+		*rcNameID: =IDS_NOTINSTALLED
+	}
+	*Option: Installed
+	{
+		*rcNameID: =IDS_INSTALLED
+	}
+}
+
+*%==============================================================================*%
+*%                       PC_CFoldMaxSheets (Installable)                        *%
+*%==============================================================================*%
+*Feature: PC_CFoldMaxSheets
+{
+	*Name : "PC_CFold Max Sheet per Set"
+	*FeatureType: PRINTER_PROPERTY
+	*ConcealFromUI?: =FeatureConcealFromUI
+	*Option: SetMode
+	{
+		*Name: "Set Mode"
+	    *Constraints: LIST(FinishingFolding.InwardCFoldLeftOrUpMopy,FinishingFolding.InwardCFoldRightOrDownMopy,FinishingFolding.OutwardCFoldLeftOrUpMopy,FinishingFolding.OutwardCFoldRightOrDownMopy)
+	}
+	*Option: DefaultMode
+	{
+		*Name: "Default 1page Set Mode"
+		*Constraints: LIST(FinishingFolding.InwardCFoldLeftOrUpSet,FinishingFolding.InwardCFoldRightOrDownSet,FinishingFolding.OutwardCFoldLeftOrUpSet,FinishingFolding.OutwardCFoldRightOrDownSet)
+	}
+}
+
+*%==============================================================================*%
+*%                          PaperSize_A3 (Installable)     
+*%==============================================================================*%
+*Feature: PaperSize_A3
+{
+	*%rcNameID: =IDS_PC_PAPERSIZE_A3
+	*Name: "PC_PAPERSIZE_A3"
+	*FeatureType: PRINTER_PROPERTY
+	*ConcealFromUI?: =FeatureConcealFromUI
+	*Option: NotInstalled
+	{
+		*rcNameID: =IDS_NOTSUPPORT
+	}
+	*Option: Installed
+	{
+		*rcNameID: =IDS_SUPPORT
+	}
+
+	*Switch: Locale
+	{
+		*Case: Korean
+		{
+			*DefaultOption: Installed
+		}
+		*Case: Korean_Johab
+		{
+			*DefaultOption: Installed
+		}
+		*Case: Chinese_PRC
+		{
+			*DefaultOption: Installed
+		}
+		*Case: Chinese_Taiwan_Region
+		{
+			*DefaultOption: Installed
+		}
+		*Case: Chinese_Hong_Kong_SAR_PRC
+		{
+			*DefaultOption: Installed
+		}
+		*Case: Chinese_Singapore
+		{
+			*DefaultOption: Installed
+		}
+		*Case: Chinese_Macau
+		{
+			*DefaultOption: Installed
+		}
+		*Case: Japanese
+		{
+			*DefaultOption: Installed
+		}
+		*Default: 
+		{
+			*DefaultOption: NotInstalled
+		}
+	}
+}
+
+*IgnoreBlock: {
+*%==============================================================================*%
+*%           SI_Config_PaperSize_A3 (Configurable by Second Initialize)     
+*%==============================================================================*%
+*Feature: SI_Config_PaperSize_A3
+{
+	*Name: "SI_PAPERSIZE_A3"
+	*FeatureType: PRINTER_PROPERTY
+	*ConcealFromUI?: =FeatureConcealFromUI
+	*DefaultOption: NotConfigured
+	*Option: NotConfigured
+	{
+		*Name: "Not Configured"
+	}
+	*Option: NotSupport
+	{
+		*rcNameID: =IDS_NOTSUPPORT
+	}
+	*Option: Support
+	{
+		*rcNameID: =IDS_SUPPORT
+	}
+}
+
+*%==============================================================================*%
+*%           SI_Config_PaperSize_NA12X18 (Configurable by Second Initialize)     
+*%==============================================================================*%
+*Feature: SI_Config_PaperSize_NA12X18
+{
+	*Name: "SI_PAPERSIZE_NA12X18"
+	*FeatureType: PRINTER_PROPERTY
+	*ConcealFromUI?: =FeatureConcealFromUI
+	*DefaultOption: NotConfigured
+	*Option: NotConfigured
+	{
+		*Name: "Not Configured"
+	}
+	*Option: NotSupport
+	{
+		*rcNameID: =IDS_NOTSUPPORT
+	}
+	*Option: Support
+	{
+		*rcNameID: =IDS_SUPPORT
+	}
+}
+
+*%==============================================================================*%
+*%           SI_Config_PaperSize_SRA3 (Configurable by Second Initialize)     
+*%==============================================================================*%
+*Feature: SI_Config_PaperSize_SRA3
+{
+	*Name: "SI_PAPERSIZE_SRA3"
+	*FeatureType: PRINTER_PROPERTY
+	*ConcealFromUI?: =FeatureConcealFromUI
+	*DefaultOption: NotConfigured
+	*Option: NotConfigured
+	{
+		*Name: "Not Configured"
+	}
+	*Option: NotSupport
+	{
+		*rcNameID: =IDS_NOTSUPPORT
+	}
+	*Option: Support
+	{
+		*rcNameID: =IDS_SUPPORT
+	}
+}
+
+*%==============================================================================*%
+*%           SI_Config_PaperSize_RA3 (Configurable by Second Initialize)     
+*%==============================================================================*%
+*Feature: SI_Config_PaperSize_RA3
+{
+	*Name: "SI_PAPERSIZE_RA3"
+	*FeatureType: PRINTER_PROPERTY
+	*ConcealFromUI?: =FeatureConcealFromUI
+	*DefaultOption: NotConfigured
+	*Option: NotConfigured
+	{
+		*Name: "Not Configured"
+	}
+	*Option: NotSupport
+	{
+		*rcNameID: =IDS_NOTSUPPORT
+	}
+	*Option: Support
+	{
+		*rcNameID: =IDS_SUPPORT
+	}
+}
+
+*%==============================================================================*%
+*%           SI_Config_PaperSize_11X17 (Configurable by Second Initialize)     
+*%==============================================================================*%
+*Feature: SI_Config_PaperSize_11X17
+{
+	*Name: "SI_PAPERSIZE_11X17"
+	*FeatureType: PRINTER_PROPERTY
+	*ConcealFromUI?: =FeatureConcealFromUI
+	*DefaultOption: NotConfigured
+	*Option: NotConfigured
+	{
+		*Name: "Not Configured"
+	}
+	*Option: NotSupport
+	{
+		*rcNameID: =IDS_NOTSUPPORT
+	}
+	*Option: Support
+	{
+		*rcNameID: =IDS_SUPPORT
+	}
+}
+
+*%==============================================================================*%
+*%           SI_Config_PaperSize_ROC8K270X390 (Configurable by Second Initialize)     
+*%==============================================================================*%
+*Feature: SI_Config_PaperSize_ROC8K270X390
+{
+	*Name: "SI_PAPERSIZE_ROC8K270X390"
+	*FeatureType: PRINTER_PROPERTY
+	*ConcealFromUI?: =FeatureConcealFromUI
+	*DefaultOption: NotConfigured
+	*Option: NotConfigured
+	{
+		*Name: "Not Configured"
+	}
+	*Option: NotSupport
+	{
+		*rcNameID: =IDS_NOTSUPPORT
+	}
+	*Option: Support
+	{
+		*rcNameID: =IDS_SUPPORT
+	}
+}
+
+*%==============================================================================*%
+*%           SI_Config_PaperSize_ROC8K260X368 (Configurable by Second Initialize)     
+*%==============================================================================*%
+*Feature: SI_Config_PaperSize_ROC8K260X368
+{
+	*Name: "SI_PAPERSIZE_ROC8K260X368"
+	*FeatureType: PRINTER_PROPERTY
+	*ConcealFromUI?: =FeatureConcealFromUI
+	*DefaultOption: NotConfigured
+	*Option: NotConfigured
+	{
+		*Name: "Not Configured"
+	}
+	*Option: NotSupport
+	{
+		*rcNameID: =IDS_NOTSUPPORT
+	}
+	*Option: Support
+	{
+		*rcNameID: =IDS_SUPPORT
+	}
+}
+
+*%==============================================================================*%
+*%           SI_Config_PaperSize_B4 (Configurable by Second Initialize)     
+*%==============================================================================*%
+*Feature: SI_Config_PaperSize_B4
+{
+	*Name: "SI_PAPERSIZE_B4"
+	*FeatureType: PRINTER_PROPERTY
+	*ConcealFromUI?: =FeatureConcealFromUI
+	*DefaultOption: NotConfigured
+	*Option: NotConfigured
+	{
+		*Name: "Not Configured"
+	}
+	*Option: NotSupport
+	{
+		*rcNameID: =IDS_NOTSUPPORT
+	}
+	*Option: Support
+	{
+		*rcNameID: =IDS_SUPPORT
+	}
+}
+
+*%==============================================================================*%
+*%           SI_Config_PaperSize_EXECUTIVE_JIS (Configurable by Second Initialize)     
+*%==============================================================================*%
+*Feature: SI_Config_PaperSize_EXECUTIVE_JIS
+{
+	*Name: "SI_PAPERSIZE_EXECUTIVE_JIS"
+	*FeatureType: PRINTER_PROPERTY
+	*ConcealFromUI?: =FeatureConcealFromUI
+	*DefaultOption: NotConfigured
+	*Option: NotConfigured
+	{
+		*Name: "Not Configured"
+	}
+	*Option: NotSupport
+	{
+		*rcNameID: =IDS_NOTSUPPORT
+	}
+	*Option: Support
+	{
+		*rcNameID: =IDS_SUPPORT
+	}
+}
+
+*%==============================================================================*%
+*%           SI_Config_PaperSize_A2 (Configurable by Second Initialize)     
+*%==============================================================================*%
+*Feature: SI_Config_PaperSize_A2
+{
+	*Name: "SI_PAPERSIZE_A2"
+	*FeatureType: PRINTER_PROPERTY
+	*ConcealFromUI?: =FeatureConcealFromUI
+	*DefaultOption: NotConfigured
+	*Option: NotConfigured
+	{
+		*Name: "Not Configured"
+	}
+	*Option: NotSupport
+	{
+		*rcNameID: =IDS_NOTSUPPORT
+	}
+	*Option: Support
+	{
+		*rcNameID: =IDS_SUPPORT
+	}
+}
+
+*%==============================================================================*%
+*%           SI_Config_PaperSize_CSHEET (Configurable by Second Initialize)     
+*%==============================================================================*%
+*Feature: SI_Config_PaperSize_CSHEET
+{
+	*Name: "SI_PAPERSIZE_CSHEET"
+	*FeatureType: PRINTER_PROPERTY
+	*ConcealFromUI?: =FeatureConcealFromUI
+	*DefaultOption: NotConfigured
+	*Option: NotConfigured
+	{
+		*Name: "Not Configured"
+	}
+	*Option: NotSupport
+	{
+		*rcNameID: =IDS_NOTSUPPORT
+	}
+	*Option: Support
+	{
+		*rcNameID: =IDS_SUPPORT
+	}
+}
+} *% End of Ignore Block.
+
+*%==============================================================================*%
+*%                  EMBEDDED JOB ACCOUNTING (EJA) (Installable)                 *%
+*%==============================================================================*%
+*Feature: JobAccountingControl
+{
+	*Name: "PC_Job Accounting"
+	*DefaultOption: disable
+	*FeatureType: PRINTER_PROPERTY
+	*ConcealFromUI?: =FeatureConcealFromUI
+	*Option: disable
+	{
+		*rcNameID: =IDS_NOTSUPPORT
+	}
+	*Option: enable
+	{
+		*rcNameID: =IDS_SUPPORT
+	}		
+
+}
+
+*%==============================================================================*%
+*%                       JobStorageControl (Installable)                        *%
+*%==============================================================================*%
+*Feature: JobStorageControl
+{
+	*%rcNameID: =IDS_PC_JOB_STORAGE
+	*Name: "PC_JOB_STORAGE"
+	*DefaultOption: NotInstalled
+	*FeatureType: PRINTER_PROPERTY
+	*ConcealFromUI?: =FeatureConcealFromUI
+	*Option: NotInstalled
+	{
+		*rcNameID: =IDS_NOTINSTALLED
+	}
+	*Option: Installed
+	{
+		*rcNameID: =IDS_INSTALLED
+	}
+}
+
+
+*%==============================================================================*%
+*%                       Edge-to-Edge Printing (Installable)                    *%
+*%==============================================================================*%
+*Feature: EdgetoEdgeControl
+{
+	*%rcNameID: =IDS_PC_EDGE_TO_EDGE_PRINT
+	*Name: "PC_Edge to Edge Printing"
+	*DefaultOption: disable
+	*FeatureType: PRINTER_PROPERTY
+	*ConcealFromUI?: =FeatureConcealFromUI
+	*Option: disable
+	{
+		*rcNameID: =IDS_NOTSUPPORT
+	}
+	*Option: enable
+	{
+		*rcNameID: =IDS_SUPPORT
+	}
+}
+
+*%==============================================================================*%
+*%                           Tab Printing (Installable)                         *%
+*%==============================================================================*%
+*Feature: TabPrintingControl
+{
+	*Name: "PC_Tab Printing"
+	*DefaultOption: disable
+	*FeatureType: PRINTER_PROPERTY
+	*ConcealFromUI?: =FeatureConcealFromUI
+	*Option: disable
+	{
+		*rcNameID: =IDS_NOTSUPPORT
+	}
+	*Option: enable
+	{
+		*rcNameID: =IDS_SUPPORT
+	}
+}
+
+*%==============================================================================*%
+*%                               EnhancedMixedOrientationSupport                *%
+*%==============================================================================*%
+*Feature: EnhancedMixedOrientationSupport
+{
+	*Name: "EnhancedMixedOrientationSupport"
+	*DefaultOption: disable
+	*FeatureType: PRINTER_PROPERTY
+	*ConcealFromUI?: FeatureConcealFromUI
+	*Option: disable
+	{
+		*rcNameID: =IDS_DISABLED
+	}
+	*Option: enable
+	{
+		*rcNameID: =IDS_ENABLED
+	}
+}
+
+*%==============================================================================*%
+*%                       PCLm Strip Height Preferred							*%
+*%==============================================================================*%
+*Feature: PC_PCLmStripHeightPreferred
+{
+	*Name: "PC_PCLmStripHeightPreferred"
+	*DefaultOption: 128
+	*FeatureType: PRINTER_PROPERTY
+	*ConcealFromUI?: =FeatureConcealFromUI
+
+	*Option: 64
+	{
+        *Name: "64"
+	}
+	
+	*Option: 128
+	{
+        *Name: "128"
+	}
+}
+
+*%==============================================================================*%
+*%                       PrintContract Version Major                       *%
+*%==============================================================================*%
+*Feature: PrintContractVersionMajor
+{
+	*Name: "PC_PrintContractVersionMajor"
+	*DefaultOption: 0
+	*FeatureType: PRINTER_PROPERTY
+	*ConcealFromUI?: =FeatureConcealFromUI
+
+	*Option: 0
+	{
+        *Name: "0"
+	}
+	
+	*Option: 1
+	{
+        *Name: "1"
+	}
+    *Option: 2
+	{
+        *Name: "2"
+	}
+    *Option: 3
+	{
+        *Name: "3"
+	}
+    *Option: 4
+	{
+        *Name: "4"
+	}
+    *Option: 5
+	{
+        *Name: "5"
+	}
+    *Option: 6
+	{
+        *Name: "6"
+	}
+    *Option: 7
+	{
+        *Name: "7"
+	}
+    *Option: 8
+	{
+        *Name: "8"
+	}
+    *Option: 9
+	{
+        *Name: "9"
+	}
+
+}
+*%==============================================================================*%
+*%                       PrintContract Version Minor                       *%
+*%==============================================================================*%
+*Feature: PrintContractVersionMinor
+{
+	*Name: "PC_PrintContractVersionMinor"
+	*DefaultOption: 0
+	*FeatureType: PRINTER_PROPERTY
+	*ConcealFromUI?: =FeatureConcealFromUI
+
+	*Option: 0
+	{
+        *Name: "0"
+	}
+	
+	*Option: 1
+	{
+        *Name: "1"
+	}
+    *Option: 2
+	{
+        *Name: "2"
+	}
+    *Option: 3
+	{
+        *Name: "3"
+	}
+    *Option: 4
+	{
+        *Name: "4"
+	}
+    *Option: 5
+	{
+        *Name: "5"
+	}
+    *Option: 6
+	{
+        *Name: "6"
+	}
+    *Option: 7
+	{
+        *Name: "7"
+	}
+    *Option: 8
+	{
+        *Name: "8"
+	}
+    *Option: 9
+	{
+        *Name: "9"
+	}
+	*Option: 71
+	{
+        *Name: "71"
+	}
+	*Option: 72
+	{
+        *Name: "72"
+	}
+	 *Option: 80
+	{
+        *Name: "80"
+	}
+    *Option: 81
+	{
+        *Name: "81"
+	}
+    *Option: 82
+	{
+        *Name: "82"
+	}
+	*Option: 83
+	{
+        *Name: "83"
+	}
+	*Option: 84
+	{
+        *Name: "84"
+	}
+	*Option: 85
+	{
+        *Name: "85"
+	}
+
+}
+
+*Ifdef: DRIVER_ARCHITECTURE_V4
+
+*%==============================================================================
+*%                PC_BIDIMediaOutputPageDelivery1 (Installable)                 
+*%==============================================================================
+*Feature: PC_BIDIMediaOutputPageDelivery1
+{
+	*Name: "PC_BIDIMediaOutputPageDelivery1"
+	*FeatureType: PRINTER_PROPERTY
+	*ConcealFromUI?: =FeatureConcealFromUI
+	*Option: NotInstalled
+	{
+		*Name: "Not Installed"
+	}
+	*Option: FACEDOWN
+	{
+		*Name: "Face down"
+	}
+	*Option: FACEUP
+	{
+		*Name: "Face up"
+	}
+	*Option: BOTH
+	{
+		*Name: "Both"
+	}
+}
+
+*InvalidCombination : LIST ( PC_BIDIMediaOutputPageDelivery1.FACEDOWN, UI_OutputBinFaceUpOrientation.Supported)
+*InvalidCombination : LIST ( PC_BIDIMediaOutputPageDelivery1.FACEUP, UI_OutputBinFaceUpOrientation.NotSupported)
+
+*%==============================================================================
+*%                PC_BIDIMediaOutputPageDelivery2 (Installable)                 
+*%==============================================================================
+*Feature: PC_BIDIMediaOutputPageDelivery2
+{
+	*Name: "PC_BIDIMediaOutputPageDelivery2"
+	*FeatureType: PRINTER_PROPERTY
+	*ConcealFromUI?: =FeatureConcealFromUI
+	*Option: NotInstalled
+	{
+		*Name: "Not Installed"
+	}
+	*Option: FACEDOWN
+	{
+		*Name: "Face down"
+	}
+	*Option: FACEUP
+	{
+		*Name: "Face up"
+	}
+	*Option: BOTH
+	{
+		*Name: "Both"
+	}
+}
+*InvalidCombination : LIST ( PC_BIDIMediaOutputPageDelivery2.FACEDOWN, UI_OutputBinFaceUpOrientation.Supported)
+*InvalidCombination : LIST ( PC_BIDIMediaOutputPageDelivery2.FACEUP, UI_OutputBinFaceUpOrientation.NotSupported)
+
+*%==============================================================================
+*%                PC_BIDIMediaOutputPageDelivery3 (Installable)                 
+*%==============================================================================
+*Feature: PC_BIDIMediaOutputPageDelivery3
+{
+	*Name: "PC_BIDIMediaOutputPageDelivery3"
+	*FeatureType: PRINTER_PROPERTY
+	*ConcealFromUI?: =FeatureConcealFromUI
+	*Option: NotInstalled
+	{
+		*Name: "Not Installed"
+	}
+	*Option: FACEDOWN
+	{
+		*Name: "Face down"
+	}
+	*Option: FACEUP
+	{
+		*Name: "Face up"
+	}
+	*Option: BOTH
+	{
+		*Name: "Both"
+	}
+}
+*InvalidCombination : LIST ( PC_BIDIMediaOutputPageDelivery3.FACEDOWN, UI_OutputBinFaceUpOrientation.Supported)
+*InvalidCombination : LIST ( PC_BIDIMediaOutputPageDelivery3.FACEUP, UI_OutputBinFaceUpOrientation.NotSupported)
+
+*%==============================================================================
+*%                PC_BIDIMediaOutputPageDelivery4 (Installable)                 
+*%==============================================================================
+*Feature: PC_BIDIMediaOutputPageDelivery4
+{
+	*Name: "PC_BIDIMediaOutputPageDelivery4"
+	*FeatureType: PRINTER_PROPERTY
+	*ConcealFromUI?: =FeatureConcealFromUI
+	*Option: NotInstalled
+	{
+		*Name: "Not Installed"
+	}
+	*Option: FACEDOWN
+	{
+		*Name: "Face down"
+	}
+	*Option: FACEUP
+	{
+		*Name: "Face up"
+	}
+	*Option: BOTH
+	{
+		*Name: "Both"
+	}
+}
+*InvalidCombination : LIST ( PC_BIDIMediaOutputPageDelivery4.FACEDOWN, UI_OutputBinFaceUpOrientation.Supported)
+*InvalidCombination : LIST ( PC_BIDIMediaOutputPageDelivery4.FACEUP, UI_OutputBinFaceUpOrientation.NotSupported)
+
+*%==============================================================================
+*%                PC_BIDIMediaOutputPageDelivery5 (Installable)                 
+*%==============================================================================
+*Feature: PC_BIDIMediaOutputPageDelivery5
+{
+	*Name: "PC_BIDIMediaOutputPageDelivery5"
+	*FeatureType: PRINTER_PROPERTY
+	*ConcealFromUI?: =FeatureConcealFromUI
+	*Option: NotInstalled
+	{
+		*Name: "Not Installed"
+	}
+	*Option: FACEDOWN
+	{
+		*Name: "Face down"
+	}
+	*Option: FACEUP
+	{
+		*Name: "Face up"
+	}
+	*Option: BOTH
+	{
+		*Name: "Both"
+	}
+}
+*InvalidCombination : LIST ( PC_BIDIMediaOutputPageDelivery5.FACEDOWN, UI_OutputBinFaceUpOrientation.Supported)
+*InvalidCombination : LIST ( PC_BIDIMediaOutputPageDelivery5.FACEUP, UI_OutputBinFaceUpOrientation.NotSupported)
+
+
+*%==============================================================================
+*%                PC_BIDIMediaOutputPageDelivery6 (Installable)                 
+*%==============================================================================
+*Feature: PC_BIDIMediaOutputPageDelivery6
+{
+	*Name: "PC_BIDIMediaOutputPageDelivery6"
+	*FeatureType: PRINTER_PROPERTY
+	*ConcealFromUI?: =FeatureConcealFromUI
+	*Option: NotInstalled
+	{
+		*Name: "Not Installed"
+	}
+	*Option: FACEDOWN
+	{
+		*Name: "Face down"
+	}
+	*Option: FACEUP
+	{
+		*Name: "Face up"
+	}
+	*Option: BOTH
+	{
+		*Name: "Both"
+	}
+}
+*InvalidCombination : LIST ( PC_BIDIMediaOutputPageDelivery6.FACEDOWN, UI_OutputBinFaceUpOrientation.Supported)
+*InvalidCombination : LIST ( PC_BIDIMediaOutputPageDelivery6.FACEUP, UI_OutputBinFaceUpOrientation.NotSupported)
+
+*%==============================================================================
+*%                PC_BIDIMediaOutputPageDelivery7 (Installable)                 
+*%==============================================================================
+*Feature: PC_BIDIMediaOutputPageDelivery7
+{
+	*Name: "PC_BIDIMediaOutputPageDelivery7"
+	*FeatureType: PRINTER_PROPERTY
+	*ConcealFromUI?: =FeatureConcealFromUI
+	*Option: NotInstalled
+	{
+		*Name: "Not Installed"
+	}
+	*Option: FACEDOWN
+	{
+		*Name: "Face down"
+	}
+	*Option: FACEUP
+	{
+		*Name: "Face up"
+	}
+	*Option: BOTH
+	{
+		*Name: "Both"
+	}
+}
+*InvalidCombination : LIST ( PC_BIDIMediaOutputPageDelivery7.FACEDOWN, UI_OutputBinFaceUpOrientation.Supported)
+*InvalidCombination : LIST ( PC_BIDIMediaOutputPageDelivery7.FACEUP, UI_OutputBinFaceUpOrientation.NotSupported)
+
+*%==============================================================================
+*%                PC_BIDIMediaOutputPageDelivery8 (Installable)                 
+*%==============================================================================
+*Feature: PC_BIDIMediaOutputPageDelivery8
+{
+	*Name: "PC_BIDIMediaOutputPageDelivery8"
+	*FeatureType: PRINTER_PROPERTY
+	*ConcealFromUI?: =FeatureConcealFromUI
+	*Option: NotInstalled
+	{
+		*Name: "Not Installed"
+	}
+	*Option: FACEDOWN
+	{
+		*Name: "Face down"
+	}
+	*Option: FACEUP
+	{
+		*Name: "Face up"
+	}
+	*Option: BOTH
+	{
+		*Name: "Both"
+	}
+}
+*InvalidCombination : LIST ( PC_BIDIMediaOutputPageDelivery8.FACEDOWN, UI_OutputBinFaceUpOrientation.Supported)
+*InvalidCombination : LIST ( PC_BIDIMediaOutputPageDelivery8.FACEUP, UI_OutputBinFaceUpOrientation.NotSupported)
+
+*%==============================================================================
+*%                PC_BIDIMediaOutputPageDelivery9 (Installable)                 
+*%==============================================================================
+*Feature: PC_BIDIMediaOutputPageDelivery9
+{
+	*Name: "PC_BIDIMediaOutputPageDelivery9"
+	*FeatureType: PRINTER_PROPERTY
+	*ConcealFromUI?: =FeatureConcealFromUI
+	*Option: NotInstalled
+	{
+		*Name: "Not Installed"
+	}
+	*Option: FACEDOWN
+	{
+		*Name: "Face down"
+	}
+	*Option: FACEUP
+	{
+		*Name: "Face up"
+	}
+	*Option: BOTH
+	{
+		*Name: "Both"
+	}
+}
+*InvalidCombination : LIST ( PC_BIDIMediaOutputPageDelivery9.FACEDOWN, UI_OutputBinFaceUpOrientation.Supported)
+*InvalidCombination : LIST ( PC_BIDIMediaOutputPageDelivery9.FACEUP, UI_OutputBinFaceUpOrientation.NotSupported)
+
+*%==============================================================================
+*%               PC_BIDIMediaOutputPageDelivery10 (Installable)                 
+*%==============================================================================
+*Feature: PC_BIDIMediaOutputPageDelivery10
+{
+	*Name: "PC_BIDIMediaOutputPageDelivery10"
+	*FeatureType: PRINTER_PROPERTY
+	*ConcealFromUI?: =FeatureConcealFromUI
+	*Option: NotInstalled
+	{
+		*Name: "Not Installed"
+	}
+	*Option: FACEDOWN
+	{
+		*Name: "Face down"
+	}
+	*Option: FACEUP
+	{
+		*Name: "Face up"
+	}
+	*Option: BOTH
+	{
+		*Name: "Both"
+	}
+}
+*InvalidCombination : LIST ( PC_BIDIMediaOutputPageDelivery10.FACEDOWN, UI_OutputBinFaceUpOrientation.Supported)
+*InvalidCombination : LIST ( PC_BIDIMediaOutputPageDelivery10.FACEUP, UI_OutputBinFaceUpOrientation.NotSupported)
+
+*%==============================================================================
+*%               PC_BIDIMediaOutputPageDelivery11 (Installable)                 
+*%==============================================================================
+*Feature: PC_BIDIMediaOutputPageDelivery11
+{
+	*Name: "PC_BIDIMediaOutputPageDelivery11"
+	*FeatureType: PRINTER_PROPERTY
+	*ConcealFromUI?: =FeatureConcealFromUI
+	*Option: NotInstalled
+	{
+		*Name: "Not Installed"
+	}
+	*Option: FACEDOWN
+	{
+		*Name: "Face down"
+	}
+	*Option: FACEUP
+	{
+		*Name: "Face up"
+	}
+	*Option: BOTH
+	{
+		*Name: "Both"
+	}
+}
+*InvalidCombination : LIST ( PC_BIDIMediaOutputPageDelivery11.FACEDOWN, UI_OutputBinFaceUpOrientation.Supported)
+*InvalidCombination : LIST ( PC_BIDIMediaOutputPageDelivery11.FACEUP, UI_OutputBinFaceUpOrientation.NotSupported)
+
+*%==============================================================================
+*%               PC_BIDIMediaOutputPageDelivery12 (Installable)                 
+*%==============================================================================
+*Feature: PC_BIDIMediaOutputPageDelivery12
+{
+	*Name: "PC_BIDIMediaOutputPageDelivery12"
+	*FeatureType: PRINTER_PROPERTY
+	*ConcealFromUI?: =FeatureConcealFromUI
+	*Option: NotInstalled
+	{
+		*Name: "Not Installed"
+	}
+	*Option: FACEDOWN
+	{
+		*Name: "Face down"
+	}
+	*Option: FACEUP
+	{
+		*Name: "Face up"
+	}
+	*Option: BOTH
+	{
+		*Name: "Both"
+	}
+}
+*InvalidCombination : LIST ( PC_BIDIMediaOutputPageDelivery12.FACEDOWN, UI_OutputBinFaceUpOrientation.Supported)
+*InvalidCombination : LIST ( PC_BIDIMediaOutputPageDelivery12.FACEUP, UI_OutputBinFaceUpOrientation.NotSupported)
+
+
+*%==============================================================================
+*%                  PC_BIDIMediaOutputFoldUnit1 (Installable)                   
+*%==============================================================================
+*Feature: PC_BIDIMediaOutputFoldUnit1
+{
+	*Name: "PC_BIDIMediaOutputFoldUnit1"
+	*FeatureType: PRINTER_PROPERTY
+	*ConcealFromUI?: =FeatureConcealFromUI
+	*Option: NotInstalled
+	{
+		*Name: "Not Installed"
+	}
+	*Option: Installed
+	{
+		*Name: "Installed"
+	}
+}
+
+*%==============================================================================
+*%                  PC_BIDIMediaOutputFoldUnit2 (Installable)                   
+*%==============================================================================
+*Feature: PC_BIDIMediaOutputFoldUnit2
+{
+	*Name: "PC_BIDIMediaOutputFoldUnit2"
+	*FeatureType: PRINTER_PROPERTY
+	*ConcealFromUI?: =FeatureConcealFromUI
+	*Option: NotInstalled
+	{
+		*Name: "Not Installed"
+	}
+	*Option: Installed
+	{
+		*Name: "Installed"
+	}
+}
+
+*%==============================================================================
+*%                  PC_BIDIMediaOutputFoldUnit3 (Installable)                   
+*%==============================================================================
+*Feature: PC_BIDIMediaOutputFoldUnit3
+{
+	*Name: "PC_BIDIMediaOutputFoldUnit3"
+	*FeatureType: PRINTER_PROPERTY
+	*ConcealFromUI?: =FeatureConcealFromUI
+	*Option: NotInstalled
+	{
+		*Name: "Not Installed"
+	}
+	*Option: Installed
+	{
+		*Name: "Installed"
+	}
+}
+
+*%==============================================================================
+*%                  PC_BIDIMediaOutputFoldUnit4 (Installable)                   
+*%==============================================================================
+*Feature: PC_BIDIMediaOutputFoldUnit4
+{
+	*Name: "PC_BIDIMediaOutputFoldUnit4"
+	*FeatureType: PRINTER_PROPERTY
+	*ConcealFromUI?: =FeatureConcealFromUI
+	*Option: NotInstalled
+	{
+		*Name: "Not Installed"
+	}
+	*Option: Installed
+	{
+		*Name: "Installed"
+	}
+}
+
+*%==============================================================================
+*%                  PC_BIDIMediaOutputFoldUnit5 (Installable)                   
+*%==============================================================================
+*Feature: PC_BIDIMediaOutputFoldUnit5
+{
+	*Name: "PC_BIDIMediaOutputFoldUnit5"
+	*FeatureType: PRINTER_PROPERTY
+	*ConcealFromUI?: =FeatureConcealFromUI
+	*Option: NotInstalled
+	{
+		*Name: "Not Installed"
+	}
+	*Option: Installed
+	{
+		*Name: "Installed"
+	}
+}
+
+*%==============================================================================
+*%                  PC_BIDIMediaOutputFoldUnit6 (Installable)                   
+*%==============================================================================
+*Feature: PC_BIDIMediaOutputFoldUnit6
+{
+	*Name: "PC_BIDIMediaOutputFoldUnit6"
+	*FeatureType: PRINTER_PROPERTY
+	*ConcealFromUI?: =FeatureConcealFromUI
+	*Option: NotInstalled
+	{
+		*Name: "Not Installed"
+	}
+	*Option: Installed
+	{
+		*Name: "Installed"
+	}
+}
+
+*%==============================================================================
+*%                  PC_BIDIMediaOutputFoldUnit7 (Installable)                   
+*%==============================================================================
+*Feature: PC_BIDIMediaOutputFoldUnit7
+{
+	*Name: "PC_BIDIMediaOutputFoldUnit7"
+	*FeatureType: PRINTER_PROPERTY
+	*ConcealFromUI?: =FeatureConcealFromUI
+	*Option: NotInstalled
+	{
+		*Name: "Not Installed"
+	}
+	*Option: Installed
+	{
+		*Name: "Installed"
+	}
+}
+
+*%==============================================================================
+*%                  PC_BIDIMediaOutputFoldUnit8 (Installable)                   
+*%==============================================================================
+*Feature: PC_BIDIMediaOutputFoldUnit8
+{
+	*Name: "PC_BIDIMediaOutputFoldUnit8"
+	*FeatureType: PRINTER_PROPERTY
+	*ConcealFromUI?: =FeatureConcealFromUI
+	*Option: NotInstalled
+	{
+		*Name: "Not Installed"
+	}
+	*Option: Installed
+	{
+		*Name: "Installed"
+	}
+}
+
+*%==============================================================================
+*%                  PC_BIDIMediaOutputFoldUnit9 (Installable)                   
+*%==============================================================================
+*Feature: PC_BIDIMediaOutputFoldUnit9
+{
+	*Name: "PC_BIDIMediaOutputFoldUnit9"
+	*FeatureType: PRINTER_PROPERTY
+	*ConcealFromUI?: =FeatureConcealFromUI
+	*Option: NotInstalled
+	{
+		*Name: "Not Installed"
+	}
+	*Option: Installed
+	{
+		*Name: "Installed"
+	}
+}
+
+*%==============================================================================
+*%                 PC_BIDIMediaOutputFoldUnit10 (Installable)                   
+*%==============================================================================
+*Feature: PC_BIDIMediaOutputFoldUnit10
+{
+	*Name: "PC_BIDIMediaOutputFoldUnit10"
+	*FeatureType: PRINTER_PROPERTY
+	*ConcealFromUI?: =FeatureConcealFromUI
+	*Option: NotInstalled
+	{
+		*Name: "Not Installed"
+	}
+	*Option: Installed
+	{
+		*Name: "Installed"
+	}
+}
+
+*%==============================================================================
+*%                 PC_BIDIMediaOutputFoldUnit11 (Installable)                   
+*%==============================================================================
+*Feature: PC_BIDIMediaOutputFoldUnit11
+{
+	*Name: "PC_BIDIMediaOutputFoldUnit11"
+	*FeatureType: PRINTER_PROPERTY
+	*ConcealFromUI?: =FeatureConcealFromUI
+	*Option: NotInstalled
+	{
+		*Name: "Not Installed"
+	}
+	*Option: Installed
+	{
+		*Name: "Installed"
+	}
+}
+
+*%==============================================================================
+*%                 PC_BIDIMediaOutputFoldUnit12 (Installable)                   
+*%==============================================================================
+*Feature: PC_BIDIMediaOutputFoldUnit12
+{
+	*Name: "PC_BIDIMediaOutputFoldUnit12"
+	*FeatureType: PRINTER_PROPERTY
+	*ConcealFromUI?: =FeatureConcealFromUI
+	*Option: NotInstalled
+	{
+		*Name: "Not Installed"
+	}
+	*Option: Installed
+	{
+		*Name: "Installed"
+	}
+}
+
+
+*%==============================================================================
+*%                    PC_BIDIOutputModeUnit1 (Installable)                      
+*%==============================================================================
+*Feature: PC_BIDIOutputModeUnit1
+{
+	*Name: "PC_BIDIOutputModeUnit1"
+	*FeatureType: PRINTER_PROPERTY
+	*ConcealFromUI?: =FeatureConcealFromUI
+	*Option: NotInstalled
+	{
+		*Name: "Not Installed"
+	}
+	*Option: MailBox
+	{
+		*Name: "Mail Box"
+	}
+	*Option: Stacker
+	{
+		*Name: "Stacker"
+	}
+	*Option: FunctionSeparator
+	{
+		*Name: "Function Separator"
+	}
+	*Option: JobCollator
+	{
+		*Name: "Job Collator"
+	}
+	*Option: JobSeparator
+	{
+		*Name: "Job Separator"
+	}
+}
+
+*%==============================================================================
+*%                    PC_BIDIOutputModeUnit2 (Installable)                      
+*%==============================================================================
+*Feature: PC_BIDIOutputModeUnit2
+{
+	*Name: "PC_BIDIOutputModeUnit2"
+	*FeatureType: PRINTER_PROPERTY
+	*ConcealFromUI?: =FeatureConcealFromUI
+	*Option: NotInstalled
+	{
+		*Name: "Not Installed"
+	}
+	*Option: MailBox
+	{
+		*Name: "Mail Box"
+	}
+	*Option: Stacker
+	{
+		*Name: "Stacker"
+	}
+	*Option: FunctionSeparator
+	{
+		*Name: "Function Separator"
+	}
+	*Option: JobCollator
+	{
+		*Name: "Job Collator"
+	}
+	*Option: JobSeparator
+	{
+		*Name: "Job Separator"
+	}
+}
+
+*%==============================================================================
+*%                    PC_BIDIOutputModeUnit3 (Installable)                      
+*%==============================================================================
+*Feature: PC_BIDIOutputModeUnit3
+{
+	*Name: "PC_BIDIOutputModeUnit3"
+	*FeatureType: PRINTER_PROPERTY
+	*ConcealFromUI?: =FeatureConcealFromUI
+	*Option: NotInstalled
+	{
+		*Name: "Not Installed"
+	}
+	*Option: MailBox
+	{
+		*Name: "Mail Box"
+	}
+	*Option: Stacker
+	{
+		*Name: "Stacker"
+	}
+	*Option: FunctionSeparator
+	{
+		*Name: "Function Separator"
+	}
+	*Option: JobCollator
+	{
+		*Name: "Job Collator"
+	}
+	*Option: JobSeparator
+	{
+		*Name: "Job Separator"
+	}
+}
+
+*%==============================================================================
+*%                    PC_BIDIOutputModeUnit4 (Installable)                      
+*%==============================================================================
+*Feature: PC_BIDIOutputModeUnit4
+{
+	*Name: "PC_BIDIOutputModeUnit4"
+	*FeatureType: PRINTER_PROPERTY
+	*ConcealFromUI?: =FeatureConcealFromUI
+	*Option: NotInstalled
+	{
+		*Name: "Not Installed"
+	}
+	*Option: MailBox
+	{
+		*Name: "Mail Box"
+	}
+	*Option: Stacker
+	{
+		*Name: "Stacker"
+	}
+	*Option: FunctionSeparator
+	{
+		*Name: "Function Separator"
+	}
+	*Option: JobCollator
+	{
+		*Name: "Job Collator"
+	}
+	*Option: JobSeparator
+	{
+		*Name: "Job Separator"
+	}
+}
+
+*%==============================================================================
+*%                    PC_BIDIOutputModeUnit5 (Installable)                      
+*%==============================================================================
+*Feature: PC_BIDIOutputModeUnit5
+{
+	*Name: "PC_BIDIOutputModeUnit5"
+	*FeatureType: PRINTER_PROPERTY
+	*ConcealFromUI?: =FeatureConcealFromUI
+	*Option: NotInstalled
+	{
+		*Name: "Not Installed"
+	}
+	*Option: MailBox
+	{
+		*Name: "Mail Box"
+	}
+	*Option: Stacker
+	{
+		*Name: "Stacker"
+	}
+	*Option: FunctionSeparator
+	{
+		*Name: "Function Separator"
+	}
+	*Option: JobCollator
+	{
+		*Name: "Job Collator"
+	}
+	*Option: JobSeparator
+	{
+		*Name: "Job Separator"
+	}
+}
+
+*%==============================================================================
+*%                    PC_BIDIOutputModeUnit6 (Installable)                      
+*%==============================================================================
+*Feature: PC_BIDIOutputModeUnit6
+{
+	*Name: "PC_BIDIOutputModeUnit6"
+	*FeatureType: PRINTER_PROPERTY
+	*ConcealFromUI?: =FeatureConcealFromUI
+	*Option: NotInstalled
+	{
+		*Name: "Not Installed"
+	}
+	*Option: MailBox
+	{
+		*Name: "Mail Box"
+	}
+	*Option: Stacker
+	{
+		*Name: "Stacker"
+	}
+	*Option: FunctionSeparator
+	{
+		*Name: "Function Separator"
+	}
+	*Option: JobCollator
+	{
+		*Name: "Job Collator"
+	}
+	*Option: JobSeparator
+	{
+		*Name: "Job Separator"
+	}
+}
+
+*%==============================================================================
+*%                    PC_BIDIOutputModeUnit7 (Installable)                      
+*%==============================================================================
+*Feature: PC_BIDIOutputModeUnit7
+{
+	*Name: "PC_BIDIOutputModeUnit7"
+	*FeatureType: PRINTER_PROPERTY
+	*ConcealFromUI?: =FeatureConcealFromUI
+	*Option: NotInstalled
+	{
+		*Name: "Not Installed"
+	}
+	*Option: MailBox
+	{
+		*Name: "Mail Box"
+	}
+	*Option: Stacker
+	{
+		*Name: "Stacker"
+	}
+	*Option: FunctionSeparator
+	{
+		*Name: "Function Separator"
+	}
+	*Option: JobCollator
+	{
+		*Name: "Job Collator"
+	}
+	*Option: JobSeparator
+	{
+		*Name: "Job Separator"
+	}
+}
+
+*%==============================================================================
+*%                    PC_BIDIOutputModeUnit8 (Installable)                      
+*%==============================================================================
+*Feature: PC_BIDIOutputModeUnit8
+{
+	*Name: "PC_BIDIOutputModeUnit8"
+	*FeatureType: PRINTER_PROPERTY
+	*ConcealFromUI?: =FeatureConcealFromUI
+	*Option: NotInstalled
+	{
+		*Name: "Not Installed"
+	}
+	*Option: MailBox
+	{
+		*Name: "Mail Box"
+	}
+	*Option: Stacker
+	{
+		*Name: "Stacker"
+	}
+	*Option: FunctionSeparator
+	{
+		*Name: "Function Separator"
+	}
+	*Option: JobCollator
+	{
+		*Name: "Job Collator"
+	}
+	*Option: JobSeparator
+	{
+		*Name: "Job Separator"
+	}
+}
+
+*%==============================================================================
+*%                    PC_BIDIOutputModeUnit9 (Installable)                      
+*%==============================================================================
+*Feature: PC_BIDIOutputModeUnit9
+{
+	*Name: "PC_BIDIOutputModeUnit9"
+	*FeatureType: PRINTER_PROPERTY
+	*ConcealFromUI?: =FeatureConcealFromUI
+	*Option: NotInstalled
+	{
+		*Name: "Not Installed"
+	}
+	*Option: MailBox
+	{
+		*Name: "Mail Box"
+	}
+	*Option: Stacker
+	{
+		*Name: "Stacker"
+	}
+	*Option: FunctionSeparator
+	{
+		*Name: "Function Separator"
+	}
+	*Option: JobCollator
+	{
+		*Name: "Job Collator"
+	}
+	*Option: JobSeparator
+	{
+		*Name: "Job Separator"
+	}
+}
+
+*%==============================================================================
+*%                    PC_BIDIOutputModeUnit10 (Installable)                     
+*%==============================================================================
+*Feature: PC_BIDIOutputModeUnit10
+{
+	*Name: "PC_BIDIOutputModeUnit10"
+	*FeatureType: PRINTER_PROPERTY
+	*ConcealFromUI?: =FeatureConcealFromUI
+	*Option: NotInstalled
+	{
+		*Name: "Not Installed"
+	}
+	*Option: MailBox
+	{
+		*Name: "Mail Box"
+	}
+	*Option: Stacker
+	{
+		*Name: "Stacker"
+	}
+	*Option: FunctionSeparator
+	{
+		*Name: "Function Separator"
+	}
+	*Option: JobCollator
+	{
+		*Name: "Job Collator"
+	}
+	*Option: JobSeparator
+	{
+		*Name: "Job Separator"
+	}
+}
+
+*%==============================================================================
+*%                    PC_BIDIOutputModeUnit11 (Installable)                     
+*%==============================================================================
+*Feature: PC_BIDIOutputModeUnit11
+{
+	*Name: "PC_BIDIOutputModeUnit11"
+	*FeatureType: PRINTER_PROPERTY
+	*ConcealFromUI?: =FeatureConcealFromUI
+	*Option: NotInstalled
+	{
+		*Name: "Not Installed"
+	}
+	*Option: MailBox
+	{
+		*Name: "Mail Box"
+	}
+	*Option: Stacker
+	{
+		*Name: "Stacker"
+	}
+	*Option: FunctionSeparator
+	{
+		*Name: "Function Separator"
+	}
+	*Option: JobCollator
+	{
+		*Name: "Job Collator"
+	}
+	*Option: JobSeparator
+	{
+		*Name: "Job Separator"
+	}
+}
+
+*%==============================================================================
+*%                    PC_BIDIOutputModeUnit12 (Installable)                     
+*%==============================================================================
+*Feature: PC_BIDIOutputModeUnit12
+{
+	*Name: "PC_BIDIOutputModeUnit12"
+	*FeatureType: PRINTER_PROPERTY
+	*ConcealFromUI?: =FeatureConcealFromUI
+	*Option: NotInstalled
+	{
+		*Name: "Not Installed"
+	}
+	*Option: MailBox
+	{
+		*Name: "Mail Box"
+	}
+	*Option: Stacker
+	{
+		*Name: "Stacker"
+	}
+	*Option: FunctionSeparator
+	{
+		*Name: "Function Separator"
+	}
+	*Option: JobCollator
+	{
+		*Name: "Job Collator"
+	}
+	*Option: JobSeparator
+	{
+		*Name: "Job Separator"
+	}
+}
+
+*%==============================================================================*%
+*%                       PC_BIDIMarginTop001 (Installable)                         *%
+*%==============================================================================*%
+*Feature: PC_BIDIMarginTop001
+{
+	*Name: "PC_BIDIMarginTop001"
+	*FeatureType: PRINTER_PROPERTY
+	*ConcealFromUI?: =FeatureConcealFromUI
+	*Option: _5mm
+	{
+		*rcNameID: =IDS_FIVE_MM
+	}
+	*Option: _3mm
+	{
+		*rcNameID: =IDS_THREE_MM
+	}
+}
+
+*%==============================================================================*%
+*%                       PC_BIDIMarginTop002 (Installable)                         *%
+*%==============================================================================*%
+*Feature: PC_BIDIMarginTop002
+{
+	*Name: "PC_BIDIMarginTop002"
+	*FeatureType: PRINTER_PROPERTY
+	*ConcealFromUI?: =FeatureConcealFromUI
+	*Option: _5mm
+	{
+		*rcNameID: =IDS_FIVE_MM
+	}
+	*Option: _3mm
+	{
+		*rcNameID: =IDS_THREE_MM
+	}
+}
+
+*InvalidCombination: LIST(PC_BIDIMarginTop001._5mm, PC_BIDIMarginTop002._5mm, JobUserMargin._3mm)
+*InvalidCombination: LIST(PC_BIDIMarginTop001._3mm, PC_BIDIMarginTop002._3mm, JobUserMargin._5mm)
+
+*%==============================================================================*%
+*%                       PC_PagePantoneEmulation (Installable)                         *%
+*%==============================================================================*%
+*Feature: PC_PagePantoneEmulation
+{
+	*Name: "PC_PagePantoneEmulation"
+	*FeatureType: PRINTER_PROPERTY
+	*ConcealFromUI?: =FeatureConcealFromUI
+	*Option: none
+	{
+		*Name: "Not supported"
+	}
+	*Option: pantone2016
+	{
+		*Name: "Supported 2016"
+	}
+	*Option: pantone2019
+	{
+		*Name: "Supported 2019"
+	}
+}
+
+*InvalidCombination : LIST ( PC_PagePantoneEmulation.none, PagePantoneEmulation.On)
+
+*Endif: DRIVER_ARCHITECTURE_V4
+
+
+*Endif: DRIVER_TYPE_SUPD
+
+*%==============================================================================*%
+*%                                     END                                      *%
+*%==============================================================================*%
