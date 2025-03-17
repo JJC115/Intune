@@ -1,13 +1,19 @@
-#########################################
-# Final Intune Printer Installer Script (with network logging)
-#########################################
+# ==========================================
+# Intune Printer Installer Script with Failovers & Enhanced Logging (Updated Driver Verification)
+# ==========================================
 # This script:
-#   • Installs the printer driver using pnputil.exe
-#   • Verifies the driver installation
-#   • Creates the printer port if it doesn’t exist
-#   • Creates the printer instance using Add-Printer
-#   • Logs every step to a log file on the network share, including the computer name
-#########################################
+#   • Installs the printer driver via pnputil.exe with retry logic and captures output
+#   • Verifies the driver installation (by checking both INF and Driver Name)
+#   • Creates the printer port if it doesn’t exist (with retries)
+#   • Removes any existing instance of the printer (with retries)
+#   • Creates the printer instance using Add-Printer (with retries)
+#   • Logs every step to a network share log file
+#
+# Note: This script uses Sysnative if running as a 32-bit process on a 64-bit OS.
+# ==========================================
+
+# Set strict error handling
+$ErrorActionPreference = "Stop"
 
 # --- Key Variables (customize as needed) ---
 $DriverFile    = "HPOneDriver.4081_V3_x64.inf"                # INF file name
@@ -16,11 +22,11 @@ $PrinterName   = "Admin Printer"                               # Desired printer
 $PortName      = "IP_10.10.3.210"                              # Printer port name (using the IP)
 $PortAddress   = "10.10.3.210"                                 # Port address
 
-# --- Determine the Computer Name and log file path on the network share ---
+# --- Determine Computer Name and log file path on network share ---
 $ComputerName = $env:COMPUTERNAME
-$LogFile = "\\help-fs\share\temp\printer-logs\PrinterInstall_$ComputerName.log"
+$LogFile = "\\help-fs\share\temp\printer-logs\PrinterInstall_${ComputerName}.log"
 
-# --- Determine the script folder (fallback if $PSScriptRoot is empty) ---
+# --- Determine Script Root ---
 if ($PSScriptRoot -and $PSScriptRoot -ne "") {
     $ScriptRoot = $PSScriptRoot
 } else {
@@ -37,111 +43,200 @@ if (Test-Path $LogFile) { Remove-Item $LogFile -Force }
 New-Item -Path $LogFile -ItemType File -Force | Out-Null
 
 function Write-Log {
-    param ([string]$message)
+    param (
+        [string]$Message
+    )
     $timeStamp = Get-Date -Format "yyyy-MM-dd HH:mm:ss"
-    $entry = "$timeStamp - $message"
+    $entry = "$timeStamp - $Message"
     Add-Content -Path $LogFile -Value $entry
     Write-Output $entry
 }
 
-Write-Log "=== Starting Printer Installation on $ComputerName ==="
-Write-Log "Script folder: $ScriptRoot"
-Write-Log "Driver file path: $DriverPath"
+Write-Log "=== Starting Printer Installation on ${ComputerName} ==="
+Write-Log "Script folder: ${ScriptRoot}"
+Write-Log "Driver file path: ${DriverPath}"
+
+# -------------------------------
+# Retry Function
+# -------------------------------
+function Retry-Operation {
+    param(
+        [ScriptBlock]$Operation,
+        [int]$MaxAttempts = 3,
+        [int]$DelaySeconds = 5,
+        [string]$OperationName = "Operation"
+    )
+
+    $attempt = 1
+    while ($attempt -le $MaxAttempts) {
+        try {
+            Write-Log "${OperationName}: Attempt ${attempt}..."
+            & $Operation
+            return $true
+        } catch {
+            Write-Log "ERROR: ${OperationName} failed on attempt ${attempt}: $_"
+            if ($attempt -lt $MaxAttempts) {
+                Write-Log "${OperationName}: Retrying in ${DelaySeconds} seconds..."
+                Start-Sleep -Seconds $DelaySeconds
+            }
+        }
+        $attempt++
+    }
+    return $false
+}
 
 # -------------------------------
 # Verify Driver File Exists
 # -------------------------------
-if (!(Test-Path $DriverPath)) {
-    Write-Log "ERROR: Driver file not found at $DriverPath. Exiting."
+if (-not (Test-Path $DriverPath)) {
+    Write-Log "ERROR: Driver file not found at ${DriverPath}. Exiting."
     exit 1
 }
 
 # -------------------------------
-# Install Printer Driver using pnputil.exe
+# Determine Correct pnputil.exe Path
 # -------------------------------
-$PnPUtilPath = "C:\Windows\System32\pnputil.exe"
-if (!(Test-Path $PnPUtilPath)) {
-    Write-Log "ERROR: pnputil.exe not found at $PnPUtilPath. Exiting."
-    exit 1
-}
-
-Write-Log "Installing printer driver via pnputil..."
-$pnputilArgs = "/add-driver `"$DriverPath`" /install"
-try {
-    $p = Start-Process -FilePath $PnPUtilPath -ArgumentList $pnputilArgs -NoNewWindow -Wait -PassThru
-    Write-Log "pnputil.exe exit code: $($p.ExitCode)"
-} catch {
-    Write-Log "ERROR: pnputil.exe failed: $_"
-    exit 1
-}
-Start-Sleep -Seconds 5  # Wait for driver registration
-
-# -------------------------------
-# Verify Driver Installation
-# -------------------------------
-$InstalledDriver = Get-PrinterDriver -ErrorAction SilentlyContinue | Where-Object { $_.InfName -like "*$DriverFile*" }
-if (-not $InstalledDriver) {
-    Write-Log "ERROR: Printer driver from $DriverPath was not installed. Exiting."
-    exit 1
+# When running as a 32-bit process on a 64-bit OS, use Sysnative to access the 64-bit pnputil.exe
+if (($env:PROCESSOR_ARCHITECTURE -eq "x86") -and (Test-Path "$env:windir\sysnative\pnputil.exe")) {
+    $PnPUtilPath = "$env:windir\sysnative\pnputil.exe"
 } else {
-    $InstalledDriverName = $InstalledDriver.Name
-    Write-Log "Printer driver installed successfully. Detected driver name: $InstalledDriverName"
+    $PnPUtilPath = "$env:windir\system32\pnputil.exe"
+}
+
+if (-not (Test-Path $PnPUtilPath)) {
+    Write-Log "ERROR: pnputil.exe not found at ${PnPUtilPath}. Exiting."
+    exit 1
 }
 
 # -------------------------------
-# Create Printer Port (if not exists)
+# Install Printer Driver using pnputil.exe with Retry and Output Capture
 # -------------------------------
-try {
+$stdOutFile = Join-Path -Path $ScriptRoot -ChildPath "pnputil_output.txt"
+$stdErrFile = Join-Path -Path $ScriptRoot -ChildPath "pnputil_error.txt"
+
+$pnputilArgs = "/add-driver `"$DriverPath`" /install"
+$installDriverOperation = {
+    # Remove previous output files if present
+    if (Test-Path $stdOutFile) { Remove-Item $stdOutFile -Force }
+    if (Test-Path $stdErrFile) { Remove-Item $stdErrFile -Force }
+
+    $process = Start-Process -FilePath $PnPUtilPath -ArgumentList $pnputilArgs -NoNewWindow -Wait -PassThru `
+                -RedirectStandardOutput $stdOutFile -RedirectStandardError $stdErrFile
+    if ($process.ExitCode -ne 0) {
+        throw "pnputil.exe returned exit code $($process.ExitCode)"
+    }
+}
+if (-not (Retry-Operation -Operation $installDriverOperation -OperationName "Printer driver installation")) {
+    Write-Log "ERROR: Printer driver installation failed after multiple attempts. Exiting."
+    Write-Log "pnputil standard output:"
+    if (Test-Path $stdOutFile) { Get-Content $stdOutFile | ForEach-Object { Write-Log "$_" } }
+    Write-Log "pnputil standard error:"
+    if (Test-Path $stdErrFile) { Get-Content $stdErrFile | ForEach-Object { Write-Log "$_" } }
+    exit 1
+}
+Start-Sleep -Seconds 5  # Allow time for driver registration
+
+# -------------------------------
+# Verify Driver Installation (retry verification up to 3 times)
+# -------------------------------
+# Updated filter: Check if INF property matches the driver file OR the driver name equals the expected model.
+$driverInstalled = $false
+for ($i = 1; $i -le 3; $i++) {
+    try {
+        $InstalledDriver = Get-PrinterDriver -ErrorAction Stop | Where-Object { 
+            ($_.InfName -like "*$DriverFile*") -or ($_.Name -eq $DriverModel)
+        }
+        if ($InstalledDriver) {
+            $InstalledDriverName = $InstalledDriver.Name
+            Write-Log "Printer driver installed successfully. Detected driver name: ${InstalledDriverName}"
+            $driverInstalled = $true
+            break
+        } else {
+            Write-Log "Verification attempt ${i}: Printer driver not yet installed. Retrying in 5 seconds..."
+            Start-Sleep -Seconds 5
+        }
+    } catch {
+        Write-Log "ERROR during driver verification on attempt ${i}: $_"
+        Start-Sleep -Seconds 5
+    }
+}
+if (-not $driverInstalled) {
+    Write-Log "ERROR: Printer driver from ${DriverPath} was not installed after multiple attempts."
+    Write-Log "DEBUG: Listing all installed printer drivers for troubleshooting:"
+    $drivers = Get-PrinterDriver -ErrorAction SilentlyContinue
+    foreach ($driver in $drivers) {
+        Write-Log "DEBUG: Driver Name: $($driver.Name), INF: $($driver.InfName)"
+    }
+    exit 1
+}
+
+# -------------------------------
+# Create Printer Port if it Doesn't Exist (with Retry)
+# -------------------------------
+$createPortOperation = {
     $existingPort = Get-PrinterPort -Name $PortName -ErrorAction SilentlyContinue
     if (-not $existingPort) {
-        Write-Log "Printer port '$PortName' not found. Creating..."
+        Write-Log "Printer port '${PortName}' not found. Creating..."
         Add-PrinterPort -Name $PortName -PrinterHostAddress $PortAddress -ErrorAction Stop
-        Write-Log "Created printer port '$PortName'."
+        Write-Log "Created printer port '${PortName}'."
     } else {
-        Write-Log "Printer port '$PortName' already exists."
+        Write-Log "Printer port '${PortName}' already exists."
     }
-} catch {
-    Write-Log "ERROR: Failed to create printer port '$PortName': $_"
+}
+if (-not (Retry-Operation -Operation $createPortOperation -OperationName "Create Printer Port")) {
+    Write-Log "ERROR: Failed to create printer port '${PortName}' after multiple attempts. Exiting."
     exit 1
 }
 
 # -------------------------------
-# Remove Existing Printer Instance (if any)
+# Remove Existing Printer Instance (if any) with Retry
 # -------------------------------
-try {
+$removePrinterOperation = {
     $existingPrinter = Get-Printer -Name $PrinterName -ErrorAction SilentlyContinue
     if ($existingPrinter) {
-        Write-Log "Existing printer '$PrinterName' found. Removing..."
+        Write-Log "Existing printer '${PrinterName}' found. Removing..."
         Remove-Printer -Name $PrinterName -ErrorAction Stop
-        Write-Log "Removed printer '$PrinterName'."
+        Write-Log "Removed existing printer '${PrinterName}'."
     } else {
-        Write-Log "No existing printer named '$PrinterName' found."
+        Write-Log "No existing printer named '${PrinterName}' found."
     }
-} catch {
-    Write-Log "ERROR: Could not remove existing printer '$PrinterName': $_"
+}
+if (-not (Retry-Operation -Operation $removePrinterOperation -OperationName "Remove Existing Printer")) {
+    Write-Log "ERROR: Could not remove existing printer '${PrinterName}' after multiple attempts. Exiting."
     exit 1
 }
 
 # -------------------------------
-# Create Printer Instance using Add-Printer
+# Create Printer Instance with Retry
 # -------------------------------
-Write-Log "Creating printer '$PrinterName' using driver '$InstalledDriverName' on port '$PortName'..."
-try {
+$createPrinterOperation = {
     Add-Printer -Name $PrinterName -DriverName $InstalledDriverName -PortName $PortName -ErrorAction Stop
-    Write-Log "Printer '$PrinterName' installed successfully."
-} catch {
-    Write-Log "ERROR: Failed to install printer '$PrinterName': $_"
+}
+if (-not (Retry-Operation -Operation $createPrinterOperation -OperationName "Add Printer Instance")) {
+    Write-Log "ERROR: Failed to install printer '${PrinterName}' after multiple attempts. Exiting."
     exit 1
 }
 
 # -------------------------------
-# Final Verification
+# Final Verification (retry up to 3 times)
 # -------------------------------
-$finalPrinter = Get-Printer -Name $PrinterName -ErrorAction SilentlyContinue
-if ($finalPrinter) {
-    Write-Log "SUCCESS: Printer '$PrinterName' is present on $ComputerName."
-    exit 0
-} else {
-    Write-Log "ERROR: Printer '$PrinterName' not found after installation."
+$printerVerified = $false
+for ($i = 1; $i -le 3; $i++) {
+    try {
+        $finalPrinter = Get-Printer -Name $PrinterName -ErrorAction Stop
+        if ($finalPrinter) {
+            Write-Log "SUCCESS: Printer '${PrinterName}' is present on ${ComputerName}."
+            $printerVerified = $true
+            break
+        }
+    } catch {
+        Write-Log "Final verification attempt ${i} failed: $_. Retrying in 5 seconds..."
+        Start-Sleep -Seconds 5
+    }
+}
+if (-not $printerVerified) {
+    Write-Log "ERROR: Printer '${PrinterName}' not found after installation. Exiting."
     exit 1
 }
+
+exit 0
