@@ -24,7 +24,7 @@ $PortAddress   = "10.10.3.210"                                 # Port address
 
 # --- Determine Computer Name and log file path on network share ---
 $ComputerName = $env:COMPUTERNAME
-$LogFile = "\\help-fs\share\temp\printer-logs\PrinterInstall_${ComputerName}.log"
+$LogFile = "c:\logs\PrinterInstall_${ComputerName}.log"
 
 # --- Determine Script Root ---
 if ($PSScriptRoot -and $PSScriptRoot -ne "") {
