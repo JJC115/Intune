@@ -29,7 +29,7 @@ $DriverDownloadURL = "https://raw.githubusercontent.com/JJC115/Intune/main/HP-Dr
 
 # --- Determine Computer Name and log file path on network share ---
 $ComputerName = $env:COMPUTERNAME
-$LogFile = "\\help-fs\share\temp\printer-logs\PrinterInstall_${ComputerName}.log"
+$LogFile = "C:\logs\printer-logs\PrinterInstall_${ComputerName}.log"
 
 # --- Determine Script Root (for logging only) ---
 if ($PSScriptRoot -and $PSScriptRoot -ne "") {
