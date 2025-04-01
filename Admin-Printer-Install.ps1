@@ -1,15 +1,17 @@
 # *********************************************************************
-# Intune Win32 App Script: Install HP Smart Universal Printing Driver V3
+# Admin Printer Installation Script
+# Target Printer: Admin Printer
+# IP Address: 10.10.3.210
+#
+# Expected driver: HP Smart Universal Printing (V3) (v2.07.1)
 #
 # This script downloads the repository ZIP from GitHub, extracts the "HP" folder,
-# then checks if the expected driver ("HP Smart Universal Printing (V3) (v2.07.1)")
-# is installed. If not, it runs the HP installer (install.exe) from the downloaded folder.
-# After waiting 30 seconds, if the driver still isn’t found, it falls back to installing
-# the driver using Add-PrinterDriver with the INF file.
-#
-# Finally, it checks if the printer ("Admin Printer") exists; if not, it adds the printer,
-# and then cleans up temporary files.
-#
+# then checks if the expected driver is installed. If not, it runs the HP installer
+# (install.exe) from the downloaded HP folder and waits 30 seconds.
+# Finally, it checks if the printer ("Admin Printer") is installed and adds it if missing,
+# then cleans up temporary files.
+# *********************************************************************
+
 # Expected published driver name:
 $DriverModel = "HP Smart Universal Printing (V3) (v2.07.1)"
 
@@ -19,7 +21,7 @@ $PortName    = "IP_10.10.3.210"
 $PortAddress = "10.10.3.210"
 
 # ---------------------------------------------------------------------
-# Step A: Download the repository ZIP from GitHub.
+# Step 1: Download repository ZIP from GitHub.
 # ---------------------------------------------------------------------
 $DownloadUrl = "https://github.com/JJC115/Intune/archive/refs/heads/main.zip"
 $TempDir = Join-Path -Path $env:TEMP -ChildPath "IntuneDownload"
@@ -36,7 +38,7 @@ try {
 }
 
 # ---------------------------------------------------------------------
-# Step B: Extract the ZIP file.
+# Step 2: Extract the ZIP file.
 # ---------------------------------------------------------------------
 $ExtractDir = Join-Path -Path $TempDir -ChildPath "Extracted"
 try {
@@ -48,7 +50,7 @@ try {
 }
 
 # ---------------------------------------------------------------------
-# Step C: Set the source folder to the HP folder from the extracted ZIP.
+# Step 3: Set source folder to the HP folder.
 # The HP folder is expected at: "<ExtractDir>\Intune-main\HP"
 # ---------------------------------------------------------------------
 $SourceFolder = Join-Path -Path $ExtractDir -ChildPath "Intune-main\HP"
@@ -57,22 +59,15 @@ if (-not (Test-Path $SourceFolder)) {
     exit 1
 }
 
-# Define paths for the installer and INF file.
+# Define the path to the installer.
 $InstallerPath = Join-Path -Path $SourceFolder -ChildPath "install.exe"
-$DriverInf = "HPOneDriver.4081_V3_x64.inf"
-$PackageDriverInfPath = Join-Path -Path $SourceFolder -ChildPath $DriverInf
-
 if (-not (Test-Path $InstallerPath)) {
     Write-Error "HP installer not found at '$InstallerPath'. Exiting."
     exit 1
 }
-if (-not (Test-Path $PackageDriverInfPath)) {
-    Write-Error "Driver INF file not found at '$PackageDriverInfPath'. Exiting."
-    exit 1
-}
 
 # ---------------------------------------------------------------------
-# Step D: Create the printer port if it doesn't exist.
+# Step 4: Create the printer port if it doesn't exist.
 # ---------------------------------------------------------------------
 $existingPort = Get-PrinterPort -Name $PortName -ErrorAction SilentlyContinue
 if (-not $existingPort) {
@@ -89,7 +84,7 @@ if (-not $existingPort) {
 }
 
 # ---------------------------------------------------------------------
-# Step E: Check if the expected driver is installed.
+# Step 5: Check if the expected driver is installed.
 # ---------------------------------------------------------------------
 $installedDriver = Get-PrinterDriver -Name $DriverModel -ErrorAction SilentlyContinue
 if ($installedDriver) {
@@ -106,30 +101,12 @@ if ($installedDriver) {
     }
 }
 
-# After installer, check again for the driver.
-$installedDriver = Get-PrinterDriver -Name $DriverModel -ErrorAction SilentlyContinue
-if (-not $installedDriver) {
-    Write-Output "Driver '$DriverModel' still not found after installer. Falling back to installing driver via INF."
-    try {
-        Add-PrinterDriver -Name $DriverModel -InfPath $PackageDriverInfPath -ErrorAction Stop
-        Write-Output "Driver installed via Add-PrinterDriver."
-    } catch {
-        Write-Error "Add-PrinterDriver failed: $_"
-        exit 1
-    }
-} else {
-    Write-Output "Driver '$DriverModel' is now installed."
-}
-
 # ---------------------------------------------------------------------
-# Step F: Check if the printer is installed.
+# Step 6: Check if the printer is installed; if not, add it.
 # ---------------------------------------------------------------------
 $printer = Get-Printer -Name $PrinterName -ErrorAction SilentlyContinue
 if ($printer) {
-    Write-Output "Printer '$PrinterName' is already installed. Exiting script."
-    # Clean up temporary files.
-    Remove-Item -Path $TempDir -Recurse -Force
-    exit 0
+    Write-Output "Printer '$PrinterName' is already installed."
 } else {
     Write-Output "Printer '$PrinterName' not found. Adding printer using the installed driver..."
     try {
@@ -142,7 +119,7 @@ if ($printer) {
 }
 
 # ---------------------------------------------------------------------
-# Step G: Clean up temporary files.
+# Step 7: Clean up temporary files.
 # ---------------------------------------------------------------------
 Write-Output "Cleaning up temporary files..."
 try {
