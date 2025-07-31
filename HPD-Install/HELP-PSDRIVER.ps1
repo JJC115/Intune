@@ -40,7 +40,6 @@ if ($existing) {
     exit 0
 }
 
-
 Log "Running installer..."
 
 # Register any INF driver files into the DriverStore
@@ -54,6 +53,11 @@ Start-Process -FilePath $installer -ArgumentList '/S' -Wait -NoNewWindow
 
 # Wait briefly for driver registration to complete
 Start-Sleep -Seconds 5
+
+# Add the printer driver to the system so it appears in Print Management
+Log "Adding printer driver to system"
+$driverName = 'HP Smart Universal Printing (V3) (v2.07.1)'
+Add-PrinterDriver -Name $driverName
 
 Log "Installation finished, verifying..."
 $installed = Get-CimInstance -ClassName Win32_PrinterDriver |
