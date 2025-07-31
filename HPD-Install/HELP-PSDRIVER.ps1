@@ -40,8 +40,20 @@ if ($existing) {
     exit 0
 }
 
+
 Log "Running installer..."
+
+# Register any INF driver files into the DriverStore
+$infFiles = Get-ChildItem -Path $ScriptRoot -Filter '*.inf' -Recurse
+foreach ($inf in $infFiles) {
+    Log "Registering driver INF: $($inf.FullName)"
+    Start-Process -FilePath pnputil.exe -ArgumentList "/add-driver `"$($inf.FullName)`" /install" -Wait -NoNewWindow
+}
+
 Start-Process -FilePath $installer -ArgumentList '/S' -Wait -NoNewWindow
+
+# Wait briefly for driver registration to complete
+Start-Sleep -Seconds 5
 
 Log "Installation finished, verifying..."
 $installed = Get-CimInstance -ClassName Win32_PrinterDriver |
