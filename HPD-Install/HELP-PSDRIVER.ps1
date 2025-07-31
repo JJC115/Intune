@@ -29,14 +29,12 @@ Log "=== Starting HPDInstall.exe installation ==="
 $installer = Join-Path $ScriptRoot 'HPDInstall.exe'
 Log "Looking for installer at $installer"
 
-if (-not (Test-Path $installer)) {
-    Log "ERROR: Installer not found"
-    exit 1
-}
+# Pattern for driver detection
+$pattern = 'HP Smart Universal Printing (V3) (v2.07.1*'
 
-# Detect specific driver
-$existing = Get-WmiObject -Class Win32_PrinterDriver |
-    Where-Object { $_.Name -like 'HP Smart Universal Printing (V3) (v2.07.1*' }
+# Detect specific driver before installation
+$existing = Get-CimInstance -ClassName Win32_PrinterDriver |
+    Where-Object { $_.Name -like $pattern }
 if ($existing) {
     Log "Driver already installed: $($existing.Name)"
     exit 0
@@ -46,12 +44,15 @@ Log "Running installer..."
 Start-Process -FilePath $installer -ArgumentList '/S' -Wait -NoNewWindow
 
 Log "Installation finished, verifying..."
-$installed = Get-WmiObject -Class Win32_PrinterDriver |
-    Where-Object { $_.Name -like 'HP Smart Universal Printing (V3) (v2.07.1*' }
+$installed = Get-CimInstance -ClassName Win32_PrinterDriver |
+    Where-Object { $_.Name -like $pattern }
 if ($installed) {
     Log "SUCCESS: Driver installed: $($installed.Name)"
     exit 0
 } else {
-    Log "ERROR: Driver verification failed"
+    Log "ERROR: Driver verification failed. Dumping all HP drivers for debugging:"
+    Get-CimInstance -ClassName Win32_PrinterDriver |
+        Where-Object { $_.Name -like '*HP*' } |
+        ForEach-Object { Log " - $($_.Name)" }
     exit 1
 }
