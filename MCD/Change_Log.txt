@@ -1,0 +1,1374 @@
+****************************AMENDMENT RECORD****************************
+******************************DOC NO: 1090******************************
+************************************************************************
+
+   DATE       VERSION
+   24/10/24   V3.1.2.1095
+
+    [MPD-2961] - Added printer Authentys 600
+
+************************************************************************
+
+   DATE       VERSION
+   24/10/24   V3.1.1.1094
+
+    [MPD-2811] - Update MagAPI to version 3.2.7.2
+
+************************************************************************
+
+   DATE       VERSION
+   19/08/24   V3.1.0.1093
+
+    [MPD-2297] - 600 dpi visibility in the user interface.
+    [MPD-2305] - EULA - End User License Agreement not appear
+    [MPD-2316] - Cardmaker CM360 (V2) card size image is incorrect
+    [MPD-2334] - Add settings for eco-cards into driver
+    [MPD-2367] - Update signing to include Windows 11 23H2
+    [MPD-2421] - Languages | Arabic | Wrong position of the Card size image in Printer tab.
+    [MPD-2422] - Languages | Polish, Russian |  "Standard Card Duplex (CR80)"
+    [MPD-2423] - The card size combo box tooltip.
+    [MPD-2430] - Magicard E+ - card images are not shown on the Printer Page.
+    [MPD-2577] - White Label Driver for Brady PA1100 Printer
+    [MPD-2578] - White Label Driver for Brady PA1300 Printer
+    [MPD-2581] - Printer model: E+ NEO (another Extended printer)
+    [MPD-2586] - An unexpected print job is sent during a firmware update
+    [MPD-2592] - Options window | German language | Incorrectly displayed text.
+    [MPD-2593] - Colour correction areas window | German language | Incorrectly displayed text.
+    [MPD-2594] - Black Resin Areas | Simplified Chinese - Unnecessary character "("
+    [MPD-2598] - The End User License Agreement (EULA) window does not appear.
+    [MPD-2601] - Magicard E+ | Resolution combobox.
+    [MPD-2617] - Improve the way the EULA acceptance dialog is presented to the user.
+    [MPD-2619] - The printer registration window appears/does not appear.
+    [MPD-2670] - Update MagAPI to V3.2.7.0
+    [MPD-2672] - Set 'High Quality Mode' to ON when printing N-panel for all MB1 printers.
+    [MPD-2678] - Print in high speed mode when using wax film
+    [MPD-2689] - Holokotes are not displayed in UI when the printer is connected via Ethernet or WIFI.
+
+************************************************************************
+
+   DATE       VERSION
+   07/06/24   V3.0.2.967
+
+    [MPD-2610] - Improve the way the EULA acceptance dialog is presented to the user.
+    [MPD-2620] - Additional Translations applied.
+
+************************************************************************
+   DATE       VERSION
+   06/03/24   V3.0.1.996
+
+    [MPD-2434] - White Label Driver for Brady PA1100 Printer
+    [MPD-2435] - White Label Driver for Brady PA1300 Printer
+    [MPD-2446] - Printer model: E+ NEO
+    [MPD-2583] - An unexpected print job is sent during a firmware update.
+
+************************************************************************
+
+   DATE       VERSION
+   16/02/24   V3.0.0.964
+
+    [MPD-1434] - MB1 Printers - Batch Printing.
+    [MPD-1770] - More aggressive warning on the clean required prompt.
+    [MPD-1779] - INF File Improvements.
+    [MPD-1882] - AlphaCard PILOT., PRO 100. and ID Maker Value. printers are not recognized by the driver using the USB connection.
+    [MPD-1967] - Arabic - Colour correct areas dialog does not show up correctly.
+    [MPD-1974] - Languages - Polish corrections.
+    [MPD-1979] - Add printer name to EULA and Printer Registration dialogs.
+    [MPD-1987] - White label 'Magicard D (supported by Bodno.com)'.
+    [MPD-1990] - Restore factory defaults not restoring correct defaults.
+    [MPD-1991] - Default settings for Holopatch area.
+    [MPD-1992] - The language is not being read from the registry correctly.
+    [MPD-1996] - Magicard K missing 600dpi control in Printing Preferences.
+    [MPD-2072] - Add a reason code when colour profile data cannot be loaded.
+    [MPD-2077] - Addition of 300 x 600dpi print quality for all printers.
+    [MPD-2082] - Change Goodcard XR260D driver branding to Gudecard XR260D
+    [MPD-2084] - Change Goodcard XR360K driver branding to Gudecard XR360K
+    [MPD-2086] - Change Goodcard XR160 driver branding to Gudecard XR160
+    [MPD-2088] - Change Goodcard XR160. driver branding to Gudecard XR160.
+    [MPD-2090] - Create a new white label driver for the Gudecard XR160PRO
+    [MPD-2093] - Advanced Tab\Rewritable cards\Define erase area... - parent window set.
+    [MPD-2094] - Card Front Tab\Security options\Holopatch\Selected area... - parent window set.
+    [MPD-2096] - Advanced Tab\Rewritable cards\Rewritable areas - Resin cutout checkbox default setting change.
+    [MPD-2100] - HoloPatch selected area button - Condition for Enable/Disable.
+    [MPD-2101] - Areas windows - Incorrectly parent window.
+    [MPD-2106] - Printer upgrades | Holokote card image button does not work.
+    [MPD-2108] - Add output from systemteminfo.exe to the Magicard Support Tool.
+    [MPD-2120] - Power Off time shown in Printer Properties -> Tools shows 15min.
+    [MPD-2251] - Change Goodcard XR260 driver branding to Gudecard XR260
+    [MPD-2252] - Fix Gudecard product log images.
+    [MPD-2292] - Resolve language display issues with Status Utility dialog.
+    [MPD-2295] - Advanced | Rewritable cards - define erase area - Value difference in static control.
+    [MPD-2296] - Advanced | Printable area - Value difference in static control.
+    [MPD-2317] - IDville printers | Black Resin Options | Pictures use YMC only not selected.
+    [MPD-2330] - Update Magicard logo images in the driver.
+    [MPD-2339] - Add a power setting for wax film types.
+    [MPD-2350] - The 'Encode only' option appears to apply to contact / contactless encoding as well as MAG
+    [MPD-2354] - The End User License Agreement window does not appear.
+    [MPD-2356] - MagAPI updated to V3.2.6.3.
+    [MPD-2357] - Add new printer model: Magicard E+
+    [MPD-2358] - IDville logo change
+    [MPD-2360] - The name of the Options dialog is not translated.
+    [MPD-2361] - The name of the Printer status dialog is not translated.
+    [MPD-2366] - Crash when upgrading driver using Windows Update.
+    [MPD-2369] - Amendment of default printer settings for MB1 Printers.
+    [MPD-2390] - Fery white label printer: Pronto: 50X
+    [MPD-2393] - Fery white label printer: Pronto 100: 250X
+    [MPD-2394] - Fery white label printer: 300: 400X
+    [MPD-2396] - Fery white label printer: 600: 800X
+    [MPD-2399] - Printhead power adjustment for K and overcoat panel linked.
+    [MPD-2403] - Printing from the Windows Picture Viewer does not work on Windows 11.
+    [MPD-2431] - The printer cannot be updated to the latest firmware.
+
+************************************************************************
+
+   DATE       VERSION
+   22/05/23   V2.8.2.779
+
+    [MPD-2081] - Change Goodcard XR260D driver branding to Gudecard XR260D
+    [MPD-2083] - Change Goodcard XR360K driver branding to Gudecard XR360K
+    [MPD-2085] - Change Goodcard XR160 driver branding to Gudecard XR160
+    [MPD-2087] - Change Goodcard XR160. driver branding to Gudecard XR160.
+    [MPD-2089] - Create a new white label driver for the Gudecard XR160PRO
+    [MPD-2099] - Printer randomly prints in mono only.
+    [MPD-2103] - problems printing multiple cards (CASE-87111)
+    [MPD-2121] - Update images for Gudecard printers
+    [MPD-2250] - Change Goodcard XR260 driver branding to Gudecard XR260
+
+************************************************************************
+
+   DATE       VERSION
+   05/04/23   V2.8.1.777
+
+    [MPD-2060] - new model: Magicard D (supported by Bodno.com
+    [MPD-2081] - Goodcard XR260D rebranded to Gudecard XR260D
+
+************************************************************************
+
+   DATE       VERSION
+
+   14/03/23   V2.8.0.776
+
+    [MPD-2092] - Printer randomly prints in mono (resin) only.
+
+*************************************************************************
+
+   DATE       VERSION
+   01/31/23   V2.8.0.775
+
+    [MPD-278] - Tech Support diagnostic utility
+    [MPD-454] -Print preview - wrong displayed card
+    [MPD-471] - Arabic Language - problems
+    [MPD-473] - Cards printed without overcoat if rewrite/erase options enabled
+    [MPD-1063] - Resolve text corruption on Status Utility dialog when multiple errors occurs
+    [MPD-1095] - Enduro3e v2.5 thousands of jobs spooled on print \(CASE-66504\)
+    [MPD-1105] - logging of printer errors
+    [MPD-1410] - Manual is not exist for D and K printers.
+    [MPD-1435] - Languages - Arabic - Black resin area window
+    [MPD-1442] - Ethernet Printer list incomplete - Pronto 100 missing
+    [MPD-1444] - The 'Query' button on the 'Ethernet' dialog does not update the edit controls.
+    [MPD-1508] - The status monitor displays error codes incorrectly.
+    [MPD-1509] - Languages - Arabic - Printable Area
+    [MPD-1510] - Languages - Arabic - Image position
+    [MPD-1511] - Languages - Russian - "About" button
+    [MPD-1514] - Save/Restore Card size
+    [MPD-1516] - General code improvements
+    [MPD-1537] - Inform the user that a reboot is required of the language monitor could be replaced during installation.
+    [MPD-1556] - The printer language does not match with the driver language.
+    [MPD-1634] - Arabic Language - "OK", "Cancel" and "Apply" buttons.
+    [MPD-1648] - Printing 'Back only' does not work
+    [MPD-1663] - Manage Holokote fails to Install the JFIF File - Offline
+    [MPD-1680] - New version of MagAPI
+    [MPD-1683] - Alphacard Incorrect Holokotes
+    [MPD-1685] - Ethernet install using executable leaves leading zeros in IP address \(Case No. 76552\)
+    [MPD-1687] - 360 NEO White Label: Centena Edge
+    [MPD-1756] - Include magicard-support.exe in the driver installation
+    [MPD-1780] - ExtEscape values for Resin Options to be set (MAGAPI)
+    [MPD-1781] - Printer "XR160. \(V2\)" not showing the correct colour correction values.
+    [MPD-1784] - Magicard Support Tool does not detect Windows 11
+    [MPD-1785] - Extend the ability to select high quality mode to all Magicard branded MB1 models
+    [MPD-1786] - Driver data gets corrupted when updating from 2.7.1.600 to 2.8.0.x
+    [MPD-1791] - 300 white label:  Magicard 300NEO
+    [MPD-1856] - Update installer to include Magicard 300NEO
+    [MPD-1857] - Create Device stage package for Magicard 300NEO
+    [MPD-1867] - Update EULA
+    [MPD-1879] - Add STATUS-HELPER.EXE to installer
+    [MPD-1890] - Update INF to Include Services
+    [MPD-1895] - 600 white label:  Magicard 600NEO
+    [MPD-1898] - Logo change required to the EasyBadge 3.0 'About' pages.
+    [MPD-1900] - Add printer Magicard 600NEO to installer \(2.8.0\)
+    [MPD-1960] - Add 'Privacy Policy' link to the EULA dialog
+    [MPD-1962] - Create Device stage package for Magicard 600NEO
+    [MPD-1964] - Magicard Ultima is not installing correctly.
+    [MPD-1965] - Launch WiFi installation.
+    [MPD-1966] - Successful installation - failed
+    [MPD-1968] - Firmware download is not working
+    [MPD-1969] - Closing registration dialog always navigates to the web site.
+    [MPD-1971] - Change target location of the 'Get Help' link
+    [MPD-1972] - Mag batch printing - INTERNAL ERROR
+    [MPD-1975] - New Languages | All languages | Translations
+    [MPD-1980] - Restrict version checking of language monitor DLLs to the current printer type
+    [MPD-1985] - Installer preventing win7 installation
+
+
+
+*************************************************************************
+
+   DATE       VERSION
+   06/12/22   V2.7.4.610
+
+    [MPD-1895] - new model: Magicard 600NEO
+
+
+*************************************************************************
+
+   DATE       VERSION
+   17/10/22   V2.7.3.609
+
+    [MPD-1791] - new model: Magicard 300NEO
+
+
+*************************************************************************
+
+   DATE       VERSION
+   24/08/22   V2.7.2.608
+
+    [MPD-1680] - MagAPI updated to v3.2.60
+    [MPD-1687] - new model: Centena Edge
+    [MPD-1781] - Pronto. models showing incorrect colour correction values.
+
+
+*************************************************************************
+
+   DATE       VERSION
+   16/03/22   V2.7.1.600
+
+    [MPD-1663] - Manage holokote unable to download
+
+
+*************************************************************************
+
+   DATE       VERSION
+   22/02/22   V2.7.1.599
+
+    [MPD-1648] - Printing 'Back only' does not work
+    [MPD-1552] - STATUS.EXE - Ultima firmware update
+    [MPD-1534] - Windows Update issues
+    [MPD-1539] - Update driver code with help URLs for all newly added printers.
+    [MPD-1525] - new model: Magicard Pronto NEO.
+    [MPD-1523] - new model: AlphaCard Pilot.
+    [MPD-1521] - new model: AlphaCard PRO 100.
+    [MPD-1519] - new model: Goodcard XR160.
+    [MPD-1397] - new model: digital id EasyBadge 3.0
+
+
+*************************************************************************
+
+   DATE       VERSION
+   11/02/22   V2.7.0.570
+
+    [MPD-1515] - Holokote Slots - Ultima
+    [MPD-1505] - About Box not showing in right-to-left in Arabic
+    [MPD-1443] - Pressing the OK button on the 'Rewritable cards' dialog closes the driver user interface
+    [MPD-1428] - Legacy Rio Pro - grey rectangle in place of the photo of the printer
+    [MPD-1418] - Legacy Rio Pro Xtended - Holokote selection - side 2 is reflected to side 1
+    [MPD-1411] - Dye film statistics show wrong number of dye film shots.
+    [MPD-1398] - Query button (Network configuration) does not work! (Case No. 70351)
+    [MPD-1390] - Ultima - The status monitor does not show all the required buttons, links and error information.
+    [MPD-1313] - Check for dye-overcoat-panel-length being greater than 0 when deciding whether to print the overcoat
+    [MPD-1307] - StandyTimeout and PowerTimeout are only saved when the printer is a Pro 600 type
+    [MPD-1236] - Languages: Russian: EULA dialog: buttons are too small for the text displayed
+    [MPD-1170] - Incorrect Percentage film remaining
+    [MPD-1169] - Holokote image position in the driver.
+    [MPD-1168] - Help button link incorrect
+    [MPD-1151] - Languages: Russian: Text on button Printer upgrade is truncated
+    [MPD-1150] - Languages: Arabic, Rio Pro 360 Xtended, Image Page
+    [MPD-1140] - Languages: Russian: Text on Printhead power button is truncated
+    [MPD-1139] - Languages: Portuguese: Text for printhead power is truncated
+    [MPD-1138] - Languages: Advanced page in Russian, the second button is too large
+    [MPD-1137] - Languages: Advanced page in French needs some work to fix layout issues
+    [MPD-625]  - Monochrome images too dark when printing at 600 dpi
+    [MPD-1421] - Dynamically read the number of HoloKote slots available from the printer.
+    [MPD-1414] - Windows 11 Support
+    [MPD-1314] - Enduro/Pronto Status Monitor to handle ERR_INTERNAL_TAG_ERROR (39) errors
+    [MPD-1077] - Erase options only applied to side 0 (card front) (Case No. 66361)
+    [MPD-349]  - Add feature to display remote UI
+    [MPD-277]  - TNID driver functionality to be incorporated into the mainline driver version
+    [MPD-916]  - Updated colour profile for the Enduro/Pronto
+    [MPD-212]  - Enduro Neo printer id issue - driver updated
+
+
+*************************************************************************
+
+   DATE       VERSION
+   07/10/21   V2.6.2.438
+
+    [MPD-1390] - Ultima - The status monitor does not show all the required buttons
+    [MPD-1319] - Update MagAPI to 3.2.5.1
+    [MPD-1315] - New model: Alphacard PRO 150
+    [MPD-1160] - New model: Cardmaker CMK
+    [MPD-1092] - New model: PriceCardPro 100
+     [MPD-1084] - New model: PriceCardPro Flex+
+
+
+*************************************************************************
+
+   DATE       VERSION
+   08/08/21   V2.6.1.424
+
+    [MPD-1302] - Pronto 100 showing legacy Holokote options
+    [MPD-1295] - Pronto 100 model variant: Magicard 100 NEO
+    [MPD-1009] - IDville ID Maker ARC (Pronto 100 White Label)
+    [MPD-1153] - Update MagAPI to 3.2.5.0
+
+
+*************************************************************************
+
+  DATE       VERSION
+   07/07/21   V2.6.0.420
+
+    [MPD-1146] - Perceptual and Colour Management (From Control Panel) profiles transposed?? V2.5.0.300 (Case No. 67834)
+    [MPD-1121] - Colour Shift between Ultima Driver Version 2.4.0.191 and 2.5.0.300
+    [MPD-1102] - Erase ExtEscape producing different values
+    [MPD-1097] - Missing models in Goodcard (XR) installer (Ethernet)(Case No. 66704)
+    [MPD-1082] - Problem with Driver 2.5.0.300 on older Xtended printers (Case No. 64F9766)
+    [MPD-1079] - Unplugging a printer whilst Preferences dialogue was open resulted in stuck dialogue
+    [MPD-1078] - Clicking on "Help" hyperlinks to an old Rio Pro 360 manual (not model dependent)
+    [MPD-1069] - Legacy Pronto - restore settings does not set correct colour profile
+    [MPD-1059] - Standby time in the driver does not work
+    [MPD-1043] - Fast Rewrite does not work.
+    [MPD-1032] - Register Printer dialogue randomly appearing
+    [MPD-1030] - Ultima - Missing translations
+    [MPD-1026] - Ultima - Languages
+    [MPD-1025] - Ultima - Save/restore - Colour correction
+    [MPD-1024] - Legacy Pronto - Save/restore - Colour correction
+    [MPD-1023] - Arabic Language - Rio Pro 360 Extended
+    [MPD-1021] - Installation issues with Pronto 100
+    [MPD-1019] - Pronto 100: 'Card size' is displayed as '0' in Portuguese
+    [MPD-1017] - Languages - Updates for M600, D, and Pronto 100
+    [MPD-895]  - RP-360 print preview CASE-63778
+    [MPD-866]  - User interface language issues
+    [MPD-780]  - WiFi - lost connection
+    [MPD-1101] - Remove printer "Elliaden Caroline 300 (V2)" from the driver
+    [MPD-1098] - Skip registration for Chinese White Label printers
+    [MPD-1076] - Fix copyright year in About dialog
+    [MPD-1051] - The rewritable option is not translated.
+    [MPD-1046] - DoH Driver Image of the printer needs to be updated
+    [MPD-1040] - Resolve scaling issues with the register printer splash screen
+    [MPD-686]  - Extend the fix for darker printing in 600 dpi mode to other printers
+    [MPD-476]  - Modifications to support printer standby mode.
+    [MPD-1037] - UILanguage is coming through as "0"
+    [MPD-1007] - Buttons on driver UI incorrectly placed and border is in the wrong place
+
+
+
+*************************************************************************
+
+   DATE       VERSION
+   18/03/21   V2.5.0.300
+
+    [MPD-1068] - Enduro - Absolute colour profile
+    [MPD-1067] - The Status Monitor displays without showing the error. Enduro Printer.
+    [MPD-1061] - Batch printing - missing cards and delay.
+    [MPD-1048] - Black resin areas not working
+    [MPD-1013] - Save/restore - Colour correction slider
+    [MPD-1008] - Spooling and Batch Printing
+    [MPD-1004] - Driver signing not working (New Dongle)
+    [MPD-935]  - USB warning dialog on installer not displaying
+    [MPD-932]  - Reorder Supplies dialog does not show the correct data
+    [MPD-931]  - STATUS.EXE using the wrong data to determine the printer type.
+    [MPD-929]  - Driver not showing Properties windows from Print Management
+    [MPD-908]  - Rio Pro 360 LE driver issue (Naming)
+    [MPD-898]  - Firmware update fix for generic Rio Pro not working in V2.4.0.190
+    [MPD-896]  - QR Code not printing correctly
+    [MPD-895]  - RP-360 print preview CASE-63778
+    [MPD-785]  - Incorrect Factory Default settings for Pronto and Enduro
+    [MPD-758]  - 360 NEO is missing from Ethernet installer drop-down list (Case No. 62117)
+    [MPD-474]  - Back Power Adjustment not working on Enduro platform
+    [MPD-451]  - Status monitor - IP adress is wrong displayed
+    [MPD-280]  - 600 dpi option producing double thickness horizontal lines
+    [MPD-120]  - UI looses scaling for 200% displays
+    [MPD-1065] - Update MagAPI to V3.2.4.0
+    [MPD-1002] - Incorrect Text on SetupInitialization dialog
+    [MPD-886]  - Add Beta product to the Installshield project
+    [MPD-1038] - Apply languages translations to the driver and the installation
+    [MPD-939]  - Update Goodcard (XR) Logo Driver Image
+    [MPD-905]  - Firmware update to use https (secure)
+    [MPD-864]  - Update Polish language translations
+    [MPD-289]  - Improvements to NetWiz
+    [MPD-1033] - Printer Driver: Error dialog to include link to Magicard support site
+    [MPD-934]  - Print Status message is incorrectly placed for Arabic
+
+
+*************************************************************************
+
+   DATE       VERSION
+   19/11/20   V2.4.2.192
+
+    [MPD-908] - Rio Pro 360 LE unable to obtain status
+
+
+*************************************************************************
+
+   DATE       VERSION
+   16/11/20   V2.4.1.191
+
+    [MPD-898] - Firmware update fix
+
+
+************************************************************************
+
+   DATE       VERSION
+   15/10/20   V2.4.0.190
+
+    [MPD-159] - GUI Spin Button Manual Input Validation
+    [MPD-228] - Introduction of print position control for Rio Pro 360
+    [MPD-590] - Consumables ordering prompt in status monitor
+    [MPD-717] - Driver to support Department of Health Magicard 300
+    [MPD-267] - 600 dpi printing darker on image/object place holders in word
+    [MPD-273] - Word file is not correctly printed.
+    [MPD-280] - 600 dpi option producing double thickness horizontal lines
+    [MPD-316] - Overcoat not being printed
+    [MPD-323] - Magicard 500 connecting to services.magicard.com
+    [MPD-344] - Back image Posterise effect
+    [MPD-584] - Rectangles for black areas, and colour areas disappear when selecting other areas.
+    [MPD-614] - Image overlap on Pridento Pro 360 GUI
+    [MPD-718] - EULA dialog does not wrap test correctly (like the About dialog)
+    [MPD-732] - YMC Printhead Power Adjustment Bug in V2.3.1.113 (Case No. 61444)
+    [MPD-752] - Resin image is corrupted when printing from the SDK
+    [MPD-757] - Disabled Holokote on Ultima
+    [MPD-758] - 360 NEO is missing from Ethernet installer drop-down list (Case No. 62117)
+    [MPD-771] - Resin image printed using YMC (without K)
+    [MPD-786] - Printing Quality differs between different films
+
+
+************************************************************************
+
+   DATE       VERSION
+   29/06/20   V2.3.1.112
+
+    [MPD-136] - Printhead Image & Position missing in driver GUI fro RP360
+    [MPD-334] - Batch printing missing files.
+    [MPD-336] - The custom mag encoding sentinels text box allows more than 3 characters to be entered.
+    [MPD-361] - When printing multiple cards from Word with 'Print to file' selected only the first card is printed to the file
+    [MPD-362] - Checksum value is not being reset when printing multiple pages to a file
+    [MPD-510] - Overcoat area definition not working correctly.
+    [MPD-530] - Overall size of driver tool appears compressed.
+    [MPD-585] - Change copyright year
+    [MPD-591] - Incorrect default colour profile after restored to default setting.
+    [MPD-593] - Issue with Ultima GUI
+    [MPD-613] - Spooler unresponsive when switching between 360 and Enduro based printers
+    [MPD-626] - Colour Problems with Driver V2.2.0.60
+    [MPD-628] - Print to file feature in MS Word (365) does not work. Driver versions: V2.2.0.60 / V2.2.0.60 (MPD-362)
+    [MPD-678] - About box issues
+    [MPD-679] - Y=0 reference for overcoat area / hole changed to bottom of card 59218)
+    [MPD-306] - Restrict upper limit of print head power adjustment for MB1 printers
+    [MPD-497] - The YMC print density is higher when printing resin at 600 x 300 dpi than 300 x 300 dpi
+    [MPD-404] - PCP Flex UI to support both mono and colour printing - printer dependent
+    [MPD-586] - Include MagAPI 3.2.3.0 in Driver Release 2.3.0
+    [MPD-612] - Language Monitor Returning An OK Status When Printer is Disconnected
+
+
+************************************************************************
+
+   DATE       VERSION
+   16/04/20   V2.2.0.60
+
+    [MPD-357] - Resin cutout availabe in Rewritable areas dialog
+    [MPD-456] - Button text is truncated when shown from Print Management (Windows 10)
+    [MPD-472] - Change the font of tooltips in the driver UI when displaying in Chinese
+    [MPD-514] - Incorrect files refferenced in inf file for 32bit driver
+    [MPD-518] - 140mm option missing from dropdown on 360 xtd models
+    [MPD-533] - Goodcard XR360K not recognised
+    [MPD-535] - Colour profiles combo are in the Japanese UI are displayed incorrectly
+    [MPD-582] - Incorrect files referenced in inf file for 32bit driver for PfS2
+    [MPD-600] - Power adjustment - not working on Enduro on side 2 (driver 2.2.0.59)
+    [MPD-615] - Change PfS2 Colour profile in installation.
+    [MPD-287] - Magicard 600 Colour Profile improvment (PPC feedback)
+    [MPD-353] - defined values for Erase Power
+    [MPD-331] - White Label 300 for PfS2 (PfSSquared)
+    [MPD-484] - White Label 360 for PfS2 (PfSSquared)
+    [MPD-495] - HQ Mode rollout across product range
+    [MPD-233] - New Colour Profile for Enduro/Pronto
+    [MPD-235] - New Colour Profile for Rio Pro
+    [MPD-404] - PCP Flex UI to support both mono and colour printing - printer dependent
+    [MPD-408] - Static IP settings greyed out
+    [MPD-596] - Model PfS2 added to installer
+    [MPD-599] - Drop Downs in Installer GUI over lapping text
+    [MPD-607] - Amend inf file to include MAGIR2C.DLL
+    [MPD-616] - Amend file movement in the installer
+    [MPD-617] - Add new colour profile dlls to installer
+
+
+************************************************************************
+
+   DATE       VERSION
+   12/03/20   V2.1.0.9
+
+1.  MPD-528    HQ mode - applicable printer model range extended
+2.  MPD-533    inf file update - Goodcard XR360K not recognised
+
+
+************************************************************************
+
+   DATE       VERSION
+   17/02/20   V2.1.0.7
+
+1.  MPD-493    Change default colour profiles
+2.  MPD-405    Null pointer exception generated when using the driver on a 32 bit machine
+3.  MPD-315    Fast Erase/Rewrite with resin film fitted: dye-ribbon-detected not refreshing
+4.  MPD-338    Power adjustment for side 2 to compensate for density change
+5.  MPD-339    Resin cut-out mis-registration
+6.  MPD-452    300/600 dpi - White blocks
+7.  MPD-305    Fixed GUI Image scaling problem with 4k displays (Win10)
+8.  MPD-307    HQ Print Mode added    for compatable printers
+9.  MPD-321    Magicard 600 Driver - Help button gives a '404 Page not found' error
+10. MPD-327    Updated User license agreement title and button translations - Chinese
+11. MPD-328    Total of HoloKote slots ammendmended
+12. MPD-329    Magicard 300 HoloKote slots ammendmended
+13. MPD-335    Settings changed for update checks and usage data
+14. MPD-337    Corrected UI elements that are misaligned with Arabic language selection
+15. MPD-341    New Magicard K white label added
+16. MPD-355    Ultima spooler issues when printing from the SDK
+17. MPD-359    Fixed - save/restoredriver settings not handling back rewritable areas
+18. MPD-360    Correction command header for Pro360
+19. MPD-363    Restoring driver data corrupts rewritable areas for the back of the card
+20. MPD-406    Fixed UI Not going into new UI mode.
+21. MPD-450    300 dpi colour and 600 dpi resin creates incorrect image
+22. MPD-354    Resolve Gui DPI issues on Windows 10 linked with MPD-305
+
+
+************************************************************************
+   DATE       VERSION
+   27/11/19   V2.0.45.0 Issue 1
+
+1. MPD-262    Spooler crashing issue fixed.
+2. MPD-268    ID Maker EDGE 'HoloGraph' branding correction.
+3. MPD-274    PPC ID 3000 and ID 4000 added.
+4. MPD-275    Magicard D white label variants
+5. MPD-276    New Fagoo printer model added.
+6. MPD-279    Magicard 500 name change.
+7. MPD-281    German Translation error on installation corrected.
+8. MPD-282    Printer Driver Isolation implimented.
+9. MPD-284    Unable to access Print Preferences on some printer models.
+10. MPD-286    AlphaCard PRO 550 driver branding correction.
+11. MPD-294    Pronto Colour Profiles added.
+12. MPD-297    Changelogs missing for Magicard NEO installer.
+13. MPD-298    MPD-299 AlphaCard images updates.
+14. MPD-303    Arabic GUI updated.
+15. MPD-304    Firmware upgrades added for new models.
+16. MPD-313    Installer error 1720 on removal fixed.
+17. MPD-318    600dpi added to MagAPI
+18. MPD-324    INF file updated.
+19 .MPD-325    Printer Image updated
+
+
+************************************************************************
+   DATE       VERSION
+   03/09/19   V2.0.44.0 Issue 1
+
+1. MPD-255 Pridento Pro 360 image Change (Status Monitor)
+2. MPD-231 Dynamic UI needs to take account of 600 dpi capability
+3. MPD-244 Option to print side 2 first
+4. MPD-258 Model Name Change for 500
+5. MPD-246 Driver to support the fast re-write option
+6. MPD-252 2.0.42.4 Ultima Status Monitor issue
+7. MPD-244 Option to print side 2 first (XML tag change)
+8. MPD-263 Save/Restore orientation functionality loading incorrectly
+9. MPD-261 2.0.43.3-rc2 Colour printing not working.
+10. MPD-258 Update 500 images
+11. Correct AlphaCard 750 PNP id
+12. MPD-264 - Mid Coercivity added to helix based printers
+13. Updated Alphacard 750 to support 600dpi capability
+14. MPD-269 - Goodcard XR images updated
+15. MPD-270 Status monitor incorrectly flaging new firmware is available
+
+
+************************************************************************
+   DATE       VERSION
+   01/07/19   V2.0.43.0 Issue 1
+
+1. MPD-226 Driver mag encoding bugs
+2. MPD-230 Resin Black being extracted from images, even when Black=YMC is Set (SDK Printing)
+3. PRO 2 encoding default altered to 'auto insert encoding settings'
+4. MPD-222 Colour profile improvement for Rio Pro 2 family
+5. MPD-240 - Rio Pro 360 mag encoding data corruption
+6. MPD-240 - removed extra end sentinel being added when app dets encoding selected update from bitbucket
+7. SDK pro360 language monitor update
+8. MPD-243 CLONE - Resin Black being extracted from images, even when Black=YMC is Set (SDK Printing) - Enduro
+9. MPD-248 600 dpi resin text rendering not quite right
+10. Modification to QUERYESCSUPPORT for SDK support
+11. MPD-247 New White label support added
+
+
+************************************************************************
+   DATE       VERSION
+   29/04/19   V2.0.42.0 Issue 1
+
+1. Pronto NEO, Enduro NEO, NOVA, Pro 360 NEO, 300 model support added
+2. Updated 300 images
+3. Corrected Alphacard help links
+4. NOVA renamed to Nova
+5. Fix for 300 status utility not displaying error message or printer images
+6. MPD-120 UI looses scaling for 200% displays
+7. Fix for pricard pro flex default page size
+8. updated Pro 360 NEO status image
+9. fixed issue with port not shown in status utility for 360 variants if older DTC status has occurred
+10. MPD-223 Spooler crash if 'Picture use YMC' selected and all other checkboxes unchecked.
+11. Colour profile for 300 default altered to Absolute Colorimetric
+
+
+************************************************************************
+   DATE       VERSION
+   03/04/19   V2.0.41.0 Issue 1
+
+1. Pronto NEO, Enduro NEO, NOVA, Pro 360 NEO model support added
+2. Corrected Alphacard help links
+3. MPD-120 UI looses scaling for 200% displays
+4. Fix for pricard pro flex default page size
+5. corrected inf file for magapi 32bit rename
+
+
+************************************************************************
+   DATE       VERSION
+   15/02/19   V2.0.40.0 Issue 1
+
+1. Authentys Retrax new images implemented
+2. MPD-190 Revert XR160 driver back to pre-GoodCard changes
+
+
+************************************************************************
+   DATE       VERSION
+   11/02/19   V2.0.39.0 Issue 1
+
+1. 360 - Support for 600 x 300 option allowing 300dpi colour panels
+2. MPD-144 x-adjust being set out of range - Actual fix was for 64bit Server 32 bit point and print installations causing corrupt 360 jobs.
+3. Mirror image option addedUpdate
+4. TNID landscape option ignored
+5. 600 - wifi static ip support added
+6. Updated colour profile lookup alogrithm and ITW, CIATT support
+7. 600 - fixed issue with query over ethernet not always complete
+8. Added alphacard 750 model
+9. Altered ultima and 360 language monitors to improve split performance
+10. MPD-147 Install button closing properties
+11. Fix for (MPD-161) Extended colour is creating duplex jobs hence giving "No duplex 22:00"
+12. 360 - Fixed regression with xtd Rotate option not holding
+13. 600 - APM-30 Wifi - Support hidden networks
+14. ResinRGB limits now supported seperately for card front and card back
+15. Resin cutout option added allowing selection of whether ymc panels should be set to white rather than filled
+16. Improved ether comms with SDK ref MPD-130
+17. WiFi network wizard created for the tools tab
+18. Improved responsiveness of initial request for printing preferences
+19. (MPD-99) Rio Pro 360 xtd - no duplex
+20. Updated language resources
+21. (MPD-174) Fixed issue with blank network lists shown when printer WiFi disabled
+22. (MPD-170) Magicard 600 - Printing fails after changing mode from 300x300 to 600x300 double sided
+23. (MPD-169) Problems flipping between 300 dpi and 600 dpi modes
+24. (MPD-181) Wifi Setup Wizard: No networks are displayed if only one network is available
+25. 600 - Fixed issue with WiFi printer model not being created if USB model marked as Shared
+26. 600 - Network wizard GUI changes
+27. 360/600 - Updated timeout settings to match updated firmware options
+28. (MPD-185) Regular banding appearing in uniform grey card in 600x300dpi mode
+29. (MPD-186) Magicard 600 set default colour correction to None
+30. (MPD-187) Change of Default Settings for CM260 and CM360 printer model
+31. (MPD-188) Viewing Print Preferences from MS Word while printing causes Word to "crash"
+32. 600 - Fixed issue with Restore factory settings not restoring resolution to 300dpi
+33.(MPD-189) - Show password option doesn't show the password
+34.(MPD-193) - Wifi setup: can't set a static IP address
+35. (MPD-194) - Wifi Setup Wizard: ability to refresh the list of available networks
+36. (MPD-200) - Separate out the 360 and 600 software upgrade paths
+37. Driver Help file links updated
+38. Fixed issue with driver printer properties tabs not showing multilingual strings
+39. (MPD-201) - If 'auto-insert' selected the data on tracks 2 & 3 is incorrect.
+40. UI dialog modification to support provided translations
+
+
+************************************************************************
+   DATE       VERSION
+   24/10/18   V2.0.38.0 Issue 1
+
+1. 360 - Fixed Xtd 360 model regression not printing larger than CR80
+2. Fixed MagAPI.DLL being renamed to MagAPI_X86.DLL for 32bit
+
+
+************************************************************************
+   DATE       VERSION
+   12/10/18   V2.0.37.0 Issue 1
+
+1. 360 - Support for printable area added
+2. Additional OEM models added
+3. Fix to Pridento Pro 360 Xtd not retaining selected page size
+4. Resin speed and printhead and image positions removed from classic GUI
+5. Revised OEM logo set for XR models
+6. 360 - Classic UI encoding tab missing Mid coercivity option
+7. AlphaCard OEM changes
+8. Ultima - current user language now set in print jobs
+9. Ultima - Bend remedy default set to off
+
+
+************************************************************************
+   DATE       VERSION
+   25/07/18   V2.0.36.0 Issue 1
+
+1. (MPD-118) No "Move card to Contact/Contactless position"
+2. (MPD-132) Make printhead power adjustment consistent across the product range
+3. (MPD-137) JIS encoding direction not set for Rio Pro 360
+4. (MPD-138) Add a Midco (650 Oe) Coercivity option
+5. (MPD-142) Rio Pro 360 LE not being recognised by driver
+6. Ultima images updated
+7. Ultima bend remedy set to be default
+8. 360 - minimum Extended colour size reduced to 85.8
+9. 360 - Fixed issue with xtd colour portrait causing spooler to stop
+10. 360 - Fixed erratic time stamp being sent from language monitor
+11. 360 - new sdk version 3.1.2.0
+12. 360 - Fixed comms issues being caused when using Tools tab in printer properties
+13. 360 - corrected ethernet comms within the language monitor when using the sdk
+14. 360 - tools tab restart printer job altered to full restart to address loss of ethernet comms on restart
+15. driver inf file altered to resolve magapi.dll installation to support folder
+
+
+************************************************************************
+   DATE       VERSION
+   25/07/18   V2.0.35.0 Issue 1
+
+1. 360 - Card Front mono options not being greyed out when monochrome film installed
+2. 360 - Resin cards printed on first print issue resolved
+3. All language monitors upgraded to improve connectivity issues
+4. Firmware upgrade to Copy x printer being sent to first queue
+5. Fixed regression for holokote/duplex upgrades
+6. MPD-132 Make printhead power adjustment consistent across the product range
+7. SDK updates added
+8. MPD-131 Problem sending PCT (overcoat area) as general command.
+9. ~4 being sent on header of first page
+10. Applied fix for unresponsive about box when closed on certain systems
+
+
+************************************************************************
+   DATE       VERSION
+   14/06/18   V2.0.34.0 Issue 1
+
+1 International support for everyone access setting added
+2 MPD-113 Printer language being set to empty string
+3 PriceCard Pro Flex duplex update added
+4 New colour profiles and pro360 colour profile handling added
+
+
+************************************************************************
+   DATE       VERSION
+   16/05/18   V2.0.33.0 Issue 1
+
+1. Magicard Ultima model support added
+2. 360 - Rewrite card support added
+3. Fix for default erase area reverting to 0
+4. Removed extra spin control being shown for Helix models
+5. Installed privilege 'Manage this printer' enabled for group 'Everyone'
+6. Default illuminate index for Gamma 2 altered to remove reported grid in image
+7. Fixed Status utility on mismatched model name not exiting gracefully.
+8. 360 - Altered setting of detected language to match printer's ISO encoding from a hyphen separator to an underscore
+
+
+************************************************************************
+   DATE       VERSION
+   06/04/18   V2.0.32.1 Issue 2
+
+1. 360 - Tools tab ethernet configuration extended
+2. Rename Existing Philos OEM Models in-line with there requirements.
+3. 360 - Added DTP MK III model support.
+4. 360 - Added Rio Pro 360 LE (V2) model support.
+5. 360 - Added ScreenCheck SC6500 model support. 360 - Added Titan T5
+   model support.
+6. 360 - Added PPC ID 3350e model support.
+7. 360 - Added Pridento Pro 360 model support.
+8. Added TCH Translations for both EULAs and Reg Splash.
+9. Implemented support for custom start end mag encoding sentinels
+10. status utility; for firmware installation, redirect user to
+    registration site if not registered for certain printers only
+11. Driver Translations for both EULAs and Reg Splash, languages
+    completed;
+12. 360- Added IDVille Secure 360 (V2) model support
+13. 360- Xtd support added to status utility
+14. 360- Fix resolving incorrect save settings used in Save, Restore
+15. 360- Fixed issue where firmware version for 360 extended was not
+    being retrieved from within status utility
+16. 360- MPD-79 Colour profile tables to support HPR film added
+17. 6MPD-83 Can't print non-left-justified colour images properly with
+    half panel film when colour profile selected
+18. MPD-81 Rio Pro 360 - Driver Tools Tab - power-off-timeout
+19. Helix language monitor update to close ethernet socket after each
+    operation
+20. Fixed mag encoding regression caused from Tools encoding support
+21. 360 - Fixed issue with Helix and pro 360 socket not being closed when
+    job clear/retry etc requested by status utility
+22. 360 - Added Magicard Rio Pro Select support
+23. Auto insert encoding settings not adding sentinels when Word concat
+    mag strings enabled fixed
+24. 360 - Changed tools\reset printer to fast-restart
+25. 360 - support for reading and encoding mag strings added
+26. AlphaCard Pro 700, Rio Pro LE holokote CKION issue addressed
+27. Mag encoding regression fixed and support for end characters added
+28. Pricecard pro flex added duplex support
+29. 360 SDK updates
+
+************************************************************************
+   DATE       VERSION
+   16/01/18   V2.0.31.0 Issue 1
+
+1. 360-hole/area/patch-options/rewrite-area support added.
+2. Removed menu options appearing when the status utility is right clicked in the task bar when active
+3. 360-back side only printing fixed
+4. 360-clean now option removed from tools tab
+5. 360-CR79 page size selectable from within application
+6. 360-altered range of power adjustment to +/- 3276
+7. 360-area 1013 altered to 1012 in area adjustment dialogs
+8. 360-sharpness altered to 0 as default
+9. 360-colour area selection fixed
+10. 360-fixed issue with status displaying incorrect values
+11. 360-Classic GUI issues fixed
+12. About box groupbox cropping text
+13. Fixed PriceCardPro DUO/LITE overcoat not being initialised
+14. Fix to alter all Messagebox prompts to be in front of main driver GUI
+15. 360-Alteration to language monitor to display driver properties quicker when no comms
+16. CKI set to off for DTP and Titan OEM's if HKT case isn't 0.
+17. About box updates for DTP and Titan Oem's.
+18. New Colour dll's added
+19. Update to Colour correction alogrithm and colour correction dll's
+20. 360-Update to automatic firmware update txt file and location
+21. Fix to incorrect devmode for Titan T5 driver
+22. Initial pro360 language monitor update for ethernet open/close socket request
+23. Updated colour correction code and latest colour dlls added
+24. Fix to incorrect HKT values for Idville Secure
+25. 360-Save/Restore defaults changed to 0
+26. 360-CR79 image altered in printer tab
+27. 360-CR79 page size declaration to GDI set correctly
+28. 360-CR79 image size sent to printer rather than CR80
+29. 360-CR79 image dimensions updated and associated max values set for all area selection dialogs
+30. Ability to specify different magencoding start characters added
+31. New OEM added Elliaden Caroline
+32. Update to Magicard Registration URL due to certificate expiration
+33. 360-Ability to set IP address within the tools tab added
+34. Multilingual support added to Registration splash screen
+35. 360-Holokote download from website resolved
+36. 360-CR79 disabled for this release
+37. URL in EULA corrected
+38. 360-Rewrite disabled for this release
+39. 360-Holokote and Duplex upgrade support added
+40. Updated Feature url's to magicard
+41. Status utility now redirects to registration page if user not registered for 'Install' firmware popup
+42. Registration splash screen changes
+43. Installer - Path change to Program Files/ID Card Printer Support
+44. Installer - Rio Pro 360 Xtd Support Added
+45. Installer - Copy MagApi unction removed as now handled by INF file
+
+************************************************************************
+   DATE       VERSION
+   06/11/17   V2.0.30.0 Issue 1
+
+1. Inital release of Rio Pro 360 Driver
+2. Japanese registration detail update
+3. Japanese - Registration Splash Screen disable on first close.
+4. Helix RT support added
+5. Critical firmware update support added
+6. Fix for MPD-65 Helix printer query hangs
+7. MagApi Update to v3.0.4.0
+
+************************************************************************
+   DATE       VERSION
+   15/08/17   V2.0.29.0 Issue 1
+
+1. PriceCardPro OEM Models Added.
+
+************************************************************************
+
+   DATE       VERSION
+   07/07/17   V2.0.28.0 Issue 1
+
+1. Fixes to EULA regression
+2. Fix to Date/Time query to enable XP installation
+
+************************************************************************
+   DATE       VERSION
+   07/06/17   V2.0.27.0 Issue 1
+
+1. Edit to support\Delete_V2_Drivers_PnP.bat to aid uninstallation
+2. Add Application Determines Orientation check box to Xtended Printers
+3. Fix to save/restore orientation loading incorrectly
+4. Fixed userdefined overcoat and rewrite areas not being validated
+5. Added support for npanel/rewritable areas
+6. Resin area extraction enhancement for defined resin areas
+7. Resin area extraction enhancement forcing any defined correction areas to be excluded
+8. 14. Fix for npanel/rewritable areas not sending back card if overcoat disabled on back panel
+9. Add printer serial number to status monitor - MPD-49
+10. Add date / time to query output (via Tools tab)  - MPD-48
+11. EULA and registration support added
+12. Disable Firmware updates removed and Automatically update software added on scroll to about box
+13. Registration Splash screen added for Magicard models
+14. Updated Magicard defaults for colour correction and YMC power.
+15. Rio Pro 2 model added for test purposes.
+
+************************************************************************
+   DATE       VERSION
+   02/05/17   V2.0.26.5 Issue 1
+
+1. Fix to save/restore orientation loading incorrectly
+3. Fixed userdefined overcoat and rewrite areas not being validated
+4. Added support for npanel/rewritable areas
+
+************************************************************************
+   DATE       VERSION
+   10/03/17   V2.0.26.0 Issue 3
+
+1. Addition of pnputil remove on uninstall.
+2. Printer Registration page loaded on finish.
+
+************************************************************************
+   DATE       VERSION
+   07/02/17   V2.0.26.0 Issue 2
+
+1. Fix to installer printer array regression
+
+************************************************************************
+   DATE       VERSION
+   07/02/17   V2.0.26.0 Issue 1
+
+1. Remove [MODELS] sections from magu.inf for HCL compatibility
+2. Added support for activation context on UI property sheets
+3. Fix for case 18255 - badge builder support
+4. Added dithering options for monochrome printing
+5. Fixed UI regression for overcoat/erase areas
+6. Reporting SEMXLI in REQ,INF response
+7. Added Package Aware to magu.inf
+8. Added SplWOW64TimeOutSeconds to magu.inf and .reg to support folder
+9. Arabic Language fixes
+
+************************************************************************
+   DATE       VERSION
+   11/10/16   V2.0.25.0 Issue 2
+
+1. SplWOW64TimeOutSeconds reg key add to installation and support folder to
+   overcome Microsoft issue with Splwow64.exe process not ending.
+
+************************************************************************
+   DATE       VERSION
+   11/10/16   V2.0.25.0 Issue 1
+
+1. Arabic Translations and GUI Added.
+2. Fix to printer sending blank jobs to spooler
+3. SDK Updates
+4. Rewritable erase area - Set default width and hieght to 0 to show full card preview.
+5. Helix - Single sided image to double sided printer regression.
+6. Chinese translation corrections.
+7. Comms header updated
+8. Helix Concatanate Mag Strings Check Box added.
+9. New Colour management dll's added for DTC printers
+10. Updated Polish Strings
+11. Registry key change for support and language selection to Magicard Ltd.
+12. [Bug 1659] RT Driver name changed - Printhead power > Overcoat changed to Holokote watermark.
+13. [Bug 1658] RT Driver updated comms.h fixes query file.
+14. MagApi Updated to 3.0.1.0
+
+************************************************************************
+   DATE       VERSION
+   12/07/16   V2.0.24.0 Issue 2
+
+1. Update to MagAPI/SDK 3.0.1.0.
+
+************************************************************************
+   DATE       VERSION
+   22/06/16   V2.0.24.0 Issue 1
+
+1. Removed collation support from devcaps and devmode to improve job
+   splitting with certain applications.
+2. RTP language USB status updated.
+3. Spanish translations update.
+4. Iso Compliance replaced with Bend Solution.
+5. Trad Chinese translations update.
+6. Fix to Rewritable areas selection.
+7. Update to Web Help URL's.
+8. Mag encoding concat now enabled as default
+9. Fix Bug 703 - Printer is displaying error code 16:8
+10. Increased allowable Mag encoding range for tracks 2 and 3
+11. RTP monitor SDK changes added
+
+************************************************************************
+   DATE       VERSION
+   25/04/16   V2.0.23.0 Issue 1
+
+1. Latest SDK changes added for correction areas
+2. MagApi.dll updated to 3.0.
+3. Fix to Max_Card_Width regression.
+4. [Bug 1522] PPC ID 3300 Holokote missing 'Cubes' tile added.
+5. Fix to Rio Pro Xtended nTextButtonOffset bug.
+6. Helix: USB removal not clearing status utility when in error
+7. Helix K resin extraction updated
+8. CoInstaller removed
+9. Colour Correction Area support added
+
+*************************************************************************
+   DATE       VERSION
+   11/04/16   V2.0.22.0 Issue 2
+
+1. MagApi.dll updated to 3.0
+
+*************************************************************************
+   DATE       VERSION
+   21/03/16   V2.0.22.0 Issue 1
+
+1. Offline holokote installation GUI changes
+2. Duplex feature install status issue addressed
+3. Fix for ethernet holokote preview interrogation
+
+*************************************************************************
+   DATE       VERSION
+   15/03/16   V2.0.21.0 Issue 1
+
+1. Bug 1497 - 2.0.20 | User defined overcote hole crashes explorer
+2. Bug 1499 - Status Monitor in v2.0.20.0 not closing when error is cleared on printer
+3. Bug 1325 - Incorrect status monitor information (renamed printer name caused issue)
+4. Bug 1397 - Terminal session - redirected printer not showing previews in word
+5. Holokote server poll implemented after holokote management dialog closed
+6. Daily holokote server poll implemented for helix feature update
+7. Orphicard logo change
+8. Additional helix error codes supported
+
+*************************************************************************
+   DATE       VERSION
+   04/03/16   V2.0.20.0 Issue 1
+
+1.    ISO 7810 Compliance added for Helix
+2.    Holokote previews now updated after download
+3.    Holokote GUI improvements
+4.    App determines orientation added to advance tab
+5.    Print head power adjustment added for Helix
+6.    Print position dialog altered for Helix (currently non functional)
+7.    [Bug 1308] HoloKote Previews are not available via USB 3.0
+8.    Added Show_V2_Drivers.bat to support folder
+9.    Added 5 new Models
+10.    [Bug 911] Mag encoding does not work correctly when batch printing using Trust ID
+11.    Holokote Store UI and Portal Improvents for RT.
+12.    Helix - Double sided upgrade buttons not visible if printer is double sided
+13.    Form Size fix for Terminal Services
+14.    DPI scaling applied to Helix NGUI
+15.    DoH change to Colour Correction Default - Colour Management (Built-in)
+16.    [Bug 1476] Printing resin text over dark background - white outline visible around text (to be verified)
+17.    Bug 1420 - Mag encoding through the driver has stopped working
+18.    Adjustment to helix query to support modification in comms structure
+19.    Helix SDK updates
+20.    Issue with incorrect Helix colour table corrected
+21.    Helix Colour tables updated with new lookup algorithm
+22.    Helix Gui updates
+23.    Holokote slot deletion added
+24.    [Bug 942] Auto firmware update
+
+*************************************************************************
+   DATE       VERSION
+   26/10/15   V2.0.19.0 Issue 1
+
+1. CR80 White Border selection removed from the GUI and DEVCAPS.
+2. Japanese Driver Translations Update
+3. Fixed Resin areas not being applied
+4. Threshold set to max for resin areas
+5. Fix to TCH Printer Status Dialogue not opening.
+6. Driver GUI Bug   Colour Management resetting to none after going into advanced tab
+
+*************************************************************************
+   DATE       VERSION
+   24/08/15   V2.0.18.0 Issue 1
+
+1. Fix to 2.0.17 Dev-mode update issue
+2. Added Magicard Enduro 3E
+3. Widen Rio Pro Extended Drop Down Window to account for Double Sided CR80
+
+*************************************************************************
+   DATE       VERSION
+   28/07/15   V2.0.17.0 Issue 1
+
+1. Japanese translations updated
+2. Updated save/restore file format to include colour adjustments
+3. Bug Fix - Corrected Idville Holokote Images
+4. Bug Fix - incorrect language monitor registry reference for sdk message requests
+5. Language monitor updated for SDK improvements
+6. Reduced maximum colour adjustment
+7. Added OEM fw url to status utility
+
+*************************************************************************
+   DATE       VERSION
+   15/05/15   V2.0.16.0 Issue 3
+
+1. Fix to PnP installation on XP.
+2. Removal of UTF-8 Database which was causing scrambled Un-install dialogue.
+
+*************************************************************************
+   DATE       VERSION
+   24/04/15   V2.0.16.0 Issue 2
+
+1. Update to include missing MAGAPI dll's.
+
+*************************************************************************
+   DATE       VERSION
+   13/04/15   V2.0.16.0 Issue 1
+
+1. Altered SDK GuiDisable to also support local printer or user setting
+2. Fixed multiple status utility icons appearing in task-bar.
+3. Fixed issue with external colour table not being disassociated if
+   previously selected
+4. Fixed issue with Xtd incorrect paper heights being used when inch
+   display used
+5. Fixed Bug 903 New: Language Monitor Not Handling CONFIG_QUIET Correctly
+   in API/SDK Sessions
+
+*************************************************************************
+   DATE       VERSION
+   20/03/15   V2.0.15.0 Issue 3
+
+1. Installer Update - Fix to Spanish not installing
+2. Installer Update - TcpMaxDataRetransmissions Key added for Ethernet
+   installs
+3. Installer Update - Ethernet Installation
+   Port not added correctly if port has a single digit IP Address
+
+*************************************************************************
+   DATE       VERSION
+   20/03/15   V2.0.15.0 Issue 3
+
+1. Installer Update - Fix to Spanish not installing
+2. Installer Update - TcpMaxDataRetransmissions Key added for Ethernet
+   installs
+3. Installer Update - Ethernet Installation
+   Port not added correctly if port has a single digit IP Address
+
+*************************************************************************
+   DATE       VERSION
+   24/02/15   V2.0.15.0 Issue 2
+
+1. Installer Update - Addition of multiple languages in Web Installer
+
+*************************************************************************
+   DATE       VERSION
+   16/02/15   V2.0.15.0 Issue 1
+
+1. Fixed SDK EnduroMessage returning initial data
+2. Altered model name used for sendfile
+3. Updated error codes for Optima
+4. Added cleaning cycles support for Optima status
+5. Fixed available holokotes for Rio Pro and Pro xtd
+
+*************************************************************************
+   DATE       VERSION
+   11/02/15   V2.0.14.0 Issue 1
+
+1. Added DisableDynamicUI reg option to disable greying out of options
+2. Fixed Bug 686 -Rio Pro Xtended - Card Size selection disabled after selecting Print Setup->Card->Section 2
+3. Disabled LUT loading for models that do not support colour matching options
+4. Altered to 109.0 mm default to address Bug 615 -size of extended cards is always 101.6 mm
+5. For extended added monochrome page sizes 109, 128, 140mm
+6. Added support for extra colour correction tables
+7. Fixed Colour correct table load failure on certain systems with limited rights
+8. Fixed Bug 674 - Overlapping Status Monitor Message
+9. Added support for extra internal colour table
+10. Fixed Bug 765 - Mag encoding does not work through the driver
+11. Fixed Bug 742 - Mag Encoding UI Error
+12. Fixed incorrect film type registry value referenced on printer rename
+13. Fixed Bug 744 - Unnecessary Hand Feed Option
+14. Fixed Bug 767 - Remaining Printer estimate & driver estimate do not match (film)
+15. Addressed Bug 759 - Retransfer film does not show up under printer status
+16. Improved internal colour profile lookup algorithm
+17. Fixed Bug 731 - Monochrome Resin Operations
+18. Fixed Bug 807 - Preview pane sent with Encoder only
+19. Folded in latest SDK changes
+20. Fixed issue with CPrintDlg sending invalid devmode
+21. Added Pridento Pro and Pridento Pro Xtd model support
+22. Add further SDK changes
+23. Updated Pridento Holokote lists
+24. Fixed issue with 2nd card colour setting not used on xtd colour card
+25. Xtd CR80 and CR80 duplex printed rotation set to normal
+
+*************************************************************************
+
+
+   DATE       VERSION
+   21/11/14   V2.0.13.0 Issue 1
+
+1. Fixed Bug 568 - bpi on tracks 2 and 3 are 0
+2. Fixed Bug 577 - verify_attempts is set to 3 even though the verify option is unticked
+   in the GUI.
+3. Implemented EncodingStartPosition for optima encoding
+4. Fixed Bug 597 - New: Driver crashes if "K only" is not checked when printing monochrome
+5. Renamed Optima model name to include V2 to avoid confusion with V4
+6. Added support for 1 bit optima mag encoding
+7. Fixed Retry/Cancel order
+8. Added support for error 38 printing disabled implementation
+9. SDK modifications added - JE
+10. Added Optima MPC1,4,5,7 and BPI210,75 extraction from mag data sent from application
+11. Implemented CoInstaller
+12. Fixed bug 593, 600 When printing a document from Word, there is a delay ....
+13. Fixed language monitor failing to provide status after a print
+14. Fixed Coinstaller requesting a reboot if magmon.dll not found in system32 directory
+15. Fixed issue with Status monitor not reporting after a print
+16. Bug 647 French Status Monitor - Incorrect dye film buttons - translation too large
+17. Added support for further optima error codes for the status utility
+18. Updated CoInstaller to handle optmon.dll
+19. Added Department of Health model support
+20. Fixed UI regression on printer tab for Aisino OEM models within the new ui
+
+*************************************************************************
+   DATE       VERSION
+   17/09/14   V2.0.12.0 Issue 1
+
+1. Updated About screen from Magicard To ULTRA ID Logo.
+2. Fixed 2k3R2 incompatibility with language monitor.
+3. CorelDraw extended printing issue addressed by adding associated page
+   sizes and firmware alteration.
+4. Regression with language monitor so removed fix for single server
+   instance showing failure to restart sending jobs.
+
+*************************************************************************
+   DATE       VERSION
+   03/08/14   V2.0.11.0 Issue 1
+
+1. Update Xtended GUI for 120 and 144 DPI in New/Legacy UI
+2. Romanian Advanced Tab fix for incorrect text.
+3. Magicard removed from about box.
+4. Remove Drop shadows on buttons.
+5. Change of image for the Identity Pro.
+6. Resized Frames for Holokote map and printer status dialogue.
+7. Fixed issue whereby when opening Black Resin Areas in Win 8 GUI would crash.
+8. Fixed X-Series old and new UI not displaying Image Size.
+9. Fixed regression where language monitor repeat when IOCTL returned 0 causing spooler loop
+
+*Unsigned for 2003/2008 Server - Driver still fully functional
+
+*************************************************************************
+  DATE       VERSION
+  03/07/14   V2.0.10 Iss 1
+
+1. Added AlphaBlend for button images
+2. Corrected RioProXtd button image
+3. 120, 144 support updated for AlphaBlend - LM
+4. First pass Print Status added for Optima
+5. Fix applied to language monitor for jobs being dropped after an error condition on XP, 2k3 server
+6. Multiple connected USB printers XP, 2k3 usb driver stops reporting status; reverted to printer query for error 0 to resume spooler
+7. New colour matching support added
+8. Fixed 2nd page duplex output for Optima
+9. Fixed greyed out resin selection on Card front, back tabs for Optima
+10. Fixed monochrome output for Optima
+11. Issue with ResetDC from VB app losing MagEncoding data resolved
+12. Applied biLinear scaling to the Optima preview output code
+13. Fixed Mag encoding defaults after factory default applied for bits per inch/char
+14. Fixed defaults being incorrectly initialised for Enduro type Mag encoding
+15. Improved navigation button responsiveness by removing double click attribute
+16. Added Ying ING171 and Identity Pro OEM model support
+17. Fix to JIS start sentinel being inserted to data-stream when loco encoding selected
+18. Updated Xtd preview images for portrait xtd card
+19. Apply now activated when xtd image mm altered
+20. Xtd colour format selection locked to monochrome if resin ribbon fitted
+21. Romanian holokote selection fixed due to missing holokote flex entry in language resource
+22. Removed selection of UltraSecure Key and set Globe to default for Identity Pro OEM model
+23. Fixed regression of status utility not closing on a cleared error
+24. Fixed print dimension window displayed as black intermittently
+
+*************************************************************************
+   DATE       VERSION
+   07/03/14   V2.0.9 Iss 1
+
+1. Bug Fix: All combinations of Holokote now changed to HoloKote  and also all strings with Holokote flex changed to HoloKote  Flex in 2.0.8.1
+2. Bug 337 Fix: Fix to JIS2 being selected when Auto Insert :> LoCo selected
+3. Added new Holokote designs for new models
+4. Status Monitor update to reflect new driver names
+5. Fixed sending .prn from Tools tab going to incorrect printer when multiple driver copies installed
+6. Fixed issue with Query button not working on certain installations
+
+
+*************************************************************************
+   DATE       VERSION
+   07/02/14   V2.0.8 Iss 2
+
+1. Update to force restart on driver update.
+
+*************************************************************************
+   DATE       VERSION
+   29/01/14   V2.0.8 Iss 1
+
+1. MAG Encoding fixes dealing with Auto insert encoding settings and non-ISO selection
+2. TcpMaxDataRetransmissions added to UpgradePrinterDriver
+3. Encode only message for no encoding data and loss of comms following fixed
+4. Perform verification now allows job to be sent if no encoding data is found on page
+5. Rio Pro Xtd Holopatch options were not being displayed
+6. Changed Japanese translation restore settings text
+7. Fixed issue with XP/Vista duplex collate printing
+8. Tools tab added with send command, file and query printer support added
+9. Driver interception of colour jobs re-enabled fixing wrong error message for rewritable card printing
+10. Print Head position not being sent in header if modified by user
+11. CR79 request fix
+12. Added DisableFWCheck registry option to disable firmware updates
+13. Colour adjustment applied to all ICC profiles not just gamma 1 and gamma 2
+14. Support added for x120 and x144 display aspect ratios. - LM
+15. Fixed incorrect default settings when sharing between 64/32 installations
+16. Back only printing regression now fixed
+
+*************************************************************************
+   DATE       VERSION
+   22/10/13   V2.0.7 Iss 1
+
+1. Duplex switching for Printer is Remote enabled
+2. Added missing Holokote options for Rio Pro Extended
+3. Removed driver name in about box for OEMs
+4. Removed z-order code for black area, overcoat options help
+5. Fixed issue with duplex printing when print direct is enabled
+6. Fixed incorrect devmode being returned to certain applications
+7. Status utility icon changed
+8. Clear resin areas functionality added
+9. Removed magicard from status utility hover message
+10. Multiple copies of a single page job when collation is enabled now uses hardware copies
+11. Collation printing now supported
+12. Selection of duplex and paper size now reflected in printer properties when set from within the application
+13. Configurable polling time registry entries added for faster than default 2 second polling to allow faster throughput (NOTE:spooler requires a restart)
+    HKLM\SYSTEM\CurrentControlSet\Control\Print\Monitors\Ultra Language Monitor\ErrorWaitTime and IdleWaitTime
+14. Internal ICC Colour matching registry values monitored to alter CMY after colour matching applied .reg file provided
+15. Changes to Rio Pro Extended support added
+16. Language monitor fix for TCP/IP re-entrancy
+17. Time between Ethernet jobs improved
+18. Fixed issue that if an old status returned hand-feed on, hand-feed on was being
+    sent in print jobs
+19. Further Changes to Rio Pro Extended support added
+20. Minor UI behaviour change for Rio Pro Extended
+21. When selection of colour on card front/back it now automatically selects the
+    print overcoat box.
+22. Alteration to fix driver settings not being reflected on clients accessing
+    a shared printer
+
+*************************************************************************
+   DATE       VERSION
+   08/10/13   V2.0.6 Iss 1
+
+1. Not released due to driver signature issues.
+
+*************************************************************************
+   DATE       VERSION
+   18/09/13   V2.0.5 Iss 2
+
+1. Changes to the autorun menu and MSI installer
+
+*************************************************************************
+   DATE       VERSION
+   16/09/13   V2.0.5 Iss 1
+
+1. Target status firmware URL modified - *Changed back due to server not being ready
+2. Pronto UI card orientation now displayed
+3. Altered holokote image for idville OEM version
+4. Altered Status utility caption to a generic title
+5. Modified Default Black options for OEM versions
+6. X Series max altered to 140mm
+7. OK, cancel and apply buttons resized for multilingual support
+8. Polaroid card front, back dialogue changes
+
+*************************************************************************
+   DATE       VERSION
+   08/08/13   V2.0.4 Iss 2
+
+1. Changes to the autorun menu and MSI installer
+
+*************************************************************************
+   DATE       VERSION
+   30/07/13   V2.0.4 Iss 1
+
+1. Initial Release
+
+*************************************************************************
