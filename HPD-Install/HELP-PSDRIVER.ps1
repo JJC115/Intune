@@ -30,7 +30,7 @@ $installer = Join-Path $ScriptRoot 'HPDInstall.exe'
 Log "Looking for installer at $installer"
 
 # Pattern for driver detection
-$pattern = 'HP Smart Universal Printing (V3) (v2.07.1*'
+$pattern = 'HP Smart Universal Printing (v5.03.1*'
 
 # Detect specific driver before installation
 $existing = Get-CimInstance -ClassName Win32_PrinterDriver |
@@ -56,7 +56,7 @@ Start-Sleep -Seconds 5
 
 # Add the printer driver to the system so it appears in Print Management
 Log "Adding printer driver to system"
-$driverName = 'HP Smart Universal Printing (V3) (v2.07.1)'
+$driverName = 'HP Smart Universal Printing (v5.03.1)'
 Add-PrinterDriver -Name $driverName
 
 Log "Installation finished, verifying..."
