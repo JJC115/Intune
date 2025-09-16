@@ -1,4 +1,4 @@
-﻿# PowerShell script to silently install HPDInstall.exe
+# PowerShell script to silently install HPDInstall.exe
 # Logs written to %TEMP%\Intune\HPDInstall.log using Out-File
 $ErrorActionPreference = 'Stop'
 
